@@ -6,7 +6,7 @@
   padding: 0;
   /* Inkludera padding och ramkanter i bredden och höjden. */
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .card {
@@ -184,8 +184,8 @@
   display: flex !important;
   /* Centrera navigeringslänkar. */
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .thumb {
@@ -230,12 +230,11 @@
   margin: 3px 7px 0 0;
 }
 
-.mymain 
-{
+.mymain {
   /* Flytta mittensinnehåll till vänster 300 pixlar. */
-  margin-left: 300px; 
+  margin-left: 300px;
   /* Flytta mittensinnehåll neråt 470 pixlar. */
-	margin-top: -470px; 
+  margin-top: -470px;
 }
 
 .spec {
@@ -299,11 +298,10 @@
     /* Höjden för Ckeditor container ska vara 40 vw. */
     max-width: 1000px !important;
   }
-  .ck-editor__top
-	{
+  .ck-editor__top {
     /* Max bredden ska vara 99.4% av hela skärmen. */
-		max-width: 99.4% !important; 
-	}
+    max-width: 99.4% !important;
+  }
   img {
     /* Låt alla bilder ha bredd 100%. */
     width: 100%;

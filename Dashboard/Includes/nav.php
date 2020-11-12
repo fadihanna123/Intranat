@@ -1,10 +1,8 @@
 <!-- Dashboardnavigeringsmeny -->
-<?php 
-
-      if (isset($_SESSION['loginuname']))
-      { // Om man är inloggad
-        $page = $_SERVER['REQUEST_URI'];
-        echo '<nav class="jumbotron navbar navbar-expand-md navbar-light m-4 p-4 dashboardnav d-flex">
+<?php if (isset($_SESSION['loginuname'])) {
+    // Om man är inloggad
+    $page = $_SERVER['REQUEST_URI'];
+    echo '<nav class="jumbotron navbar navbar-expand-md navbar-light m-4 p-4 dashboardnav d-flex">
           <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#dashboardnav">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -68,11 +66,10 @@
                 </div>  
               </nav>
               <br />';
-
-       
-      } // Slut om man är inloggad.
-      else
-      { // Om man inte är inloggad.
-        header("location: ../login.php?msg=true");
-      } // Slut om man inte är inloggad.
+}
+// Slut om man är inloggad.
+else {
+    // Om man inte är inloggad.
+    header("location: ../login.php?msg=true");
+} // Slut om man inte är inloggad.
 ?>

@@ -1,23 +1,25 @@
 <?php session_start(); ?>
 <?php $title = "Startsida"; ?>
-<?php require("Includes/header.php"); ?>
+<?php require "Includes/header.php"; ?>
 <!-- Mittensdelen -->
 <div class="container-fluid">
   <?php
-      if (isset($_SESSION['loginuname']))
-      { // Om man är inloggad.
-        header("location: Dashboard/index.php");
-      } // Slut om man är inloggad.
-       if (isset($_GET['msg']) && $_GET['msg'] == "true")
-       { // Om det skickades varningsmeddelande i adressfältet.
-         echo "<br /><div class='alert alert-info text-center'>
+  if (isset($_SESSION['loginuname'])) {
+      // Om man är inloggad.
+      header("location: Dashboard/index.php");
+  } // Slut om man är inloggad.
+  if (isset($_GET['msg']) && $_GET['msg'] == "true") {
+      // Om det skickades varningsmeddelande i adressfältet.
+      echo "<br /><div class='alert alert-info text-center'>
                    Du är utloggad nu.<br /> 
                    Välkommen tillbaka.
-               </div>";  
-       } // Slut om det skickades varningsmeddelande i adressfältet.
-   ?>
+               </div>";
+  }
+
+// Slut om det skickades varningsmeddelande i adressfältet.
+?>
    <!-- Mittenstext -->
-  <h1 class="rubrik text-center">Välkommen till<br /><?= $getname; ?></h1>
+  <h1 class="rubrik text-center">Välkommen till<br /><?= $getname ?></h1>
 <p class="text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam aliquam<br /> 
         metus, at dapibus lacus mattis ut. Pellentesque semper nunc ac ante tristique, in<br />
@@ -52,4 +54,4 @@
 </p>
 </div>
 
-<?php require("Includes/footer.php"); ?>
+<?php require "Includes/footer.php"; ?>

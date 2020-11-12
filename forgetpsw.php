@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php $title = "Glömt lösenord?"; ?>
-<?php require("Includes/header.php"); ?>
+<?php require "Includes/header.php"; ?>
 
 
 
@@ -12,36 +12,42 @@
       <div id="forgetpswmain">
       
       <?php
-        if (isset($_SESSION['loginuname']))
-        { // Om användare är inloggad.
+      if (isset($_SESSION['loginuname'])) {
+          // Om användare är inloggad.
           header('location: ././dashboard.php');
-        } // Slut om användare är inloggad.
-        $forgetepost =  strip_tags(htmlentities(isset($_POST["forgetepost"]) ? $_POST["forgetepost"] : ""));
-        if (isset($_POST['forgetpswbtn']))
-        { // Om användare klickade på Återställa lösenordet knappen.
-          
-          if (empty($forgetepost))
-          { // Om det saknas samtliga data för lösenordsåterställning.
-                  echo "<div class='alert alert-danger'>
+      } // Slut om användare är inloggad.
+      $forgetepost = strip_tags(
+          htmlentities(
+              isset($_POST["forgetepost"]) ? $_POST["forgetepost"] : ""
+          )
+      );
+      if (isset($_POST['forgetpswbtn'])) {
+          // Om användare klickade på Återställa lösenordet knappen.
+          if (empty($forgetepost)) {
+              // Om det saknas samtliga data för lösenordsåterställning.
+              echo "<div class='alert alert-danger'>
                               Fyll in din e-postadress.
                         </div>";
-          } // Slut om det saknas samtliga data för lösenordsåterställning.
-          else 
-          { // Om det finns samtliga data för lösenordsåterställning.
-            if (filter_var($forgetepost, FILTER_VALIDATE_EMAIL))
-            { // Om e-postadress validerades korrekt.
-              $functions->forgetpsw($forgetepost);
-            } // Slut om e-postadress validerades korrekt.
-            else
-            { // Om e-postadress inte validerades korrekt.
-              echo "<div class='alert alert-danger'>
+          }
+          // Slut om det saknas samtliga data för lösenordsåterställning.
+          else {
+              // Om det finns samtliga data för lösenordsåterställning.
+              if (filter_var($forgetepost, FILTER_VALIDATE_EMAIL)) {
+                  // Om e-postadress validerades korrekt.
+                  $functions->forgetpsw($forgetepost);
+              }
+              // Slut om e-postadress validerades korrekt.
+              else {
+                  // Om e-postadress inte validerades korrekt.
+                  echo "<div class='alert alert-danger'>
                               Fyll in en korrek e-postadress.
                     </div>";
-            } // Slut om e-postadress inte validerades korrekt.
-            
+              }
+              // Slut om e-postadress inte validerades korrekt.
           } // Slut om det finns samtliga data för lösenordsåterställning.
+      }
 
-      } // Slut om användare klickade på Återställa lösenordet knappen.
+// Slut om användare klickade på Återställa lösenordet knappen.
 ?>
 
       
@@ -49,7 +55,9 @@
   </div>
     <!-- Lösenordsåterställningsfrågansform -->
     <div class="container mr-lg-2">
-      <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" class="p-2 myform needs-validation" novalidate>
+      <form action="<?= $_SERVER[
+          'PHP_SELF'
+      ] ?>" method="post" class="p-2 myform needs-validation" novalidate>
       <div class="row h-100 justify-content-center align-items-center">
         <div class="form-group">
           <label for="forgetepost">E-postadress:</label>
@@ -62,4 +70,4 @@
   </div>
   
 
-  <?php require("Includes/footer.php"); ?>
+  <?php require "Includes/footer.php"; ?>

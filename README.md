@@ -1,7 +1,10 @@
-## 1. Självständigt arbete 
+## 1. Självständigt arbete
+
 **Adress:**<br />
 https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/index.php
+
 ## 1.1 Intränatapplikation
+
 Detta är en intränatapplikation som hjälper personal att kommunicera med sina chefer genom att till exempel anmäla sjukanmälan eller ansöka om ledighet. <br>
 **Intränatapplikation har 8 funktioner:** <br>
 1 - Se de senaste nyheter. <br>
@@ -18,7 +21,7 @@ Detta är en intränatapplikation som hjälper personal att kommunicera med sina
 3 - Logga in i intränatapplikationen. <br>
 4 - Återställa lösenordet. <br>
 Webbapplikationen är responsivt.<br>
-**Den här webbapplikationen består av dessa länkar:**  <br>
+**Den här webbapplikationen består av dessa länkar:** <br>
 1 - Startsida<br>
 2 - Logga in <br>
 3 - Återställa lösenordet. <br>
@@ -31,7 +34,9 @@ Webbapplikationen är responsivt.<br>
 10 - FAQ.<br>
 11 - Mitt konto. <br>
 12 - Adminpanel. <br>
+
 ## 1.2 Mappstruktur <br>
+
 CSS/<br>
 CSS/main.css<br>
 CSS/main.scss<br>
@@ -131,7 +136,9 @@ news.php<br>
 report.php<br>
 showpost.php<br>
 staff.php<br>
+
 ## 1.3 Installation <br>
+
 Du kan ladda ner alla dessa filer och installera källkodsfiler i din lokala server eller egen hemsida. <br>
 Du behöver ändra SQL uppgifter från din localhost till din egen i dessa filer:<br>
 Includes/config.php rad 13, 14, 15 och 16.<br>
@@ -235,9 +242,13 @@ Du behöver skapa dessa kolumner i dessa tabeller :<br>
 `fullname` text NOT NULL<br>
 
 ## 1.4 Programmeringsspråk som används i projektet: <br>
-HTML, CSS/SASS, Objektorienterad PHP och Javascript. <br>
-## 1.5 Ramverk: <br>
-Bootstrap <br>
-## 1.6 Skärmdump av Intränatapplikation <br>
-![alt text](https://github.com/fadihanna123/Intranat/blob/master/screenshot.png "Screenshot av hemsidan")
 
+HTML, CSS/SASS, Objektorienterad PHP och Javascript. <br>
+
+## 1.5 Ramverk: <br>
+
+Bootstrap <br>
+
+## 1.6 Skärmdump av Intränatapplikation <br>
+
+![alt text](https://github.com/fadihanna123/Intranat/blob/master/screenshot.png "Screenshot av hemsidan")

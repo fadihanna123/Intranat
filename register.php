@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php $title = "Registrera dig"; ?>
-<?php require("Includes/header.php"); ?>
+<?php require "Includes/header.php"; ?>
 
 
 <!-- Registreringsformulär -->
@@ -18,118 +18,218 @@
   <div class="container-fluid">
       <div id="registermain">
     <?php
-          if (isset($_SESSION['loginuname']))
-            { // Om användare är inloggad.
-              header('location: Dashboard/index.php');
-            } // Slut om användare är inloggad.
-            $registerfname = strip_tags(htmlentities(isset($_POST["registerfname"]) ? $_POST["registerfname"] : ""));
-            $registerlname = strip_tags(htmlentities(isset($_POST["registerlname"]) ? $_POST["registerlname"] : ""));
-            $registerepost =  strip_tags(htmlentities(isset($_POST["registerepost"]) ? $_POST["registerepost"] : ""));
-            $registermobnr =  strip_tags(htmlentities(isset($_POST["registermobnr"]) ? $_POST["registermobnr"] : ""));
-            $registerpsw =  strip_tags(htmlentities(isset($_POST["registerpsw"]) ? $_POST["registerpsw"] : ""));
-            $registerwork =  strip_tags(htmlentities(isset($_POST["registerwork"]) ? $_POST["registerwork"] : ""));
-            $registerbornday =  strip_tags(htmlentities(isset($_POST["registerbornday"]) ? $_POST["registerbornday"] : ""));
-            $registerbornmonth =  strip_tags(htmlentities(isset($_POST["registerbornmonth"]) ? $_POST["registerbornmonth"] : ""));
-            $registerbornyear =  strip_tags(htmlentities(isset($_POST["registerbornyear"]) ? $_POST["registerbornyear"] : ""));
-            $registersex =  strip_tags(htmlentities(isset($_POST["registersex"]) ? $_POST["registersex"] : ""));
-            $registertfnr =  strip_tags(htmlentities(isset($_POST["registertfnr"]) ? $_POST["registertfnr"] : ""));
-            $filename = isset($_FILES['registerimg']['name']) ? $_FILES['registerimg']['name'] : "";
-            $filetype = isset($_FILES['registerimg']['type']) ? $_FILES['registerimg']['type'] : "";
-            $tmpname = isset($_FILES['registerimg']['tmp_name']) ? $_FILES['registerimg']['tmp_name'] : "";
-            $forgetpsw =  strip_tags(htmlentities(isset($_POST["forgetpsw"]) ? $_POST["forgetpsw"] : ""));
-            $confirmpsw = strip_tags(htmlentities(isset($_POST["confirmpsw"]) ? $_POST["confirmpsw"] : ""));
-          if(isset($_POST['registerbtn']))
-          { // Om användare klickade på Registrera dig knappen.
-
-            
-          if (empty($registerfname) || empty($registerlname) || empty($registerepost) ||
-            empty($registermobnr)
-            || empty($registerpsw)
-            || empty($registerwork) || empty($registerbornday) || empty($registerbornmonth) || empty($registerbornyear)
-            || empty($registersex) || empty($registertfnr)) 
-          { // Om det saknas samtliga data för registrering.
-                  echo "<div class='alert alert-danger'>
+    if (isset($_SESSION['loginuname'])) {
+        // Om användare är inloggad.
+        header('location: Dashboard/index.php');
+    } // Slut om användare är inloggad.
+    $registerfname = strip_tags(
+        htmlentities(
+            isset($_POST["registerfname"]) ? $_POST["registerfname"] : ""
+        )
+    );
+    $registerlname = strip_tags(
+        htmlentities(
+            isset($_POST["registerlname"]) ? $_POST["registerlname"] : ""
+        )
+    );
+    $registerepost = strip_tags(
+        htmlentities(
+            isset($_POST["registerepost"]) ? $_POST["registerepost"] : ""
+        )
+    );
+    $registermobnr = strip_tags(
+        htmlentities(
+            isset($_POST["registermobnr"]) ? $_POST["registermobnr"] : ""
+        )
+    );
+    $registerpsw = strip_tags(
+        htmlentities(isset($_POST["registerpsw"]) ? $_POST["registerpsw"] : "")
+    );
+    $registerwork = strip_tags(
+        htmlentities(
+            isset($_POST["registerwork"]) ? $_POST["registerwork"] : ""
+        )
+    );
+    $registerbornday = strip_tags(
+        htmlentities(
+            isset($_POST["registerbornday"]) ? $_POST["registerbornday"] : ""
+        )
+    );
+    $registerbornmonth = strip_tags(
+        htmlentities(
+            isset($_POST["registerbornmonth"])
+                ? $_POST["registerbornmonth"]
+                : ""
+        )
+    );
+    $registerbornyear = strip_tags(
+        htmlentities(
+            isset($_POST["registerbornyear"]) ? $_POST["registerbornyear"] : ""
+        )
+    );
+    $registersex = strip_tags(
+        htmlentities(isset($_POST["registersex"]) ? $_POST["registersex"] : "")
+    );
+    $registertfnr = strip_tags(
+        htmlentities(
+            isset($_POST["registertfnr"]) ? $_POST["registertfnr"] : ""
+        )
+    );
+    $filename = isset($_FILES['registerimg']['name'])
+        ? $_FILES['registerimg']['name']
+        : "";
+    $filetype = isset($_FILES['registerimg']['type'])
+        ? $_FILES['registerimg']['type']
+        : "";
+    $tmpname = isset($_FILES['registerimg']['tmp_name'])
+        ? $_FILES['registerimg']['tmp_name']
+        : "";
+    $forgetpsw = strip_tags(
+        htmlentities(isset($_POST["forgetpsw"]) ? $_POST["forgetpsw"] : "")
+    );
+    $confirmpsw = strip_tags(
+        htmlentities(isset($_POST["confirmpsw"]) ? $_POST["confirmpsw"] : "")
+    );
+    if (isset($_POST['registerbtn'])) {
+        // Om användare klickade på Registrera dig knappen.
+        if (
+            empty($registerfname) ||
+            empty($registerlname) ||
+            empty($registerepost) ||
+            empty($registermobnr) ||
+            empty($registerpsw) ||
+            empty($registerwork) ||
+            empty($registerbornday) ||
+            empty($registerbornmonth) ||
+            empty($registerbornyear) ||
+            empty($registersex) ||
+            empty($registertfnr)
+        ) {
+            // Om det saknas samtliga data för registrering.
+            echo "<div class='alert alert-danger'>
                               Du behöver fylla in de obligatoriska fält.
                         </div>";
-          } // Slut om det saknas samtliga data för registrering.
-          else 
-          { // Om det finns samtliga data för registrering.
-            if (filter_var($registerepost, FILTER_VALIDATE_EMAIL)) 
-            { // Om e-postadressen var korrekt validerat.
+        }
+        // Slut om det saknas samtliga data för registrering.
+        else {
+            // Om det finns samtliga data för registrering.
+            if (filter_var($registerepost, FILTER_VALIDATE_EMAIL)) {
+                // Om e-postadressen var korrekt validerat.
+                if (strlen($registerpsw) >= 6) {
+                    // Om lösenordets längd var längre eller lika med 6 tecken.
+                    if ($functions->checkemail($registerepost)) {
+                        // Om e-postadressen saknas i databasen.
+                        if (
+                            isset($filename) &&
+                            ($filetype =
+                                "image/jpg" &&
+                                ($filetype =
+                                    "image/png" &&
+                                    ($filetype =
+                                        "image/jpeg" &&
+                                        ($filetype = "image/gif"))))
+                        ) {
+                            // Om användare bifogade bildfil och bildtyper var jpg, png, jpeg och gif.
+                            if (
+                                move_uploaded_file(
+                                    $tmpname,
+                                    "Images/Users/$filename"
+                                )
+                            ) {
+                                // Om bildfilen laddades upp till mappen Users.
+                                $bild = "Images/Users/$filename";
+                                copy(
+                                    $bild,
 
-              if (strlen($registerpsw) >= 6) 
-              { // Om lösenordets längd var längre eller lika med 6 tecken.
-                
-                if ($functions->checkemail($registerepost))
-                { // Om e-postadressen saknas i databasen.
-                
-                if (isset($filename) && $filetype = "image/jpg" && $filetype = "image/png" && $filetype = "image/jpeg"
-                && $filetype = "image/gif")
-                { // Om användare bifogade bildfil och bildtyper var jpg, png, jpeg och gif.
-                  if (move_uploaded_file($tmpname, "Images/Users/$filename"))
-                  { // Om bildfilen laddades upp till mappen Users.
-                    
-                      $bild = "Images/Users/$filename";
-                      copy($bild, "Dashboard/Images/Users/" . $filename);
-                  } // Slut om bildfilen laddades upp till mappen Users. 
+                                    "Dashboard/Images/Users/" . $filename
+                                );
+                            }
 
+                            // Slut om bildfilen laddades upp till mappen Users.
+                        }
+                        // Slut om användare bifogade bildfilen.
+                        $realpsw = $registerpsw;
+                        if ($registersex == "Man" && $filename == "") {
+                            // Om användaren är en man men saknar en profilbild.
+                            $bild = "Images/Users/default_man.png";
+                            copy(
+                                $bild,
 
-                } // Slut om användare bifogade bildfilen.
-
-                
-                $realpsw = $registerpsw;
-                if ($registersex == "Man" && $filename == "")
-                { // Om användaren är en man men saknar en profilbild.
-                  $bild = "Images/Users/default_man.png";
-                  copy($bild, "Dashboard/Images/Users/default_man.png");
-                } // Slut om användaren är en man men saknar en profilbild.
-
-                if ($registersex == "Kvinna" && $filename == "")
-                { // Om användaren är en kvinna men saknar en profilbild.
-                  $bild = "Images/Users/default_woman.gif";
-                  copy($bild, "Dashboard/Images/Users/default_woman.gif");
-                } // Slut om användaren är en kvinna men saknar en profilbild.
-
-                      $functions->checkuser($registerfname, $registerlname, $registermobnr, $registertfnr, $registerepost, $registerpsw, $registerwork, isset($registerbornday) ? $registerbornday : "", isset($registerbornmonth) ? $registerbornmonth : "", isset($registerbornyear) ? $registerbornyear : "", $registersex, isset($bild) ? $bild : "Bild saknas", $realpsw);
-
-                } // Slut om e-postadressen saknas i databasen.
-                else
-                { // Om e-postadressen hittades i databasen.
-                    echo "<div class='alert alert-danger'>
+                                "Dashboard/Images/Users/default_man.png"
+                            );
+                        }
+                        // Slut om användaren är en man men saknar en profilbild.
+                        if ($registersex == "Kvinna" && $filename == "") {
+                            // Om användaren är en kvinna men saknar en profilbild.
+                            $bild = "Images/Users/default_woman.gif";
+                            copy(
+                                $bild,
+                                "Dashboard/Images/Users/default_woman.gif"
+                            );
+                        }
+                        // Slut om användaren är en kvinna men saknar en profilbild.
+                        $functions->checkuser(
+                            $registerfname,
+                            $registerlname,
+                            $registermobnr,
+                            $registertfnr,
+                            $registerepost,
+                            $registerpsw,
+                            $registerwork,
+                            isset($registerbornday) ? $registerbornday : "",
+                            isset($registerbornmonth) ? $registerbornmonth : "",
+                            isset($registerbornyear) ? $registerbornyear : "",
+                            $registersex,
+                            isset($bild) ? $bild : "Bild saknas",
+                            $realpsw
+                        );
+                    }
+                    // Slut om e-postadressen saknas i databasen.
+                    else {
+                        // Om e-postadressen hittades i databasen.
+                        echo "<div class='alert alert-danger'>
                              Den här e-postadressen är redan registrerad.<br /> 
                               Varsågod logga in 
                               <a href='login.php'>här</a>.
                           </div>";
-                } // Slut om e-postadressen hittades i databasen.
+                    }
 
-              } // Slut om lösenordet var längre eller lika med 6 tecken.
-              else 
-              { // Om lösenordet var mindre eller lika med 6 tecken.
-                            echo "<div class='alert alert-danger'>
+                    // Slut om e-postadressen hittades i databasen.
+                }
+                // Slut om lösenordet var längre eller lika med 6 tecken.
+                else {
+                    // Om lösenordet var mindre eller lika med 6 tecken.
+                    echo "<div class='alert alert-danger'>
                                     Du skrev ett lösenord som är mindre än 6 tecken.<br />
                                     Skriv ett lösenord som är minst 6 tecken.
                                   </div>";
-              } // Slut om lösenordet var mindre eller lika med 6 tecken.
+                }
 
-            } // Slut om e-postadress var korrekt validerat.
-            else 
-            { // Om e-postadressen var felaktig validerad.
-              echo "    <div class='alert alert-danger'>
+                // Slut om lösenordet var mindre eller lika med 6 tecken.
+            }
+            // Slut om e-postadress var korrekt validerat.
+            else {
+                // Om e-postadressen var felaktig validerad.
+                echo "    <div class='alert alert-danger'>
                             Du skrev felaktig e-postadress. Skriv en korrekt e-postadress.
                         </div>
                       ";
             } // Slut om e-postadressen var felaktig validerad.
+        }
 
-          } // Slut om det finns samtliga data för registrering.
+        // Slut om det finns samtliga data för registrering.
+    }
 
-          } // Slut om användare klickade på Registrera dig knappen.
-        ?>
+// Slut om användare klickade på Registrera dig knappen.
+?>
 
 
       </div>
   </div>
   	<!-- Registreringsformulär -->
-    <form action="<?= $_SERVER['PHP_SELF'] ?>" class="col-12 needs-validation" novalidate id="registerform" method="post" enctype="multipart/form-data">
+    <form action="<?= $_SERVER[
+        'PHP_SELF'
+    ] ?>" class="col-12 needs-validation" novalidate id="registerform" method="post" enctype="multipart/form-data">
       
           <div class="row h-100 justify-content-center align-items-center">
               <div class="form-group">
@@ -386,5 +486,5 @@
   
 
   
-  <?php require("Includes/footer.php"); ?>
+  <?php require "Includes/footer.php"; ?>
            

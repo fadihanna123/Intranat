@@ -6,7 +6,7 @@
   padding: 0;
   /* Inkludera padding och ramkanter i bredd och höjd. */
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .icon {
@@ -83,4 +83,3 @@
     width: 1000vw;
   }
 }
-
