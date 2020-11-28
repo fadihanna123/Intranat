@@ -9,6 +9,7 @@ $twoem: 2em;
   /* Återställa alla padding till 0 */
   padding: $zero;
   /* Inkludera padding och ramkanter i bredd och höjd. */
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 

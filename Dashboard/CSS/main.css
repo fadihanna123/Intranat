@@ -218,6 +218,8 @@
   /* Låt navigeringsmeny ha bredden: 270 pixlar. */
   width: 250px;
   /* Visa den som flex-behållare. */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
