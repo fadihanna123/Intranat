@@ -113,6 +113,7 @@
   }
 
 // Slut det saknas återställningsnyckel i adressfältet.
+
 ?>
 </div>
 </div>

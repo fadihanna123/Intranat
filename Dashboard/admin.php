@@ -101,7 +101,6 @@
                     $editinvoiceinfo,
                     $editaddressstreet,
                     $editaddressbox,
-
                     $editaddresscity,
                     $editvisitaddress,
                     $editfirstcolor,

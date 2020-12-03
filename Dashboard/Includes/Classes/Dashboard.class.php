@@ -52,9 +52,9 @@ class Dashboard
                 $to = $getemail;
                 $subject = "Administratören godkände din registrering";
                 $message = "
-        Din administratör godkände din registrering. <br /><br />
-        Nu kan du logga in.<br /><br />
-        <a href='https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/login.php'>Klicka här för att logga in</a>";
+                Din administratör godkände din registrering. <br /><br />
+                Nu kan du logga in.<br /><br />
+                <a href='https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/login.php'>Klicka här för att logga in</a>";
                 $headers = "From: admin@gssonselab.com";
                 $headers = 'MIME-Version: 1.0' . "\r\n";
                 $headers .=
@@ -224,9 +224,9 @@ class Dashboard
             $to = $newepost;
             $subject = "Verifiera e-postadress";
             $message = "Verifiera e-postadress.<br /><br />
-  Du begärde att ändra din e-postadress.<br />
-  Klicka på länken nedan för att verifiera.<br />
-  <a href='https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/activateemail.php?key=$token_key&uid=$getuserid&epost=$newepost'>https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/activateemail.php?key=$token_key&uid=$getuserid&epost=$newepost</a>
+        Du begärde att ändra din e-postadress.<br />
+        Klicka på länken nedan för att verifiera.<br />
+        <a href='https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/activateemail.php?key=$token_key&uid=$getuserid&epost=$newepost'>https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/activateemail.php?key=$token_key&uid=$getuserid&epost=$newepost</a>
         <br /><br />Observera att denna länk är giltig i bara 24 timmar.
   ";
             $headers = "From: admin@gssonselab.com";

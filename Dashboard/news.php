@@ -13,7 +13,8 @@
         <h2 class='rubrik specrubriktxt ml-3'>Alla nyheter</h2>
     <br />
   
-  <?php if (isset($_SESSION['loginuname'])) {
+  <?php
+  if (isset($_SESSION['loginuname'])) {
       // Om man är inloggad.
       if ($dashboard->checkadminuser($_SESSION['loginuname']) == 1) {
           // Om användaren har administratörsbehörigheter.

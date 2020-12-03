@@ -3,7 +3,9 @@
 <!-- Kontoaktiveringsprocess -->
 <div class="container text-center">
   <h1 class="display-4">Verifiera ditt konto</h1>
-  <?php if (isset($_GET['key'])) {
+  <?php
+  
+  if (isset($_GET['key'])) {
       // Om det finns aktiveringsnyckel i adressfältet.
       $functions->checkkey($_GET['key'], $_GET['uid']);
   }

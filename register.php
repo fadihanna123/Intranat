@@ -108,7 +108,7 @@
             // Om det saknas samtliga data för registrering.
             echo "<div class='alert alert-danger'>
                               Du behöver fylla in de obligatoriska fält.
-                        </div>";
+                   </div>";
         }
         // Slut om det saknas samtliga data för registrering.
         else {
@@ -140,7 +140,6 @@
                                 $bild = "Images/Users/$filename";
                                 copy(
                                     $bild,
-
                                     "Dashboard/Images/Users/" . $filename
                                 );
                             }
@@ -154,7 +153,6 @@
                             $bild = "Images/Users/default_man.png";
                             copy(
                                 $bild,
-
                                 "Dashboard/Images/Users/default_man.png"
                             );
                         }

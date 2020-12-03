@@ -12,4 +12,3 @@ define("DB_HOST", "localhost");
 define("DB_USRNAME", "root");
 define("DB_PSW", "");
 define("DB_NAME", "");
-?>

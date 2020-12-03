@@ -12,19 +12,18 @@
 <div class="container-fluid">
   
     <?php if (isset($_SESSION['loginuname'])) {
-        // Om man är inloggad.
-        if (isset($_GET['id'])) {
-            // Om adressfältet har rätt id.
-            $dashboard->showFullContent($_GET['id']);
-        }
-        // Slut om adressfältet har rätt id.
-        else {
-            // Om adressfältet saknar rätt id.
-            header("location: index.php");
-            exit();
-        } // Slut om adressfältet saknar rätt id. // Slut om man är inloggad.
+    // Om man är inloggad.
+    if (isset($_GET['id'])) {
+        // Om adressfältet har rätt id.
+        $dashboard->showFullContent($_GET['id']);
     }
+    // Slut om adressfältet har rätt id.
     else {
+        // Om adressfältet saknar rätt id.
+        header("location: index.php");
+        exit();
+    } // Slut om adressfältet saknar rätt id. // Slut om man är inloggad.
+} else {
         // Om man inte är inloggad.
         header("location: ../login.php?msg=true");
     }

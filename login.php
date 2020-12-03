@@ -13,39 +13,41 @@
       <div id="loginmain">
       
       <?php
-      if (isset($_SESSION['loginuname'])) {
-          // Om användare är inloggad.
-          header('location: Dashboard/index.php');
-      } // Slut om användare är inloggad.
-      if (isset($_GET['msg']) && $_GET['msg'] == "true") {
-          // Om det skickades varningsmeddelande i adressfältet.
-          echo "<div class='alert alert-danger'>
-                    Du måste logga in först.
-                </div>";
-      }
-      // Slut om det skickades varningsmeddelande i adressfältet.
-      $loginuname = strip_tags(
-          htmlentities(isset($_POST["loginuname"]) ? $_POST["loginuname"] : "")
-      );
-      $loginpsw = strip_tags(
-          htmlentities(isset($_POST["loginpsw"]) ? $_POST["loginpsw"] : "")
-      );
-      if (isset($_POST['loginbtn'])) {
-          // Om användare klickade på Logga in knappen.
-          if (empty($loginuname) || empty($loginpsw)) {
-              // Om det saknas samtliga data för inloggning.
-              echo "<div class='alert alert-danger'>
-                          Du behöver fylla in samtliga fält.
-                    </div>";
-          }
-          // Slut om det saknas samtliga data för inloggning.
-          else {
-              // Om det finns samtliga data för inloggning.
-              $functions->checklogin($loginuname, $loginpsw);
-          } // Slut om det finns samtliga data för inloggning.
-      }
+      
+        if (isset($_SESSION['loginuname'])) {
+            // Om användare är inloggad.
+            header('location: Dashboard/index.php');
+        } // Slut om användare är inloggad.
+        if (isset($_GET['msg']) && $_GET['msg'] == "true") {
+            // Om det skickades varningsmeddelande i adressfältet.
+            echo "<div class='alert alert-danger'>
+                      Du måste logga in först.
+                  </div>";
+        }
+        // Slut om det skickades varningsmeddelande i adressfältet.
+        $loginuname = strip_tags(
+            htmlentities(isset($_POST["loginuname"]) ? $_POST["loginuname"] : "")
+        );
+        $loginpsw = strip_tags(
+            htmlentities(isset($_POST["loginpsw"]) ? $_POST["loginpsw"] : "")
+        );
+        if (isset($_POST['loginbtn'])) {
+            // Om användare klickade på Logga in knappen.
+            if (empty($loginuname) || empty($loginpsw)) {
+                // Om det saknas samtliga data för inloggning.
+                echo "<div class='alert alert-danger'>
+                            Du behöver fylla in samtliga fält.
+                      </div>";
+            }
+            // Slut om det saknas samtliga data för inloggning.
+            else {
+                // Om det finns samtliga data för inloggning.
+                $functions->checklogin($loginuname, $loginpsw);
+            } // Slut om det finns samtliga data för inloggning.
+        }
 
-// Slut om användare klickade på Logga in knappen.
+  // Slut om användare klickade på Logga in knappen.
+
 ?>
 
       

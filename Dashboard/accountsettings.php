@@ -9,10 +9,10 @@
     
     <?php
     $editusername = strip_tags(
-        htmlentities(
-            isset($_POST['editusername']) ? $_POST['editusername'] : ""
-        )
-    );
+    htmlentities(
+        isset($_POST['editusername']) ? $_POST['editusername'] : ""
+    )
+);
     $editfullname = strip_tags(
         htmlentities(
             isset($_POST['editfullname']) ? $_POST['editfullname'] : ""

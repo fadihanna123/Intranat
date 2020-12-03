@@ -1,8 +1,9 @@
 <?php
 
-require "config.php";
-$functions = new Functions();
-$getname = $functions->getCompanyName();
+  require "config.php";
+  $functions = new Functions();
+  $getname = $functions->getCompanyName();
+
 ?>
 <!DOCTYPE html>
 <html lang="sv">

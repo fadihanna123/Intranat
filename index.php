@@ -4,19 +4,21 @@
 <!-- Mittensdelen -->
 <div class="container-fluid">
   <?php
-  if (isset($_SESSION['loginuname'])) {
-      // Om man är inloggad.
-      header("location: Dashboard/index.php");
-  } // Slut om man är inloggad.
-  if (isset($_GET['msg']) && $_GET['msg'] == "true") {
-      // Om det skickades varningsmeddelande i adressfältet.
-      echo "<br /><div class='alert alert-info text-center'>
-                   Du är utloggad nu.<br /> 
-                   Välkommen tillbaka.
-               </div>";
-  }
 
-// Slut om det skickades varningsmeddelande i adressfältet.
+    if (isset($_SESSION['loginuname'])) {
+        // Om man är inloggad.
+        header("location: Dashboard/index.php");
+    } // Slut om man är inloggad.
+    if (isset($_GET['msg']) && $_GET['msg'] == "true") {
+        // Om det skickades varningsmeddelande i adressfältet.
+        echo "<br /><div class='alert alert-info text-center'>
+                    Du är utloggad nu.<br /> 
+                    Välkommen tillbaka.
+                </div>";
+    }
+
+  // Slut om det skickades varningsmeddelande i adressfältet.
+
 ?>
    <!-- Mittenstext -->
   <h1 class="rubrik text-center">Välkommen till<br /><?= $getname ?></h1>

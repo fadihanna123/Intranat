@@ -8,11 +8,11 @@
   
   
   <?php if (isset($_SESSION['loginuname'])) {
-      // Om man är inloggad.
-      echo "<div class='container-fluid'>";
-      $dashboard->GetStaff();
-      echo "</div>";
-  }
+    // Om man är inloggad.
+    echo "<div class='container-fluid'>";
+    $dashboard->GetStaff();
+    echo "</div>";
+}
   // Slut om man är inloggad.
   else {
       // Om man inte är inloggad.

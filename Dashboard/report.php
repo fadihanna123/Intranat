@@ -8,8 +8,8 @@
     <div class="mymain">
     <?php
     $sickreason = html_entity_decode(
-        isset($_POST["sickreason"]) ? $_POST["sickreason"] : ""
-    );
+    isset($_POST["sickreason"]) ? $_POST["sickreason"] : ""
+);
     $sickfrom = strip_tags(
         htmlentities(isset($_POST["sickfrom"]) ? $_POST["sickfrom"] : "")
     );

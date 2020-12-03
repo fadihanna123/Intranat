@@ -12,5 +12,3 @@ header('Cache-Control: must-revalidate');
 header('Pragma: public');
 header('Content-Length: ' . filesize($file));
 readfile("Images/Files/" . $file);
-
-?>

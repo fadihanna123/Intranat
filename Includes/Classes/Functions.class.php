@@ -92,12 +92,12 @@ class Functions
             $to = $registerepost;
             $subject = "Verifiera ditt konto";
             $message = "Tack för registrering.<br /><br />
-Dina inloggninsuppgifter: <br /><br />
-Användarnamn: $getusername  <br /><br />
-Lösenord: $realpsw  <br /><br /><br />
-Verifiera ditt konto här <br /><br />
-<a href='https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/activate.php?key=$token_key&uid=$row2[id]'>https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/activate.php?key=$token_key&uid=$row2[id]</a> <br /><br />
-Observera att denna länk är giltig i bara 24 timmar.";
+            Dina inloggninsuppgifter: <br /><br />
+            Användarnamn: $getusername  <br /><br />
+            Lösenord: $realpsw  <br /><br /><br />
+            Verifiera ditt konto här <br /><br />
+            <a href='https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/activate.php?key=$token_key&uid=$row2[id]'>https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/activate.php?key=$token_key&uid=$row2[id]</a> <br /><br />
+            Observera att denna länk är giltig i bara 24 timmar.";
             $headers = "From: admin@gssonselab.com";
             $headers = 'MIME-Version: 1.0' . "\r\n";
             $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -329,10 +329,10 @@ Observera att denna länk är giltig i bara 24 timmar.";
                 $to = $forgetepost;
                 $subject = "Återställa ditt lösenord";
                 $message = "
-Du begärde ett nytt lösenord.<br /><br />
-Klicka på länken för att kunna återställa ditt lösenord<br /><br />
-<a href='https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/doforgetpsw.php?key=$token_key&uid=$userid'>https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/doforgetpsw.php?key=$token_key&uid=$userid</a> <br /><br />
-Observera att denna länk är giltig i bara 24 timmar.";
+                Du begärde ett nytt lösenord.<br /><br />
+                Klicka på länken för att kunna återställa ditt lösenord<br /><br />
+                <a href='https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/doforgetpsw.php?key=$token_key&uid=$userid'>https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se/doforgetpsw.php?key=$token_key&uid=$userid</a> <br /><br />
+                Observera att denna länk är giltig i bara 24 timmar.";
                 $headers = "From: admin@gssonselab.com";
                 $headers = 'MIME-Version: 1.0' . "\r\n";
                 $headers .=
@@ -421,5 +421,4 @@ Observera att denna länk är giltig i bara 24 timmar.";
                 </div>";
         } // Slut om användaren inte begärde lösenordsåterställningförfrågan.
     }
-} ?>
- 
+}

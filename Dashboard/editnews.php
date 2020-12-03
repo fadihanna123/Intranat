@@ -59,7 +59,6 @@ if (isset($_SESSION['loginuname'])) {
                     $edittitle,
                     $editcat,
                     $editcontent,
-
                     isset($bild) ? $bild : "",
                     $_SESSION['loginuname']
                 );

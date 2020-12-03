@@ -12,6 +12,7 @@
       <div id="forgetpswmain">
       
       <?php
+      
       if (isset($_SESSION['loginuname'])) {
           // Om användare är inloggad.
           header('location: ././dashboard.php');
