@@ -14,10 +14,10 @@
             // Om användare klickade på Lägg till knappen.
             $addquestion = strip_tags(
                 htmlentities(
-                            isset($_POST['addquestion'])
+                    isset($_POST['addquestion'])
                                 ? $_POST['addquestion']
                                 : ""
-                        )
+                )
             );
             $addanswer = html_entity_decode(
                 isset($_POST['addanswer']) ? $_POST['addanswer'] : ""

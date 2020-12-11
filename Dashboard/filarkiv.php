@@ -24,8 +24,8 @@
         } // Slut om det finns fail i adressfältet och är true.
         $addfilename = strip_tags(
             html_entity_decode(
-                      isset($_POST["addfilename"]) ? $_POST["addfilename"] : ""
-                  )
+                isset($_POST["addfilename"]) ? $_POST["addfilename"] : ""
+            )
         );
         $adddes = html_entity_decode(
             isset($_POST["adddes"]) ? $_POST["adddes"] : ""

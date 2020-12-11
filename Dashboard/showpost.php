@@ -24,9 +24,9 @@
         exit();
     } // Slut om adressfältet saknar rätt id. // Slut om man är inloggad.
 } else {
-        // Om man inte är inloggad.
-        header("location: ../login.php?msg=true");
-    }
+    // Om man inte är inloggad.
+    header("location: ../login.php?msg=true");
+}
 // Om man inte är inloggad.
 ?>
     </div>
