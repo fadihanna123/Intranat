@@ -74,7 +74,7 @@ index.php<br>
 login.php<br>
 register.php<br>
 intranet_2020.sql<br>
-.php_cs.cache <br />
+
 **Dashboard**:<br>
 CSS/<br>
 CSS/main.css<br>
