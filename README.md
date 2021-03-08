@@ -76,7 +76,7 @@ register.php<br>
 intranet_2020.sql<br>
 
 **Dashboard**:<br>
-CSS/<br>
+CSS/ <br>
 CSS/main.css<br>
 CSS/main.scss<br>
 ckeditor5/<br>
