@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <script src="./ckeditor5/build/ckeditor.js"></script>
-  <script src="./Js/main.js?t=<?= time() ?>"></script>
+  <script src="./Js/main.min.js?t=<?= time() ?>"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./CSS/main.css?t=<?= time() ?>" type="text/css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
