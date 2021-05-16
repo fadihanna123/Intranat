@@ -26,12 +26,12 @@
     "@ckeditor/ckeditor5-paste-from-office": "^27.1.0",
     "@ckeditor/ckeditor5-table": "^27.1.0",
     "@ckeditor/ckeditor5-theme-lark": "^27.1.0",
-    "postcss-loader": "^5.2.0",
+    "postcss-loader": "^5.3.0",
     "raw-loader": "^4.0.0",
     "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^5.1.1",
-    "webpack": "^5.36.2",
-    "webpack-cli": "^4.6.0"
+    "terser-webpack-plugin": "^5.1.2",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
   },
   "scripts": {
     "build": "webpack --mode production"
