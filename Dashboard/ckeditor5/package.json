@@ -35,5 +35,8 @@
   },
   "scripts": {
     "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "postcss": "^8.2.10"
   }
 }
