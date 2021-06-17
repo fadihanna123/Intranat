@@ -37,6 +37,8 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
+    "glob-parent": "5.1.2",
+    "normalize-url": "4.5.1",
     "postcss": "^8.3.5"
   }
 }
