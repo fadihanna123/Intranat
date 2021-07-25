@@ -79,7 +79,7 @@ intranet_2020.sql<br>
 CSS/ <br>
 CSS/main.css<br>
 CSS/main.scss<br>
-ckeditor5/<br>
+ckeditor5/<br />
 Images/<br>
 Images/Admin/<br>
 Images/Admin/admin_header_logo.png<br>
