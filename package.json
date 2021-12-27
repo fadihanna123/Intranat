@@ -1,7 +1,6 @@
 {
   "name": "intranat",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "1.0.1",
   "repository": "https://github.com/fadihanna123/Intranat.git",
   "author": "fadihanna123 <fhanna181@gmail.com>",
   "license": "MIT",
@@ -9,6 +8,6 @@
     "jquery": "^3.6.0"
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.6"
+    "@types/jquery": "^3.5.11"
   }
 }
