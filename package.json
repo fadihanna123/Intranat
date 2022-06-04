@@ -1,13 +1,20 @@
 {
-  "name": "intranat",
-  "version": "1.0.6",
-  "repository": "https://github.com/fadihanna123/Intranat.git",
-  "author": "fadihanna123 <fhanna181@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "jquery": "^3.6.0"
-  },
-  "devDependencies": {
-    "@types/jquery": "^3.5.14"
-  }
+    "name": "intranat",
+    "version": "1.0.6",
+    "repository": "https://github.com/fadihanna123/Intranat.git",
+    "author": "fadihanna123 <fhanna181@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "jquery": "^3.6.0"
+    },
+    "devDependencies": {
+        "@types/jquery": "^3.5.14",
+        "prettier": "^2.6.2",
+        "@typescript-eslint/eslint-plugin": "^5.9.1",
+        "@typescript-eslint/parser": "^5.9.1",
+        "eslint": "^8.6.0",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-jsdoc": "^39.2.0",
+        "eslint-plugin-prefer-arrow": "^1.2.3"
+    }
 }
