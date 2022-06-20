@@ -1,6 +1,7 @@
 {
     "name": "intranat",
     "version": "1.0.7",
+    "private": "true",
     "repository": "https://github.com/fadihanna123/Intranat.git",
     "author": "fadihanna123 <fhanna181@gmail.com>",
     "license": "MIT",
