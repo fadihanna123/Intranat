@@ -1,6 +1,7 @@
 {
     "name": "intranat",
-    "version": "1.0.7",
+    "version": "1.0.8",
+    "lastUpgrade": "20220703",
     "private": "true",
     "repository": "https://github.com/fadihanna123/Intranat.git",
     "author": "fadihanna123 <fhanna181@gmail.com>",
@@ -10,13 +11,13 @@
     },
     "devDependencies": {
         "@types/jquery": "^3.5.14",
-        "prettier": "^2.7.1",
-        "@typescript-eslint/eslint-plugin": "^5.28.0",
-        "@typescript-eslint/parser": "^5.28.0",
-        "eslint": "^8.6.0",
+        "@typescript-eslint/eslint-plugin": "^5.30.4",
+        "@typescript-eslint/parser": "^5.30.4",
+        "eslint": "^8.19.0",
         "eslint-plugin-import": "^2.25.4",
-        "eslint-plugin-jsdoc": "^39.2.0",
+        "eslint-plugin-jsdoc": "^39.3.3",
         "eslint-plugin-prefer-arrow": "^1.2.3",
+        "prettier": "^2.7.1",
         "typescript": "^4.7.4"
     },
     "engines": {
