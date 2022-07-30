@@ -3,13 +3,11 @@
   "version": "1.0.8",
   "lastUpgrade": "20220703",
   "private": "true",
-  "repository": "https://github.com/fadihanna123/Intranat.git",
+  "repository": "https://github.com/fadihanna123/Intranat",
   "author": "fadihanna123 <fhanna181@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "jquery": "^3.6.0"
-  },
-  "devDependencies": {
+    "@manypkg/cli": "^0.19.1",
     "@types/jquery": "^3.5.14",
     "@typescript-eslint/eslint-plugin": "^5.30.4",
     "@typescript-eslint/parser": "^5.30.5",
@@ -18,6 +16,7 @@
     "eslint-plugin-jsdoc": "^39.3.3",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "husky": "^8.0.1",
+    "jquery": "^3.6.0",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   },
