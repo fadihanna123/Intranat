@@ -1,18 +1,20 @@
 // Implementerar Bootstrapvalidering i formulär.
 (() => {
   window.addEventListener(
-    "load",
+    'load',
     () => {
-      const forms = document.getElementsByClassName("needs-validation");
+      const forms = document.getElementsByClassName(
+        'needs-validation'
+      );
       Array.prototype.filter.call(forms, (form: HTMLFormElement) => {
         form.addEventListener(
-          "submit",
+          'submit',
           (event: Event) => {
             if (form.checkValidity() === false) {
               event.preventDefault();
               event.stopPropagation();
             }
-            form.classList.add("was-validated");
+            form.classList.add('was-validated');
           },
           false
         );
