@@ -1,7 +1,8 @@
 {
   "name": "intranat",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "lastUpgrade": "20220703",
+  "bugs": "https://github.com/fadihanna123/Intranat/issues",
   "private": "true",
   "repository": "https://github.com/fadihanna123/Intranat",
   "author": "fadihanna123 <fhanna181@gmail.com>",
