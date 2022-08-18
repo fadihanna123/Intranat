@@ -156,7 +156,7 @@ class Dashboard
                         <b>Födelsedatum: </b> 
                           $getbornday-$getbornmonth-$getbornyear<br />
                         <b>Kön: </b> $getsex<br />
-                       </p>
+                      </p>
                         <form action='admin.php' class='p-2' method='post'>
                           <input type='hidden' name='getid' value='$getid' />
                           <input name='adminapprovebtn' value='Godkänna' class='btn btn-primary w-100 btn-lg ' type='submit' />
@@ -508,7 +508,7 @@ class Dashboard
                   <div class='col-sm-3'>
                     <img src='$getavatar' class='img-fluid thumb' alt='Logotypen' /><br /><br />
                   </div>
-               </div>
+              </div>
               
               <div class='row'>
                   <label for='editaddressstreet' class='col-sm-2'>Gata:</label>
@@ -519,15 +519,15 @@ class Dashboard
               <label for='editaddressbox' class='col-sm-2'>Postnummer:</label>
                   <div class='col-sm-3'>
                         <input type='text' value='$getaddress_box' class='form-control mb-2' name='editaddressbox' id='editaddressbox' />
-                   </div>
+                  </div>
 
               </div>
 
             <div class='row'>
-                   <label for='editaddresscity' class='col-sm-2'>Stad:</label>
-                   <div class='col-sm-5'>
-                         <input type='text' value='$getaddress_city' class='form-control mb-2' name='editaddresscity' id='editaddresscity' />
-                   </div>
+                  <label for='editaddresscity' class='col-sm-2'>Stad:</label>
+                  <div class='col-sm-5'>
+                        <input type='text' value='$getaddress_city' class='form-control mb-2' name='editaddresscity' id='editaddresscity' />
+                  </div>
 
             <label for='editorgnr' class='col-sm-2'>Orgnr:</label>
                     <div class='col-sm-3'>
@@ -554,11 +554,11 @@ class Dashboard
                   <input type='color' value='$getfirstcolor' class='form-control mb-2' name='editfirstcolor' id='editfirstcolor' />
                 </div>
 
-         <label for='editsecondcolor' class='col-sm-2'>Sekundär färg:</label>
+        <label for='editsecondcolor' class='col-sm-2'>Sekundär färg:</label>
                   <div class='col-sm-3'>
                     <input type='color' value='$getsecondcolor' class='form-control mb-2' name='editsecondcolor' id='editsecondcolor' />
                   </div>
-         </div>
+        </div>
 
                 
           <div class='row'>
@@ -658,7 +658,7 @@ class Dashboard
         $sql = "SELECT * FROM FAQ";
         $result = $this->db->query($sql);
         echo '
-       <img src="Images/Ikoner/help.png" class="img-fluid FAQicon" alt="Hjälp ikon" />
+      <img src="Images/Ikoner/help.png" class="img-fluid FAQicon" alt="Hjälp ikon" />
         <h1 class="ml-5">FAQ</h1>
           <ul class="list-group">';
         $num = mysqli_num_rows($result);
@@ -687,10 +687,10 @@ class Dashboard
             }
 
             echo "
-       </ul>
-       </div>
+      </ul>
       </div>
-     </div>";
+      </div>
+    </div>";
         }
         // Slut om det finns frågor i databasen.
         else {
@@ -705,12 +705,12 @@ class Dashboard
         $sql = "SELECT * FROM users WHERE username='$_SESSION[loginuname]';";
         $result = $this->db->query($sql);
         echo '
-       <img src="Images/Ikoner/settings-1.png" class="img-fluid accountsettingsicon" alt="Inställningarsikon" />
-         <h2 class="rubrik specrubriktxt">Mitt konto</h2>
-           <p class="specrubriktxt">
-             Här kan du ändra dina kontouppgifter.
-           </p>
-           ';
+      <img src="Images/Ikoner/settings-1.png" class="img-fluid accountsettingsicon" alt="Inställningarsikon" />
+        <h2 class="rubrik specrubriktxt">Mitt konto</h2>
+          <p class="specrubriktxt">
+            Här kan du ändra dina kontouppgifter.
+          </p>
+          ';
         while ($getdata = mysqli_fetch_array($result)) {
             $getusername = mysqli_real_escape_string(
                 $this->db,
@@ -741,14 +741,14 @@ class Dashboard
             );
             // Kontoinställningsformulär.
             echo "
-               <form action='accountsettings.php' class='form-horizontal needs-validation' novalidate method='post' enctype='multipart/form-data'>
-                 <div class='row'>
-                       <label class='col-sm-2' for='editusername'>Användarnamn:</label>
-                       <div class='col-sm-5'>
-                           <input type='text' value='$getusername' class='form-control' name='editusername' id='editusername' />
-                       </div>
+              <form action='accountsettings.php' class='form-horizontal needs-validation' novalidate method='post' enctype='multipart/form-data'>
+                <div class='row'>
+                      <label class='col-sm-2' for='editusername'>Användarnamn:</label>
+                      <div class='col-sm-5'>
+                          <input type='text' value='$getusername' class='form-control' name='editusername' id='editusername' />
+                      </div>
 
-                       <label for='editfullname' class='col-sm-2'>Fullständigt namn:</label>
+                      <label for='editfullname' class='col-sm-2'>Fullständigt namn:</label>
                         <div class='col-sm-3'>
                           <input type='text' value='$getfullname' class='form-control mb-2' name='editfullname' id='editfullname' />
                         </div>
@@ -796,8 +796,8 @@ class Dashboard
                         <div class='col-sm-3'>
                           <input value='$gettfnr' class='form-control' name='edittfnr' id='edittfnr' />
                         </div>
-                   </div> 
-                   <br />
+                  </div> 
+                  <br />
                       <div class='row'>
                         <div class='mx-auto'>
                           <input class='btn btn-primary ml-1 btn-lg' name='editaccountbtn' id='editaccountbtn' type='submit' value='Uppdatera' />
@@ -1118,9 +1118,9 @@ class Dashboard
                 <th>Fil:</th>
                 <th>Filstorlek</th>    
                 <th>Ladda ner</th>    
-               </tr>
-             </thead>
-               <tbody>";
+              </tr>
+            </thead>
+              <tbody>";
         if ($num > 0) {
             // Om det finns arkivfiler i databasen.
             while ($getdata = mysqli_fetch_array($result)) {
@@ -1191,7 +1191,7 @@ class Dashboard
                     <option value=''>---</option>
                     <option value='news_categories'>Nyhetkategorier</option>
                     <option value='arkiv_categories'>Filarkivkategorier</option>
-                 </select>
+                </select>
               </div>
           </div>
           <br />
@@ -1215,8 +1215,8 @@ class Dashboard
         if ($addcatdb == "") {
             // Om användaren valde nyheterkategorier.
             echo "<div class='alert alert-danger'>
-               Du måste välja vilket register gäller det.
-               </div>";
+              Du måste välja vilket register gäller det.
+              </div>";
         } // Slut om användaren valde nyheterkategorier.
 
         if ($addcatdb == "arkiv_categories") {

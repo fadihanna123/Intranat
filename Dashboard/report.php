@@ -86,10 +86,10 @@
                   <label for='sickfrom' class='ml-3'>Från:*</label>
                       <input type='date' class='form-control' name='sickfrom' id='sickfrom' required />
                 </div>
-               </div>
+              </div>
 
               <div class='row'>
-               <div class='form-group col-md-9'>
+              <div class='form-group col-md-9'>
                   <label for='sickto' class='ml-3'>Till:</label>
                         <input type='date' class='form-control' name='sickto' id='sickto' />
                   </div>
@@ -121,7 +121,7 @@
                           <div class="row">
                             <div class="form-group col-md-9">
                               <label for="leavefrom" class="ml-3">Från:*</label>
-                                 <input type="date" class="form-control" name="leavefrom" id="leavefrom" required />
+                                <input type="date" class="form-control" name="leavefrom" id="leavefrom" required />
                             </div>
                       </div>
 

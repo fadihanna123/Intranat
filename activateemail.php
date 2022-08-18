@@ -7,7 +7,7 @@
 <div class="container-fluid text-center">
     <div class="mymain">
 
-    	  <h1>Verifiera e-postadress</h1>
+        <h1>Verifiera e-postadress</h1>
   <?php
 
     $getkey = $_GET['key'];

@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="mymain">
 
-    	  <h1>Verifiera e-postadress</h1>
+        <h1>Verifiera e-postadress</h1>
   <?php
   $getkey = $_GET['key'];
   $getuid = $_GET['uid'];

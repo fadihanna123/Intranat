@@ -20,7 +20,7 @@
   // Slut om det skickades varningsmeddelande i adressfältet.
 
 ?>
-   <!-- Mittenstext -->
+  <!-- Mittenstext -->
   <h1 class="rubrik text-center">Välkommen till<br /><?= $getname ?></h1>
 <p class="text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam aliquam<br /> 

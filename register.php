@@ -108,7 +108,7 @@
             // Om det saknas samtliga data för registrering.
             echo "<div class='alert alert-danger'>
                               Du behöver fylla in de obligatoriska fält.
-                   </div>";
+                  </div>";
         }
         // Slut om det saknas samtliga data för registrering.
         else {
@@ -186,7 +186,7 @@
                     else {
                         // Om e-postadressen hittades i databasen.
                         echo "<div class='alert alert-danger'>
-                             Den här e-postadressen är redan registrerad.<br /> 
+                            Den här e-postadressen är redan registrerad.<br /> 
                               Varsågod logga in 
                               <a href='login.php'>här</a>.
                           </div>";
@@ -224,7 +224,7 @@
 
       </div>
   </div>
-  	<!-- Registreringsformulär -->
+    <!-- Registreringsformulär -->
     <form action="<?= $_SERVER[
         'PHP_SELF'
     ] ?>" class="col-12 needs-validation" novalidate id="registerform" method="post" enctype="multipart/form-data">

@@ -143,16 +143,16 @@ class Functions
                       Du blev inloggad. <br />
                       Du skickas snart till Dashboard.
 
-                     </div>
+                    </div>
             <meta http-equiv="refresh" content="2; url=../Dashboard/index.php" />';
                 }
                 // Slut om administratören har godkänt registrering.
                 else {
                     // Om administratören inte har godkänt registrering.
                     echo '<div class="alert alert-info">
-                       Dina administratörer bör godkänna din registrering först.<br />
-                       Kontakta administratörer för mer information
-                     </div>';
+                      Dina administratörer bör godkänna din registrering först.<br />
+                      Kontakta administratörer för mer information
+                    </div>';
                 } // Slut om administratören inte har godkänt registrering.
             }
             // Slut om användaren är aktiv och verifierad.

@@ -102,7 +102,7 @@
                     <div class="form-group col-md-7 col-xs-12">
                       <label for="addtitle" class="ml-3">Rubrik:*</label>
                         <input type="text" name="addtitle" class="form-control ml-2" id="addtitle" required />
-                     </div>
+                    </div>
                   </div>
                   
                   <div class="row">
@@ -111,7 +111,7 @@
                           <select name="addcat" class="ml-1 form-control" id="addcat" required>';
         $dashboard->getList();
         echo '
-                       </div>
+                      </div>
                     </div>
 
 

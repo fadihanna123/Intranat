@@ -20,5 +20,5 @@ else {
 }
 // Slut om man är inloggad.
 ?></div>
-   </div>
+  </div>
 <?php require "Includes/footer.php"; ?>

@@ -30,7 +30,7 @@
         $dashboard->showFullContent($getid);
         echo "
               <form action='././deletenews.php?id=$getid' method='post' class='p-2'>
-                 <input class='btn btn-danger btn-lg' name='deletebtn' id='deletebtn' type='submit' value='Radera' />  
+                <input class='btn btn-danger btn-lg' name='deletebtn' id='deletebtn' type='submit' value='Radera' />  
               </form>
 
             ";

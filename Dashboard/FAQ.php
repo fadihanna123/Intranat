@@ -87,7 +87,7 @@
 
 
 <script>
-     // CKeditor inställningar.
+    // CKeditor inställningar.
         ClassicEditor
     .create( document.querySelector( '#addanswer' ), {
         toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
@@ -105,4 +105,3 @@
    
     </script>
 <?php require "Includes/footer.php"; ?>
-

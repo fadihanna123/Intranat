@@ -203,7 +203,7 @@
         // Mitt konto- och e-postadressändrings formulär.
         echo "
                     <div class='container-fluid'>
-                       <div class='row'>     
+                      <div class='row'>     
                         <div class='col-sm-6'>";
         $dashboard->GetAccountSettingsForm();
         echo "</div>
@@ -245,12 +245,12 @@
                         <div class='mx-auto'>
                           <input class='btn btn-primary ml-4 mb-2 btn-lg' name='editpswbtn' id='editpswbtn' type='submit' value='Ändra' />
                         </div>
-                   </div>
+                  </div>
 
                     
                 </form>
                 </div>
-               ";
+              ";
     }
     // Slut om man är inloggad.
     else {
@@ -261,7 +261,7 @@
 // Slut om man inte är inloggad.
 ?>
     <script>
-             // Den styr om lösenordet ska visas eller intei lösenordsändringsformulär.   
+            // Den styr om lösenordet ska visas eller intei lösenordsändringsformulär.   
             function showPsw() 
             {
               let x = document.getElementById("editpsw");

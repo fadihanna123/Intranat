@@ -33,7 +33,7 @@
                           <img src="Images/Ikoner/staff.png" class="icon img-fluid" alt="Personalsikon" />
                             Personal
                         </a>
-                   </li>
+                  </li>
                   
                   
                   <li class="nav-item">

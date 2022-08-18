@@ -97,9 +97,9 @@
                                                       <label id="addfilelabel" for="addfile">Dokument:*</label>
                                                         <input type="file" name="addfile" class="form-control" id="addfile" required />
                                                     </div>
-                                                 </div>
+                                                </div>
 
-                                                 <div class="row">
+                                                <div class="row">
                                                   <div class="form-group col-md-7">
                                                       <label for="addcat">Kategori:*</label>
                                                       <select name="addcat" id="addcat" class="ml-1 form-control">
@@ -135,7 +135,7 @@
     // Slut om användaren inte har administratörsbehörigheter.
     echo "
                     <img src='Images/Ikoner/arkiv.png' class='arkivicon img-fluid' alt='Filarkivikon' />
-                         <h1>Filarkiv</h1><br />";
+                        <h1>Filarkiv</h1><br />";
     $dashboard->GetArkiv($_SESSION['loginuname']);
     echo "</div>";
 }
@@ -146,11 +146,11 @@
       }
 // Slut om man inte är inloggad.
 ?>
-   </div>
-   </div>
+  </div>
+  </div>
 
-   <script>
-     // CKeditor inställningar.
+  <script>
+    // CKeditor inställningar.
         ClassicEditor
     .create( document.querySelector( '#adddes' ), {
         toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
@@ -168,4 +168,3 @@
    
     </script>
 <?php require "Includes/footer.php"; ?>
-

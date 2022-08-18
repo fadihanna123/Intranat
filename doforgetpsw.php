@@ -34,7 +34,7 @@
               // Om man inte fyllde in samtliga obligatoriska fält.
               echo "<div class='alert alert-danger'>
                       Du behöver fylla in samtliga fält.
-                     </div>";
+                    </div>";
           }
           // Slut om man inte fyllde in samtliga obligatoriska fält.
           else {
@@ -56,8 +56,8 @@
                       else {
                           // Om både lösenordsfält inte matchades.
                           echo "<div class='alert alert-danger'>
-                               Dina lösenordsfält matchas inte. <br />
-                               Du behöver kontrollera både lösenordsfält.
+                              Dina lösenordsfält matchas inte. <br />
+                              Du behöver kontrollera både lösenordsfält.
                               </div>";
                       } // Slut om både lösenordsfält matchades.
                   }
@@ -90,7 +90,7 @@
                   <label for='forgetpsw'>Det nya lösenordet:*</label>
                     <input type='password' name='forgetpsw' id='forgetpsw' class='form-control forgetpsw' required />
                   </div>
-               </div>
+              </div>
 
               <div class='row h-100 justify-content-center align-items-center'>
                 <div class='form-group'>
