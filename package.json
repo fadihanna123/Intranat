@@ -1,6 +1,6 @@
 {
   "name": "intranat",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "lastUpgrade": "20220703",
   "bugs": "https://github.com/fadihanna123/Intranat/issues",
   "private": "true",
@@ -10,8 +10,8 @@
   "dependencies": {
     "@manypkg/cli": "^0.19.1",
     "@types/jquery": "^3.5.14",
-    "@typescript-eslint/eslint-plugin": "^5.35.1",
-    "@typescript-eslint/parser": "^5.35.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
     "eslint": "^8.23.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsdoc": "^39.3.6",
