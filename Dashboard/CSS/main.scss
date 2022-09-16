@@ -1,10 +1,10 @@
 @charset "utf-8";
+
 // Definiera variabler
 $zero: 0;
 $hundrapercent: 100%;
 $fyrtiovh: 40vh;
 $twovh: 2vh;
-$important: !important;
 $onevw: 1vw;
 $onevh: 1vh;
 $minusseventtio: -70px;
@@ -17,19 +17,22 @@ $twentypx: 20px;
 $relative: relative;
 $threetiopercent: 30%;
 $minusone: -1px;
+
 * {
   /* Återställa alla margin till 0 */
   margin: $zero;
+
   /* Återställa alla padding till 0 */
   padding: $zero;
+
   /* Inkludera padding och ramkanter i bredden och höjden. */
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 %mymain {
   /* Flytta mittensinnehåll till vänster 300 pixlar. */
   margin-left: 300px;
+
   /* Flytta mittensinnehåll neråt 450 pixlar. */
   margin-top: -470px;
 }
@@ -37,10 +40,13 @@ $minusone: -1px;
 @mixin FAQicon {
   /* Låt ladda ner bilden ha bredden: 5 vw. */
   width: $onevw;
+
   /* Låt ladda ner bilden ha höjden: 1 vh. */
   height: $onevh;
+
   /* Flytta ikonen upåt till 60 pixlar. */
   margin-bottom: $minusseventtio;
+
   /* Flytta ikonen till vänster 10 pixlar. */
   margin-left: $tenpx;
 }
@@ -52,18 +58,21 @@ $minusone: -1px;
 
 .ck-editor__editable_inline {
   /* Höjden för Ckeditor container ska vara 40 vh. */
-  min-height: $fyrtiovh $important;
+  min-height: $fyrtiovh !important;
 }
 
 .FAQicon {
   /* Inkludera FAQiconskoden. */
   @include FAQicon;
 }
+
 .cardimage {
   /* Maxhöjden för kortbild ska vara 40 vh. */
   max-height: $fyrtiovh;
+
   /* Bredden för kortsbild ska vara 800 pixlar. */
   width: 80vw;
+
   /* Minsta höjd för kortsbild ska vara 35 vh. */
   min-height: 35vh;
 }
@@ -71,6 +80,7 @@ $minusone: -1px;
 .downloadicon {
   /* Låt ladda ner bilden ha bredden: 3 vw. */
   width: 3vw;
+
   /* Låt ladda ner bilden ha höjden: 3 vh. */
   height: 3vh;
 }
@@ -78,10 +88,13 @@ $minusone: -1px;
 .stafficon {
   /* Låt ladda ner bilden ha bredden: 1 vw. */
   width: $onevw;
+
   /* Låt ladda ner bilden ha höjden: 1 vh. */
   height: $onevh;
+
   /* Flytta ikonen upåt till 60 pixlar. */
   margin-bottom: $minussextio;
+
   /* Flytta ikonen till vänster 50 pixlar. */
   margin-left: $minusone;
 }
@@ -89,10 +102,13 @@ $minusone: -1px;
 .headicon {
   /* Låt ladda ner bilden ha bredden: 20 pixlar. */
   width: $twentypx;
+
   /* Låt ladda ner bilden ha höjden: 2 vh. */
   height: $twovh;
+
   /* Flytta ikonen upåt till 60 pixlar. */
   margin-bottom: $minussextio;
+
   /* Flytta ikonen till vänster 10 pixlar. */
   margin-left: $tenpx;
 }
@@ -100,10 +116,13 @@ $minusone: -1px;
 .uploadicon {
   /* Låt ladda ner bilden ha bredden: 20 pixlar. */
   width: $twentypx;
+
   /* Låt ladda ner bilden ha höjden: 2 vh. */
   height: $twovh;
+
   /* Flytta ikonen upåt till 60 pixlar. */
   margin-bottom: $minussextio;
+
   /* Flytta ikonen till vänster 10 pixlar. */
   margin-left: $tenpx;
 }
@@ -111,10 +130,13 @@ $minusone: -1px;
 .addicon {
   /* Låt ladda ner bilden ha bredden: 20 pixlar. */
   width: $twentypx;
+
   /* Låt ladda ner bilden ha höjden: 2 vh. */
   height: $twovh;
+
   /* Flytta ikonen upåt till 60 pixlar. */
   margin-bottom: $minussextio;
+
   /* Flytta ikonen till höger 7 pixlar. */
   margin-left: -7px;
 }
@@ -122,10 +144,13 @@ $minusone: -1px;
 .arkivicon {
   /* Låt ladda ner bilden ha bredden: 20 pixlar. */
   width: $twentypx;
+
   /* Låt ladda ner bilden ha höjden: 2 vh. */
   height: $twovh;
+
   /* Flytta ikonen upåt till 60 pixlar. */
   margin-bottom: $minussextio;
+
   /* Flytta ikonen till höger 41 pixlar. */
   margin-left: -41px;
 }
@@ -133,10 +158,13 @@ $minusone: -1px;
 .adminicon {
   /* Låt ladda ner bilden ha bredden: 20 pixlar. */
   width: $twentypx;
+
   /* Låt ladda ner bilden ha höjden: 2 vh. */
   height: 2vh;
+
   /* Flytta ikonen upåt till 60 pixlar. */
   margin-bottom: $minussextio;
+
   /* Flytta ikonen till höger 10 pixlar. */
   margin-left: -$tenpx;
 }
@@ -144,10 +172,13 @@ $minusone: -1px;
 .accountsettingsicon {
   /* Låt ladda ner bilden ha bredden: 20 pixlar. */
   width: $twentypx;
+
   /* Låt ladda ner bilden ha höjden: 2 vh. */
   height: $twovh;
+
   /* Flytta ikonen upåt till 60 pixlar. */
   margin-bottom: $minussextio;
+
   /* Flytta ikonen till höger 10 pixlar. */
   margin-left: -$tenpx;
 }
@@ -155,10 +186,13 @@ $minusone: -1px;
 .emailicon {
   /* Låt ladda ner bilden ha bredden: 20 pixlar. */
   width: $twentypx;
+
   /* Låt ladda ner bilden ha höjden: 2 vh. */
   height: $twovh;
+
   /* Flytta ikonen upåt till 60 pixlar. */
   margin-bottom: $minussextio;
+
   /* Flytta ikonen till höger 10 pixlar. */
   margin-left: -$tenpx;
 }
@@ -166,10 +200,13 @@ $minusone: -1px;
 .pswicon {
   /* Låt ladda ner bilden ha bredden: 20 pixlar. */
   width: $twentypx;
+
   /* Låt ladda ner bilden ha höjden: 2 vh. */
   height: $twovh;
+
   /* Flytta ikonen upåt till 60 pixlar. */
   margin-bottom: $minussextio;
+
   /* Flytta ikonen till höger 10 pixlar. */
   margin-left: -$tenpx;
 }
@@ -177,10 +214,13 @@ $minusone: -1px;
 .specheadicon {
   /* Låt ladda ner bilden ha bredden: 20pixlar. */
   width: $twentypx;
+
   /* Låt ladda ner bilden ha höjden: 2 vh. */
   height: $twovh;
+
   /* Flytta ikonen uppåt till 60 pixlar. */
   margin-bottom: $minussextio;
+
   /* Flytta ikonen till vänster 10 pixlar. */
   margin-left: $tenpx;
 }
@@ -188,10 +228,13 @@ $minusone: -1px;
 .specheadicon2 {
   /* Låt ladda ner bilden ha bredden: 20 pixlar. */
   width: $twentypx;
+
   /* Låt ladda ner bilden ha höjden: 2 vh. */
   height: $twovh;
+
   /* Flytta ikonen upåt till 60 pixlar. */
   margin-bottom: $minussextio;
+
   /* Flytta ikonen till vänster 10 pixlar. */
   margin-left: $twentypx;
 }
@@ -199,6 +242,7 @@ $minusone: -1px;
 .specrubriktxt {
   /* Positionera elementet till sitt normala position. */
   position: $relative;
+
   /* Flytta texten till vänster 20 pixlar. */
   left: $twentypx;
   z-index: -1;
@@ -207,8 +251,10 @@ $minusone: -1px;
 .navlinks {
   /* Låt länkarna ha textstorlek: 20 pixlar. */
   font-size: $twentypx;
+
   /* Visa den som flex-behållare. */
-  display: flex $important;
+  display: flex !important;
+
   /* Centrera navigeringslänkar. */
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -218,6 +264,7 @@ $minusone: -1px;
 .thumb {
   /* Bredden för nyhetsbilder ska vara 150 pixlar. */
   width: 150px;
+
   /* Höjden för nyhetsbilder ska vara 15 vh. */
   height: 15vh;
 }
@@ -225,6 +272,7 @@ $minusone: -1px;
 .newsimg {
   /* Bredden för nyhetsbilder ska vara 32 vw. */
   width: 32vw;
+
   /* Höjden för nyhetsbilder ska vara 20 vh. */
   height: 20vh;
 }
@@ -232,6 +280,7 @@ $minusone: -1px;
 #logobild {
   /* Låt breeden för logobilden ha 250 pixlar. */
   width: 250px;
+
   /* Låt breeden för logobilden vara automatiskt. */
   height: auto;
 }
@@ -244,17 +293,20 @@ $minusone: -1px;
 .dashboardnav {
   /* Låt navigeringsmeny ha bredden: 270 pixlar. */
   width: 270px;
+
   /* Visa den som flex-behållare. */
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: box;
+  display: flexbox;
   display: flex;
 }
 
 .icon {
   /* Ikonerna ska ha bredden 15 pixlar. */
   width: 15px;
+
   /* Ikonerna ska ha höjden 1.5 vh. */
   height: 1.5vh;
+
   /* Ikonera ska flyttas 3 pixlar upåt, 7 pixlar högeråt, 0 nedåt och 0 vänsteråt. */
   margin: 3px 7px 0 0;
 }
@@ -262,6 +314,7 @@ $minusone: -1px;
 .spec {
   /* Positionera elementet till normala position. */
   position: $relative;
+
   /* Flytta den till vänster 22 pixlar. */
   left: 5px;
   z-index: $minusone;
@@ -270,8 +323,10 @@ $minusone: -1px;
 .leaveicon {
   /* Bredden ska vara 20 pixlar. */
   width: $twentypx;
+
   /* Höjden ska vara 2 vh. */
   height: $twovh;
+
   /* Flytta ikonen upåt 75 pixlar. */
   margin-bottom: -75px;
 }
@@ -305,10 +360,13 @@ $minusone: -1px;
   body {
     /* Låt sidors innehåll den bredd 100%. */
     width: 100%;
+
     /* Ta bort alla margin från alla sidor. */
     margin: 0;
+
     /* Låt texten vara responsivt att ha 100% beroende på skärmens storlek. */
     font-size: 100%;
+
     /* Dölja den klippta del och dölja rullningslistan i vänster- och högersdelar. */
     overflow-x: hidden;
   }
@@ -336,6 +394,7 @@ $minusone: -1px;
   .mymain {
     /* Visa den som tabellcell. */
     display: table-cell;
+
     /* Låt den ha bredden 1000 pixlar. */
     width: 1000px;
   }
@@ -388,6 +447,7 @@ $minusone: -1px;
   .logoutbtn {
     /* Flytta Logga ut knappen till vänster 70 pixlar. */
     margin-left: 70px;
+
     /* Flytta Logga ut knappen till vänster 70 pixlar. */
     margin-top: $twentypx;
   }
@@ -395,6 +455,7 @@ $minusone: -1px;
   .inloggad {
     /* Positionera elementet till den normala position. */
     position: $relative;
+
     /* Flytta elementet till höger 40 pixlar. */
     right: 52px;
   }
@@ -422,6 +483,7 @@ $minusone: -1px;
   .specheadicon2 {
     /* Flytta ikonen upåt till 40 pixlar. */
     margin-bottom: $minusfyrtio;
+
     /* Flytta ikonen till vänster 20 pixlar. */
     margin-left: $twentypx;
   }
@@ -454,26 +516,32 @@ $minusone: -1px;
   .stafficon {
     /* Låt ladda ner bilden ha bredden: 4 vw. */
     width: 4vw;
+
     /* Låt ladda ner bilden ha höjden: 1 vh. */
     height: $onevh;
+
     /* Flytta ikonen upåt till 60 pixlar. */
     margin-bottom: $minusseventtio;
+
     /* Flytta ikonen till vänster 1 pixlar. */
     margin-left: $minusone;
   }
 
   .ck-editor__top {
     /* Max bredden ska vara 99.4% av hela skärmen. */
-    max-width: 99.4% $important;
+    max-width: 99.4% !important;
   }
 
   .FAQicon {
     /* Låt ladda ner bilden ha bredden: 5 vw. */
     width: 5vw;
+
     /* Låt ladda ner bilden ha höjden: 1 vh. */
     height: $onevh;
+
     /* Flytta ikonen upåt till 60 pixlar. */
     margin-bottom: $minusseventtio;
+
     /* Flytta ikonen till höger 1 pixlar. */
     margin-left: $minusone;
   }
@@ -481,10 +549,13 @@ $minusone: -1px;
   .leaveicon {
     /* Bredden ska vara 20 pixlar. */
     width: $twentypx;
+
     /* Höjden ska vara 2 vh. */
     height: $twovh;
+
     /* Flytta ikonen upåt 60 pixlar. */
     margin-bottom: $minussextio;
+
     /* Flytta ikonen till vänster 10 pixlar. */
     margin-left: $tenpx;
   }
@@ -492,10 +563,13 @@ $minusone: -1px;
   .addicon {
     /* Låt ladda ner bilden ha bredden: 20 pixlar. */
     width: $twentypx;
+
     /* Låt ladda ner bilden ha höjden: 2 vh. */
     height: $twovh;
+
     /* Flytta ikonen upåt till 66 pixlar. */
     margin-bottom: -66px;
+
     /* Flytta ikonen till höger 10 pixlar. */
     margin-left: -10px;
   }

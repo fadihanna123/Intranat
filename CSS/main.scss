@@ -1,21 +1,25 @@
 @charset "UTF-8";
+
 // Definera variabler
 $zero: 0;
 $hundrapercent: 100%;
 $twoem: 2em;
+
 * {
   /* Återställa alla margin till 0 */
   margin: $zero;
+
   /* Återställa alla padding till 0 */
   padding: $zero;
+
   /* Inkludera padding och ramkanter i bredd och höjd. */
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .icon {
   /* Ikonerna ska ha bredden 20px. */
   width: 20px;
+
   /* Ikonerna ska ha höjden 2 vh. */
   height: 2vh;
 }
@@ -38,6 +42,7 @@ $twoem: 2em;
 #sidfoten {
   /* Låt texten ha fetstil i sidfoten. */
   font-weight: bold;
+
   /* Låt texten ha textstorlek: 1.5 em i sidfoten. */
   font-size: 1.5em;
 }
@@ -59,8 +64,10 @@ $twoem: 2em;
       body {
         /* Låt hela sidan ha bredden 100%. */
         width: $hundrapercent;
+
         /* Ta bort uttrymme från alla sidor. */
         margin: $zero;
+
         /* Låt texten vara responsivt att ha 100% beroende på skärmens storlek */
         font-size: $hundrapercent;
       }
@@ -93,6 +100,7 @@ $twoem: 2em;
       #main {
         /* Visa innehållet som tabellcell. */
         display: table-cell;
+
         /* Låt innehållet ha bredden 1000 vw. */
         width: 1000vw;
       }
