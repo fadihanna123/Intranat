@@ -1,3 +1,7 @@
-node_modules/
+node_modules/*
 Dashboard/ckeditor5/README.md
+Dashboard/ckeditor5/node_modules/*
+Dashboard/ckeditor5/pnpm-lock.yaml
+pnpm-lock.yaml
 README.md
+.vscode/*

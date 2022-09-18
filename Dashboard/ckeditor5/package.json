@@ -33,6 +33,7 @@
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-jsdoc": "^39.3.6",
         "eslint-plugin-prefer-arrow": "^1.2.3",
+        "htmlhint": "^1.1.4",
         "postcss-loader": "^7.0.1",
         "prettier": "^2.7.1",
         "raw-loader": "^4.0.2",
