@@ -2,7 +2,7 @@
  <div class="container-fluid">
     <footer class="jumbotron bg-light h-25 text-center" id="sidfoten">
         <?php echo $getname; ?><br />
-        &copy;  Copyright 2020 <?php echo $getname; ?>. 
+        &copy;  Copyright 2022 <?php echo $getname; ?>. 
     <br />
     </footer>
   </div>

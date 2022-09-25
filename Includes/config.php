@@ -11,4 +11,4 @@ spl_autoload_register(function ($class) {
 define("DB_HOST", "localhost");
 define("DB_USRNAME", "root");
 define("DB_PSW", "");
-define("DB_NAME", "");
+define("DB_NAME", "intranat");
