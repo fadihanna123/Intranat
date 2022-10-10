@@ -4,3 +4,4 @@ Dashboard/ckeditor5/node_modules/*
 Dashboard/ckeditor5/pnpm-lock.yaml
 pnpm-lock.yaml
 README.md
+.github/*
