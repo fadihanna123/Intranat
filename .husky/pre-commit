@@ -4,6 +4,6 @@
 pnpm i
 pnpm manypkg check
 npx stylelint "**/*.scss"
-eslint .
+pnpm lint
 npx pretty-quick --staged
-rimraf node_modules
+rm -rf node_modules
