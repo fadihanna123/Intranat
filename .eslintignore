@@ -1,6 +1,6 @@
-.eslintrc.js
-Dashboard/ckeditor5/.eslintrc.js
-Dashboard/ckeditor5/webpack.config.js
-node_modules
+node_modules/*
 *.html
-*.js
+Js/*
+Dashboard/Js/*
+Dashboard/ckeditor5/webpack.config.js
+.eslintrc.js

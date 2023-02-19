@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "baseUrl": ".",
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
   },
-  "exclude": ["node_modules", "Dashboard/ckeditor5/node_modules"]
+  "include": ["TS/**/*", "Dashboard/TS/**/*", "Dashboard/ckeditor5/**/*"],
+  "exclude": ["node_modules", "Dashboard/node_modules"]
 }
