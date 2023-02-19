@@ -156,4 +156,3 @@ const config = {
 };
 
 module.exports = config;
-console.log('hej');
