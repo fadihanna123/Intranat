@@ -2,7 +2,7 @@
   "name": "ckeditor5-custom-build",
   "author": "CKSource",
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder.",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "license": "SEE LICENSE IN LICENSE.md",
   "private": true,
   "lastUpgrade": "20230201",
@@ -13,6 +13,7 @@
     "@ckeditor/ckeditor5-basic-styles": "^36.0.0",
     "@ckeditor/ckeditor5-block-quote": "^36.0.0",
     "@ckeditor/ckeditor5-ckfinder": "^36.0.0",
+    "@ckeditor/ckeditor5-core": "^36.0.1",
     "@ckeditor/ckeditor5-dev-utils": "^33.0.0",
     "@ckeditor/ckeditor5-dev-webpack-plugin": "^31.1.13",
     "@ckeditor/ckeditor5-editor-classic": "^36.0.0",
@@ -42,8 +43,10 @@
     "webpack-cli": "^5.0.1"
   },
   "scripts": {
-    "build": "webpack --mode production",
-    "lint": "eslint ."
+    "build": "pnpm prebuild && webpack --mode production",
+    "prebuild": "rm -rf build",
+    "lint": "eslint .",
+    "format": "prettier -w ."
   },
   "dependencies": {
     "normalize-url": "8.0.0",

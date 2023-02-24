@@ -34,7 +34,6 @@ module.exports = {
   optimization: {
     minimizer: [
       new TerserWebpackPlugin({
-        sourceMap: true,
         terserOptions: {
           output: {
             // Preserve CKEditor 5 license comments.
@@ -58,7 +57,7 @@ module.exports = {
       raw: true,
     }),
   ],
-
+  stats: 'minimal',
   module: {
     rules: [
       {
