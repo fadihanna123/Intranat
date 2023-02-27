@@ -1,4 +1,5 @@
 'use strict';
+import $ from 'jquery';
 
 // Implementerar kontroll om lösenordet är mindre än 6 tecken.
 $(document).on('ready', () => {

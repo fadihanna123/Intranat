@@ -8,6 +8,11 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["TS/**/*", "Dashboard/TS/**/*", "Dashboard/ckeditor5/**/*"],
+  "include": [
+    "TS/**/*",
+    "Dashboard/TS/**/*",
+    "Dashboard/ckeditor5/**/*",
+    ".eslintrc.js"
+  ],
   "exclude": ["node_modules", "Dashboard/node_modules"]
 }

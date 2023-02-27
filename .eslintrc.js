@@ -8,12 +8,14 @@ const config = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    'eslint:recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['tsconfig.json'],
     sourceType: 'module',
     tsconfigRootDir: __dirname,
+    ecmaVersion: 2023,
   },
   plugins: [
     'eslint-plugin-import',
