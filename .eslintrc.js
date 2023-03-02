@@ -15,7 +15,7 @@ const config = {
     project: ['tsconfig.json'],
     sourceType: 'module',
     tsconfigRootDir: __dirname,
-    ecmaVersion: 2023,
+    ecmaVersion: 'latest',
   },
   plugins: [
     'eslint-plugin-import',
