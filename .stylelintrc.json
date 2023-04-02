@@ -2,6 +2,7 @@
   "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
   "rules": {
     "selector-class-pattern": null,
-    "scss/at-mixin-pattern": null
+    "scss/at-mixin-pattern": null,
+    "media-feature-range-notation": null
   }
 }

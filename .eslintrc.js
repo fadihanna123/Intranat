@@ -2,13 +2,19 @@ const config = {
   env: {
     browser: true,
     es2022: true,
-    node: true,
   },
   root: true,
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'eslint:recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+    'plugin:jsdoc/recommended',
+    'plugin:jsdoc/recommended-error',
+    'plugin:jsdoc/recommended-typescript',
+    'plugin:jsdoc/recommended-typescript-error',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -22,8 +28,29 @@ const config = {
     'eslint-plugin-jsdoc',
     'eslint-plugin-prefer-arrow',
     '@typescript-eslint',
+    'jsdoc',
+    'prefer-arrow',
+    'html',
+    'css',
+    'php-markup',
   ],
+  settings: {
+    'php/php-extensions': ['.php'],
+    'php/markup-replacement': { php: '', '=': '0' },
+    'php/keep-eol': false,
+    'php/remove-whitespace': false,
+    'php/remove-empty-line': false,
+    'php/remove-php-lint': false,
+  },
   rules: {
+    'prefer-arrow/prefer-arrow-functions': [
+      'warn',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false,
+      },
+    ],
     'no-console': 'error',
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/adjacent-overload-signatures': 'error',
@@ -143,7 +170,6 @@ const config = {
     'object-curly-newline': 'error',
     'object-shorthand': 'off',
     'one-var': ['error', 'never'],
-    'prefer-arrow/prefer-arrow-functions': 'error',
     'prefer-const': 'error',
     quotes: ['warn', 'single'],
     radix: 'error',
@@ -157,6 +183,9 @@ const config = {
     ],
     'use-isnan': 'error',
     'valid-typeof': 'off',
+    'no-undef': 'off',
+    'jsdoc/check-values': 'off',
+    'import/no-unresolved': 'off',
   },
 };
 
