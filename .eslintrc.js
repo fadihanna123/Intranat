@@ -1,3 +1,6 @@
+/**
+ * @type{import("eslint").Linter.Config}
+ */
 const config = {
   env: {
     browser: true,
@@ -6,7 +9,6 @@ const config = {
   root: true,
   extends: [
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
     'eslint:recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
@@ -43,6 +45,7 @@ const config = {
     'php/remove-php-lint': false,
   },
   rules: {
+    'jsdoc/check-tag-names': 'off',
     'prefer-arrow/prefer-arrow-functions': [
       'warn',
       {
