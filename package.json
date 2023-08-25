@@ -1,22 +1,27 @@
 {
   "name": "intranat",
-  "version": "1.0.24",
-  "lastUpgrade": "20230706",
+  "version": "1.0.25",
+  "lastUpgrade": "20230825",
   "bugs": "https://github.com/fadihanna123/Intranat/issues",
   "private": "true",
   "repository": "https://github.com/fadihanna123/Intranat",
-  "author": "fadihanna123 <fhanna181@gmail.com>",
+  "author": {
+    "name": "Fadi Hanna",
+    "email": "fhanna181@gmail.com"
+  },
   "license": "MIT",
   "scripts": {
+    "openWebPage": "start http://localhost:8000",
+    "preview": "pnpm openWebPage && php -S localhost:8000",
     "lint": "eslint .",
     "format": "prettier -w ."
   },
   "dependencies": {
     "@manypkg/cli": "^0.21.0",
     "@types/jquery": "^3.5.17",
-    "@types/node": "^20.5.4",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
+    "@types/node": "^20.5.6",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-css": "^0.8.1",
@@ -32,11 +37,11 @@
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-config-standard-scss": "^10.0.0",
-    "typescript": "^5.2.2"
+    "typescript": "^4.3.5"
   },
   "engines": {
     "node": ">=14.12.0",
-    "npm": "Please use pnpm instead of NPM to install dependencies",
-    "yarn": "Please use pnpm instead of Yarn to install dependencies"
+    "npm": "Please use Pnpm instead of NPM to install dependencies",
+    "yarn": "Please use Pnpm instead of Yarn to install dependencies"
   }
 }
