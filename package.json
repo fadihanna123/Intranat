@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@manypkg/cli": "^0.21.0",
-    "@types/jquery": "^3.5.17",
+    "@types/jquery": "^3.5.18",
     "@types/node": "^20.5.9",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.6.0",
@@ -36,7 +36,7 @@
     "prettier": "^3.0.3",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
-    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-config-standard-scss": "^11.0.0",
     "typescript": "^5.2.2"
   },
   "engines": {
