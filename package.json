@@ -19,7 +19,7 @@
   "dependencies": {
     "@manypkg/cli": "^0.21.0",
     "@types/jquery": "^3.5.18",
-    "@types/node": "^20.6.0",
+    "@types/node": "^20.6.1",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
     "eslint": "^8.49.0",
