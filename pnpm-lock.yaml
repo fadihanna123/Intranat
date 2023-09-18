@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.21.0
     version: 0.21.0
   '@types/jquery':
-    specifier: ^3.5.18
-    version: 3.5.18
+    specifier: ^3.5.19
+    version: 3.5.19
   '@types/node':
     specifier: ^20.6.1
     version: 20.6.1
@@ -290,8 +290,8 @@ packages:
       defer-to-connect: 1.1.3
     dev: false
 
-  /@types/jquery@3.5.18:
-    resolution: {integrity: sha512-sNm7O6LECFhHmF+3KYo6QIl2fIbjlPYa0PDgDQwfOaEJzwpK20Eub9Ke7VKkGsSJ2K0HUR50S266qYzRX4GlSw==}
+  /@types/jquery@3.5.19:
+    resolution: {integrity: sha512-KFbmk+dXfphHGuVCmlopgcNRCegN/21mkeoD4BzuJhVH0SJW3Uo2mLuAwb6oqTNV79EsRp6J7yC1BbKymjpx/g==}
     dependencies:
       '@types/sizzle': 2.3.3
     dev: false
