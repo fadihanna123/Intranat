@@ -41,7 +41,7 @@
     "eslint-plugin-jsdoc": "^46.5.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "normalize-url": "8.0.0",
-    "postcss": "^8.4.28",
+    "postcss": "^8.4.31",
     "postcss-loader": "^7.3.3",
     "prettier": "^3.0.2",
     "raw-loader": "^4.0.2",
