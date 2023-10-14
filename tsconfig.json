@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "alwaysStrict": true,
     "baseUrl": ".",
     "module": "commonjs",
     "esModuleInterop": true,
