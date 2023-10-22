@@ -1,6 +1,4 @@
-'use strict';
-import $ from 'jquery';
-
+// @ts-check
 // Implementerar kontroll om lösenordet är mindre än 6 tecken.
 $(document).on('ready', () => {
   $('#registerpsw').on('click', () => {

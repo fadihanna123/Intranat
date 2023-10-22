@@ -230,55 +230,55 @@
         'PHP_SELF'
     ] ?>" class="col-12 needs-validation" novalidate id="registerform" method="post" enctype="multipart/form-data">
       
-          <div class="row mb-3 h-100 justify-content-center align-items-center">
+          <div class="row mb-3 justify-content-center align-items-center">
               <label for="registerfname" class="col-form-label col-sm-4">Förnamn:*</label>
               <div class="col-sm-5">
                 <input type="text" class="form-control" name="registerfname" id="registerfname" required />
               </div>
           </div>
 
-          <div class="row h-100 justify-content-center align-items-center">
+          <div class="row justify-content-center align-items-center">
                 <label for="registerlname" class="col-form-label col-sm-4">Efternamn:*</label>
                 <div class="col-sm-5">
                   <input type="text" class="form-control" name="registerlname" id="registerlname" required /><br />
                 </div>
           </div>
 
-          <div class="row mb-3 h-100 justify-content-center align-items-center">
+          <div class="row mb-3 justify-content-center align-items-center">
                 <label for="registerepost" class="col-form-label col-sm-4">E-postadress:*</label>
                 <div class="col-sm-5">
                   <input type="email" class="form-control" name="registerepost" id="registerepost" required /><br />
                 </div>
             </div>
 
-            <div class="row mb-3 h-100 justify-content-center align-items-center">
+            <div class="row mb-3 justify-content-center align-items-center">
                 <label for="registermobnr" class="col-form-label col-sm-4">Mobilnummer:*</label>
                 <div class="col-sm-5">
                   <input type="text" class="form-control" name="registermobnr" id="registermobnr" required /><br />
                 </div>
             </div>
 
-            <div class="row mb-3 h-100 justify-content-center align-items-center">
+            <div class="row mb-3 justify-content-center align-items-center">
                 <label for="registertfnr" class="col-form-label col-sm-4">Telefonnummer:*</label>
                 <div class="col-sm-5">
                   <input type="text" class="form-control" name="registertfnr" id="registertfnr" required /><br />
                 </div>
               </div>
 
-            <div class="row mb-3 h-100 justify-content-center align-items-center">
+            <div class="row mb-3 justify-content-center align-items-center">
               <label for="registerpsw" class="col-form-label col-sm-4">Lösenord:*</label>
               <div class="col-sm-5">
                 <input autocomplete="on" type="password" class="form-control" name="registerpsw" id="registerpsw" required /><br />
               </div>
             </div>
 
-            <div class="row mb-3 h-100 justify-content-center align-items-center">
+            <div class="row mb-3 justify-content-center align-items-center">
                 <label for="registerwork" class="col-form-label col-sm-4">Yrkestitel:*</label>
                 <div class="col-sm-5">
                   <input type="text" class="form-control" name="registerwork" id="registerwork" required /><br />
                 </div>
             </div>
-          <div class="row mb-3 h-100 justify-content-center align-items-center">
+          <div class="row mb-3 justify-content-center align-items-center">
                 <label id="bornlabel" class="col-form-label col-sm-4">Födelsedatum:*</label>
                 <div class="col-sm-2">
                   <select class="form-select mb-1" name="registerbornday" id="registerbornday" required>
@@ -461,18 +461,18 @@
         <div class="row mb-3">
           <label class="col-form-label col-sm-7">Kön:*</label>
           <div class="form-check">
-              <input class="form-check-input registersex" type="radio" name="registersex" value="Man" required />
+              <input class="registersex" type="radio" name="registersex" value="Man" required />
               <label class="form-check-label">Man</label>
           </div>
 
           <div class="form-check">
-              <input class="form-check-input registersex" type="radio" name="registersex" value="Kvinna" required />
+              <input class="registersex" type="radio" name="registersex" value="Kvinna" required />
               <label class="form-check-label">Kvinna</label>
           </div>
 
         </div>
 
-        <div class="row mb-3 h-100 justify-content-center align-items-center">
+        <div class="row mb-3 justify-content-center align-items-center">
           <label class="col-form-label col-sm-4">Bild:</label>
           <div class="col-sm-5">
               <input type="file" name="registerimg" class="form-control col-sm-3 mx-auto" accept="image/*" id="registerimg" />

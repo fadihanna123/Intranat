@@ -54,17 +54,17 @@
       </div>
   </div>
     <!-- Inloggningsformulär -->
-    <div class="container h-100">
+    <div class="container">
       <form action="<?= $_SERVER[
           'PHP_SELF'
       ] ?>" method="post" class="needs-validation col-4 mx-auto" novalidate>
-      <div class="row mb-3 h-100 justify-content-center align-items-center">
+      <div class="row mb-3  justify-content-center align-items-center">
           <label for="loginuname" class="col-form-label col-sm-4">Användarnamn:</label>
           <div class="col-sm-7">
             <input type="text" name="loginuname" id="loginuname" class="form-control" required />
           </div>
       </div>
-      <div class="row h-100 justify-content-center align-items-center">
+      <div class="row justify-content-center align-items-center">
           <label for="loginpsw" class="col-form-label col-sm-4">Lösenord:</label>
          <div class="col-sm-7">
             <input autocomplete="on" type="password" class="form-control" id="loginpsw" name="loginpsw" required /><br />

@@ -1,3 +1,4 @@
+// @ts-check
 // Implementerar Bootstrapvalidering i formulär.
 (() => {
   window.addEventListener(
