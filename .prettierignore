@@ -1,8 +1,8 @@
 node_modules/*
 Dashboard/ckeditor5/README.md
 Dashboard/ckeditor5/node_modules/*
-Dashboard/ckeditor5/pnpm-lock.yaml
-pnpm-lock.yaml
+Dashboard/ckeditor5/yarn.lock
+yarn.lock
 README.md
 .github/*
 Js/*
