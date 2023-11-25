@@ -8,7 +8,9 @@
       Array.prototype.filter.call(forms, function (form) {
         form.addEventListener(
           'submit',
-          function (event) {
+          function (
+            /** @type {{ preventDefault: () => void; stopPropagation: () => void; }} */ event
+          ) {
             if (form.checkValidity() === false) {
               event.preventDefault();
               event.stopPropagation();

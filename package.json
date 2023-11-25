@@ -42,5 +42,10 @@
   "engines": {
     "node": ">=16.0.0",
     "npm": "Please use Yarn instead of NPM to install dependencies"
+  },
+  "devDependencies": {
+    "eslint-plugin-editorconfig": "^4.0.3",
+    "eslint-plugin-sql": "^2.5.0",
+    "stylelint-scss": "^5.3.1"
   }
 }

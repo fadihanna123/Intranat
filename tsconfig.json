@@ -28,6 +28,10 @@
     "noUncheckedIndexedAccess": true,
     "removeComments": true
   },
-  "include": ["TS/**/*", "Dashboard/TS/**/*", "Dashboard/js/main.js"],
-  "exclude": ["node_modules", "Dashboard/ckeditor5/node_modules"]
+  "include": ["TS/**/*", "Dashboard/TS/**/*"],
+  "exclude": [
+    "node_modules",
+    "Dashboard/ckeditor5/node_modules",
+    "Dashboard/Js/main.js"
+  ]
 }

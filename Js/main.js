@@ -1,3 +1,4 @@
+// @ts-nocheck
 $(document).on('ready', () => {
     $('#registerpsw').on('click', () => {
         if ($('#registerpsw').val()[0].length >= 6) {
@@ -22,4 +23,5 @@ $(document).on('ready', () => {
         });
     }, false);
 })();
+
 export {};

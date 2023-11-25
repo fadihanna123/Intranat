@@ -32,18 +32,14 @@ main .ck-editor[role='application'] .ck.ck-content,
   background: #fff;
   border: 1px solid hsl(0deg 0% 70%);
   width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .ck.ck-editor {
   /* To enable toolbar wrapping. */
   width: 100%;
   overflow-x: hidden;
-}
-
-/* Because of sidebar `position: relative`, Edge is overriding the outline of a focused editor. */
-.ck.ck-editor__editable {
-  position: relative;
-  z-index: 10;
 }
 
 /* --------- DECOUPLED (DOCUMENT) BUILD. --------------------------------------------- */
@@ -72,13 +68,6 @@ body[data-editor='DecoupledDocumentEditor'] .row-editor {
   border: 1px solid hsl(0deg 0% 77%);
 }
 
-body[data-editor='DecoupledDocumentEditor'] .sidebar {
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-}
-
-/* --------- COMMENTS & TRACK CHANGES FEATURE ---------------------------------------------------------------------- */
 .sidebar {
   padding: 0 15px;
   position: relative;
@@ -92,6 +81,14 @@ body[data-editor='DecoupledDocumentEditor'] .sidebar {
   min-height: 100%;
   flex-grow: 1;
 }
+
+body[data-editor='DecoupledDocumentEditor'] .sidebar {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+/* --------- COMMENTS & TRACK CHANGES FEATURE ---------------------------------------------------------------------- */
 
 /* Do not inherit styles related to the editable editor content. See line 25. */
 .sidebar .ck-content[role='textbox'],
@@ -176,6 +173,16 @@ body[data-editor='DecoupledDocumentEditor'] .sidebar {
   border: 1px solid hsl(0deg 0% 77%);
 }
 
+.presence,
+.collaboration-demo__row {
+  transition: 0.2s opacity;
+}
+
+.collaboration-demo--ready .presence,
+.collaboration-demo--ready .collaboration-demo__row {
+  opacity: 1;
+}
+
 body[data-editor='InlineEditor'] .collaboration-demo__row {
   border: 0;
 }
@@ -186,11 +193,6 @@ body[data-editor='InlineEditor'] .collaboration-demo__row {
   padding: 1.25rem;
 }
 
-.presence,
-.collaboration-demo__row {
-  transition: 0.2s opacity;
-}
-
 .collaboration-demo__topbar {
   background: #fff;
   border: 1px solid var(--ck-color-toolbar-border);
@@ -199,6 +201,23 @@ body[data-editor='InlineEditor'] .collaboration-demo__row {
   align-items: center;
   border-bottom: 0;
   border-radius: 4px 4px 0 0;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 8px 16px;
+  font-size: 1rem;
+  user-select: none;
+  border-radius: 4px;
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+  background-color: var(--ck-sample-color-button-blue);
+  border-color: var(--ck-sample-color-button-blue);
+  color: var(--ck-sample-color-white);
+  display: inline-block;
 }
 
 .collaboration-demo__topbar .btn {
@@ -296,11 +315,6 @@ body[data-editor='InlineEditor'] .collaboration-demo__row {
   height: auto;
 }
 
-.collaboration-demo--ready .presence,
-.collaboration-demo--ready .collaboration-demo__row {
-  opacity: 1;
-}
-
 /* --------- SAMPLE GENERIC STYLES (not related to CKEditor) ------------------------------------------------------- */
 body,
 html {
@@ -323,6 +337,14 @@ body * {
 
 a {
   color: #38a5ee;
+}
+
+.centered {
+  /* Hide overlapping comments. */
+  overflow: hidden;
+  max-width: var(--ck-sample-container-width);
+  margin: 0 auto;
+  padding: 0 var(--ck-sample-base-spacing);
 }
 
 header .centered {
@@ -393,34 +415,9 @@ main .message h2 {
   font-size: 2em;
 }
 
-.centered {
-  /* Hide overlapping comments. */
-  overflow: hidden;
-  max-width: var(--ck-sample-container-width);
-  margin: 0 auto;
-  padding: 0 var(--ck-sample-base-spacing);
-}
-
 .row {
   display: flex;
   position: relative;
-}
-
-.btn {
-  cursor: pointer;
-  padding: 8px 16px;
-  font-size: 1rem;
-  user-select: none;
-  border-radius: 4px;
-  transition:
-    color 0.2s ease-in-out,
-    background-color 0.2s ease-in-out,
-    border-color 0.2s ease-in-out,
-    opacity 0.2s ease-in-out;
-  background-color: var(--ck-sample-color-button-blue);
-  border-color: var(--ck-sample-color-button-blue);
-  color: var(--ck-sample-color-white);
-  display: inline-block;
 }
 
 .btn--tiny {
