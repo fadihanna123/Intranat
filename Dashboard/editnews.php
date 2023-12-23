@@ -95,7 +95,7 @@ else {
         }
     } )
     .catch( error => {
-        console.log( error );
+        console.log(`❌ ${error}`);
     } );    
     </script>
     </div>
