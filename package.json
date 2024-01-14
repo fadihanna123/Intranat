@@ -1,15 +1,20 @@
 {
   "name": "intranat",
-  "version": "1.0.29",
-  "lastUpgrade": "20231015",
-  "bugs": "https://github.com/fadihanna123/Intranat/issues",
+  "version": "1.0.30",
   "private": "true",
-  "repository": "https://github.com/fadihanna123/Intranat",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/fadihanna123/Intranat/issues",
+    "email": "fhanna181@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/fadihanna123/Intranat",
+    "type": "git"
+  },
   "author": {
     "name": "Fadi Hanna",
     "email": "fhanna181@gmail.com"
   },
-  "license": "UNLICENSED",
   "scripts": {
     "preview": "yarn openWebPage && php -S localhost:8000",
     "openWebPage": "start http://localhost:8000",
@@ -25,7 +30,7 @@
     "eslint-plugin-css": "^0.8.1",
     "eslint-plugin-html": "^7.1.0",
     "husky": "^8.0.3",
-    "prettier": "^3.2.1",
+    "prettier": "^3.2.2",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.0.0",
     "typescript": "^5.3.3"
