@@ -26,12 +26,12 @@
     "noUnusedLocals": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
-    "removeComments": true
+    "removeComments": true,
   },
   "include": ["TS/**/*", "Dashboard/TS/**/*"],
   "exclude": [
     "node_modules",
     "Dashboard/ckeditor5/node_modules",
-    "Dashboard/Js/main.js"
-  ]
+    "Dashboard/Js/main.js",
+  ],
 }
