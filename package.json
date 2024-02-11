@@ -1,6 +1,6 @@
 {
   "name": "intranat",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "private": "true",
   "license": "UNLICENSED",
   "bugs": {
@@ -24,13 +24,13 @@
   "dependencies": {
     "@manypkg/cli": "^0.21.2",
     "@types/jquery": "^3.5.29",
-    "@typescript-eslint/eslint-plugin": "^6.19.0",
-    "@typescript-eslint/parser": "^6.19.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.56.0",
     "eslint-plugin-css": "^0.9.1",
-    "eslint-plugin-html": "^7.1.0",
-    "husky": "^8.0.3",
-    "prettier": "^3.2.4",
+    "eslint-plugin-html": "^8.0.0",
+    "husky": "^9.0.10",
+    "prettier": "^3.2.5",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.0.0",
     "typescript": "^5.3.3"
@@ -42,7 +42,7 @@
   "devDependencies": {
     "eslint-plugin-editorconfig": "^4.0.3",
     "eslint-plugin-sql": "^2.5.0",
-    "stylelint": "^16.2.0"
+    "stylelint": "^16.2.1"
   },
   "config": {
     "port": 8000
