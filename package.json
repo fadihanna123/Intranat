@@ -2,7 +2,7 @@
   "name": "intranat",
   "version": "1.0.32",
   "private": "true",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/fadihanna123/Intranat/issues",
     "email": "fhanna181@gmail.com"
