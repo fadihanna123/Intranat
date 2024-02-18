@@ -96,8 +96,7 @@ else {
     } )
     .catch( error => {
         console.log(`❌ ${error}`);
-    } );    
+    } );
     </script>
     </div>
   <?php require "Includes/footer.php"; ?>
-           
