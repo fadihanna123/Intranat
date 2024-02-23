@@ -8,6 +8,6 @@ updates:
 version: 2
 updates:
   - package-ecosystem: 'npm'
-    directory: 'Dashboard/ckeditor5'
+    directory: '/Dashboard/ckeditor5'
     schedule:
       interval: 'daily'
