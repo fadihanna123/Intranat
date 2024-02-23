@@ -1,13 +1,13 @@
-version: 2
+version: 3
 updates:
   - package-ecosystem: 'yarn'
     directory: '/'
     schedule:
-      interval: 'monthly'
+      interval: 'daily'
 
-version: 1
+version: 2
 updates:
   - package-ecosystem: 'yarn'
     directory: 'Dashboard/ckeditor5'
     schedule:
-      interval: 'monthly'
+      interval: 'daily'
