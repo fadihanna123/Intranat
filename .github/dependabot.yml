@@ -1,13 +1,13 @@
 version: 3
 updates:
-  - package-ecosystem: 'yarn'
+  - package-ecosystem: 'npm'
     directory: '/'
     schedule:
       interval: 'daily'
 
 version: 2
 updates:
-  - package-ecosystem: 'yarn'
+  - package-ecosystem: 'npm'
     directory: 'Dashboard/ckeditor5'
     schedule:
       interval: 'daily'
