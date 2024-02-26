@@ -1,6 +1,6 @@
 {
   "name": "intranat",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "private": "true",
   "license": "MIT",
   "bugs": {
@@ -24,9 +24,9 @@
   "dependencies": {
     "@manypkg/cli": "^0.21.2",
     "@types/jquery": "^3.5.29",
-    "@typescript-eslint/eslint-plugin": "^7.0.1",
-    "@typescript-eslint/parser": "^7.0.1",
-    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-css": "^0.9.1",
     "eslint-plugin-html": "^8.0.0",
     "husky": "^9.0.11",
