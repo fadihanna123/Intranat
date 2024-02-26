@@ -1,9 +1,10 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm i
-pnpm manypkg check
+yarn
+npx manypkg check
 stylelint "**/*.scss"
-pnpm lint
+yarn lint
 npx pretty-quick --staged
 rm -rf node_modules
+git add -A
