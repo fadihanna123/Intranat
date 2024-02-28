@@ -168,10 +168,10 @@
     "@ckeditor/ckeditor5-utils" "41.1.0"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-dev-translations@^39.6.1":
-  version "39.6.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-translations/-/ckeditor5-dev-translations-39.6.1.tgz#8d14d66d51f6be3988c639c142ecde54e2b232c5"
-  integrity sha512-YtT4lgl3mPE9p236pN/u98IdmzXrlUEuKByrjBsjihhFN1tUi1dz3XLXVRDvEJhR5Ps8oSSS9LgOlk6DwayUyw==
+"@ckeditor/ckeditor5-dev-translations@^39.6.2":
+  version "39.6.2"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-translations/-/ckeditor5-dev-translations-39.6.2.tgz#d0fbe6220a5aee0093e1cbe550e30e369a78af64"
+  integrity sha512-QPoIc4iWt78oMuZ5UQI0lR3hRW4GUkpivYgXVCf6M+g3y9l5ylNPBsUUXuB7cs/2AnCVxPC+gDzqHqYLrea12A==
   dependencies:
     "@babel/parser" "^7.18.9"
     "@babel/traverse" "^7.18.9"
@@ -210,12 +210,12 @@
     through2 "^3.0.1"
     ts-loader "^9.3.0"
 
-"@ckeditor/ckeditor5-dev-utils@^39.6.1":
-  version "39.6.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-utils/-/ckeditor5-dev-utils-39.6.1.tgz#b83e00b2f2d6ca95ba69cd501dc1e77fe8d28a13"
-  integrity sha512-DcRd83Y7kvvEc1Dx830+XD6BOrNSJoq/suo95bLj759aa9BxKgAdXuxqYJvbexjrbBR8eFD8mbtyXxfhc74Qvg==
+"@ckeditor/ckeditor5-dev-utils@^39.6.2":
+  version "39.6.2"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-utils/-/ckeditor5-dev-utils-39.6.2.tgz#ed7ea205b1ecb5454f37e4e72b030e15d507d254"
+  integrity sha512-su03GH3pr0hAKhhyNV6uU73UUAmUEYp4zVJjSOvpbxVcltYR2CGVLnBWjWaLHj2fkvTeblR0X94wLBLBSzi4Vg==
   dependencies:
-    "@ckeditor/ckeditor5-dev-translations" "^39.6.1"
+    "@ckeditor/ckeditor5-dev-translations" "^39.6.2"
     chalk "^3.0.0"
     cli-cursor "^3.1.0"
     cli-spinners "^2.6.1"
@@ -2073,11 +2073,6 @@ ms@2.1.2:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-nanoid@^3.3.6:
-  version "3.3.6"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
-  integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
-
 nanoid@^3.3.7:
   version "3.3.7"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.7.tgz#d0c301a691bc8d54efa0a2226ccf3fe2fd656bd8"
@@ -2537,16 +2532,7 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.1.0, postcss-value-parser@^
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^8.2.15, postcss@^8.4.12:
-  version "8.4.31"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.31.tgz#92b451050a9f914da6755af352bdc0192508656d"
-  integrity sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==
-  dependencies:
-    nanoid "^3.3.6"
-    picocolors "^1.0.0"
-    source-map-js "^1.0.2"
-
-postcss@^8.4.35:
+postcss@^8.2.15, postcss@^8.4.12, postcss@^8.4.35:
   version "8.4.35"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.35.tgz#60997775689ce09011edf083a549cea44aabe2f7"
   integrity sha512-u5U8qYpBCpN13BsiEB0CbR1Hhh4Gc0zLFuedrHJKMctHCHAGrMdG0PRM/KErzAL3CU6/eckEtmHNB3x6e3c0vA==
