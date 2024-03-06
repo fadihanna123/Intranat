@@ -408,12 +408,12 @@
     "@ckeditor/ckeditor5-ui" "41.2.0"
     "@ckeditor/ckeditor5-utils" "41.2.0"
 
-"@ckeditor/ckeditor5-table@^41.1.0":
-  version "41.1.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-table/-/ckeditor5-table-41.1.0.tgz#cca35f7f7a386626c55d08ce81f5d0a5d5580f36"
-  integrity sha512-MtWPC3DT3Ew3Fm5Tf/aIOqOodzVR/ms1cmB7jKFnJ1IRe0olo8TborMv6UvNWfy5W11vqf33snCEU1ynbJN7zw==
+"@ckeditor/ckeditor5-table@^41.2.0":
+  version "41.2.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-table/-/ckeditor5-table-41.2.0.tgz#6250b2d305830f83227aa4c5edff730be00e045a"
+  integrity sha512-UusMhOjlj6U5CHZ3r9WAfaN/X/MxIXb468QRIxk+kh+Cl1uUw4nZP/5DzKkpOSHDYRncBKepHy5lElBMkyFMXg==
   dependencies:
-    ckeditor5 "41.1.0"
+    ckeditor5 "41.2.0"
     lodash-es "4.17.21"
 
 "@ckeditor/ckeditor5-theme-lark@^41.1.0":
