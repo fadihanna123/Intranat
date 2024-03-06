@@ -311,12 +311,12 @@
     "@ckeditor/ckeditor5-engine" "41.2.0"
     "@ckeditor/ckeditor5-utils" "41.2.0"
 
-"@ckeditor/ckeditor5-essentials@^41.1.0":
-  version "41.1.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-essentials/-/ckeditor5-essentials-41.1.0.tgz#ddc8c8d05c9f7924635e0221367c8dd01162f8a3"
-  integrity sha512-zUPbApEGl32Err/hURVDPZpXZHpe9gRQ/3r1xhaxIvB2zILcHAKauB94phzPLywrr0eBNa546ZW8+iXjFEJ7CQ==
+"@ckeditor/ckeditor5-essentials@^41.2.0":
+  version "41.2.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-essentials/-/ckeditor5-essentials-41.2.0.tgz#db2a56368778c1fe2801b05b94945c71eb20e154"
+  integrity sha512-II+fOra2ymW9TkLBYsS+3ezz/3YGjcgFhtf+mt+PsIiGhy6paAsqBNySg8kUg3p+6NTGPv2bFA6iOlXBOnH3oQ==
   dependencies:
-    ckeditor5 "41.1.0"
+    ckeditor5 "41.2.0"
 
 "@ckeditor/ckeditor5-heading@^41.1.0":
   version "41.1.0"
