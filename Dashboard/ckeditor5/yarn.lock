@@ -269,12 +269,12 @@
     rimraf "^3.0.2"
     webpack-sources "^2.0.1"
 
-"@ckeditor/ckeditor5-editor-classic@^41.1.0":
-  version "41.1.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-editor-classic/-/ckeditor5-editor-classic-41.1.0.tgz#e6f7adb3a5b9533d12d0b0d476967c03200ef90f"
-  integrity sha512-KMkHPmYalwqDecsMIbNexddhIwe/O0QkD7atJxzwtHWjEWP2bxi0fYPGQvMZXpj1BDXXMyZN6zQZlYfHzrk+7w==
+"@ckeditor/ckeditor5-editor-classic@^41.2.0":
+  version "41.2.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-editor-classic/-/ckeditor5-editor-classic-41.2.0.tgz#c006c3d79bebc9e5dd4d0531eb2f5b3bfe34c4f2"
+  integrity sha512-pzOZwKA2OfgJaT96Vs6APseKjPNePV8MFXwF1ocI+7N3GmU4M09bAH2x7YmmJOQjjEc/s++e4jwxi/l6NhLKOA==
   dependencies:
-    ckeditor5 "41.1.0"
+    ckeditor5 "41.2.0"
     lodash-es "4.17.21"
 
 "@ckeditor/ckeditor5-engine@41.1.0":
