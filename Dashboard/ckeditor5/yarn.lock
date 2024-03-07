@@ -140,12 +140,12 @@
   dependencies:
     ckeditor5 "41.1.0"
 
-"@ckeditor/ckeditor5-ckfinder@^41.1.0":
-  version "41.1.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-ckfinder/-/ckeditor5-ckfinder-41.1.0.tgz#edf991b120b4028a19f9de3e0d1f800c1fedf77a"
-  integrity sha512-XsMmjuyzuRHBytTDt3k3Rbf/IvVvZkA5uL7llkLFhR+ujut4WMexZpYREudJOQi/M4/UAkjPLccZB00fuR7OEw==
+"@ckeditor/ckeditor5-ckfinder@^41.2.0":
+  version "41.2.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-ckfinder/-/ckeditor5-ckfinder-41.2.0.tgz#5f640537b4dd80dd815ee85b6161b59dfe463286"
+  integrity sha512-Yky535zssY7kerdCga8gfpPYbT6+J/Dw6+byjW6MCgpFG5BuWscw4lqGqbQ3kkihqaGnWQV1VlGgQ0VFhsWGNQ==
   dependencies:
-    ckeditor5 "41.1.0"
+    ckeditor5 "41.2.0"
 
 "@ckeditor/ckeditor5-clipboard@41.1.0":
   version "41.1.0"

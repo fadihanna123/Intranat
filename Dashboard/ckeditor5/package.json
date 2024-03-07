@@ -19,7 +19,7 @@
     "@ckeditor/ckeditor5-autoformat": "^41.1.0",
     "@ckeditor/ckeditor5-basic-styles": "^41.2.0",
     "@ckeditor/ckeditor5-block-quote": "^41.1.0",
-    "@ckeditor/ckeditor5-ckfinder": "^41.1.0",
+    "@ckeditor/ckeditor5-ckfinder": "^41.2.0",
     "@ckeditor/ckeditor5-dev-utils": "^39.6.2",
     "@ckeditor/ckeditor5-editor-classic": "^41.1.0",
     "@ckeditor/ckeditor5-essentials": "^41.2.0",
