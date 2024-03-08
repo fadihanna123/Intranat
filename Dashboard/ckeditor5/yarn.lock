@@ -357,13 +357,13 @@
   dependencies:
     ckeditor5 "41.2.0"
 
-"@ckeditor/ckeditor5-media-embed@^41.1.0":
-  version "41.1.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-media-embed/-/ckeditor5-media-embed-41.1.0.tgz#3602c3fc88b428cb6442f40cac826c6c942711d5"
-  integrity sha512-fV2rvE7RORY9jR7icswCgWEtQxze6tVahBDI85YaZuruX20+pa5PmxLE6Ls6uzZZFvIl9hJZkkUxzmJC/tPEsw==
+"@ckeditor/ckeditor5-media-embed@^41.2.0":
+  version "41.2.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-media-embed/-/ckeditor5-media-embed-41.2.0.tgz#54e2d2f61618c9be53855fca7d048a5a49ab7fd5"
+  integrity sha512-cnW2Tt8uDL/r5rW0kqxae9vJsBEJJdpS9PHmNFrbLWVE5yTjw7m+UDEOAsGTi/EwSpHuKWA0tvHnEkyw7T7+ow==
   dependencies:
-    "@ckeditor/ckeditor5-ui" "41.1.0"
-    ckeditor5 "41.1.0"
+    "@ckeditor/ckeditor5-ui" "41.2.0"
+    ckeditor5 "41.2.0"
 
 "@ckeditor/ckeditor5-paragraph@41.1.0":
   version "41.1.0"
