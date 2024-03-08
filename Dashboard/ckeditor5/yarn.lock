@@ -318,12 +318,12 @@
   dependencies:
     ckeditor5 "41.2.0"
 
-"@ckeditor/ckeditor5-heading@^41.1.0":
-  version "41.1.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-heading/-/ckeditor5-heading-41.1.0.tgz#287534205d68eb8ca85a6784e24503383fa49087"
-  integrity sha512-rOsQ5AIsc5ccsARrs0CsiinoSx5DZrnkHH6PV6wEJcpgvhiJhB7NYG6Maw+vUcaDlY5z012GvAXLvv21ZNpw4w==
+"@ckeditor/ckeditor5-heading@^41.2.0":
+  version "41.2.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-heading/-/ckeditor5-heading-41.2.0.tgz#bb514e58f55740b57ebc729c5bfba94527e0ebf8"
+  integrity sha512-QCOh5z4jMYnBBvFUwQ4+GWL2+ClqYM/Pb/IeJE69R+VFpXXOR36v+0tZPOWc2Z2fxmhFDhArmwSzpBmPpSlyTQ==
   dependencies:
-    ckeditor5 "41.1.0"
+    ckeditor5 "41.2.0"
 
 "@ckeditor/ckeditor5-image@^41.1.0":
   version "41.1.0"
