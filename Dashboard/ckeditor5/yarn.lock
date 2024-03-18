@@ -133,12 +133,12 @@
   dependencies:
     ckeditor5 "41.2.0"
 
-"@ckeditor/ckeditor5-block-quote@^41.2.0":
-  version "41.2.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-block-quote/-/ckeditor5-block-quote-41.2.0.tgz#b094284fe73e80423b5d0730b932b153195929bb"
-  integrity sha512-IKZGJv8VJhcl68sy5Fi25SfKFFiz+3CHDPGig7caPZfEgOqqzKMEjtlF5UYTljjaW2StmkPXeLCJcptmL4+pNQ==
+"@ckeditor/ckeditor5-block-quote@^41.2.1":
+  version "41.2.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-block-quote/-/ckeditor5-block-quote-41.2.1.tgz#77fe17021f1c2d940192150529e24a5f51434367"
+  integrity sha512-47dOvlnwgZcoYpOtyOypIAdH4WJaQyK93jTroJJyTrj6WNhz0BxvyWcJ4lWg0rBioQz7B9In4L4cfVkOjoSQFA==
   dependencies:
-    ckeditor5 "41.2.0"
+    ckeditor5 "41.2.1"
 
 "@ckeditor/ckeditor5-ckfinder@^41.2.0":
   version "41.2.0"
