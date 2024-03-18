@@ -341,13 +341,13 @@
   dependencies:
     ckeditor5 "41.2.0"
 
-"@ckeditor/ckeditor5-link@^41.2.0":
-  version "41.2.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-link/-/ckeditor5-link-41.2.0.tgz#d7645219060f19ac605348395a92b922378d9d8c"
-  integrity sha512-NTjaPxroxfBTWY3u3lkjd61KTOr0DUEti/Zt+oUKYg07F3ey7DKJOJqs8pFqZMz1hI0Zd8K8ctavXyDIMPkNdQ==
+"@ckeditor/ckeditor5-link@^41.2.1":
+  version "41.2.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-link/-/ckeditor5-link-41.2.1.tgz#4159e4ed4282ef253d68d20841ebce3300f6e63f"
+  integrity sha512-rbYvzFQMD9hnYl+n21bO1/Vjgkj1S9vhv6WKukYOphHb45+g/7hcaQSjbEjcPMUu/qQYAOqK2SvrEGvFW9582Q==
   dependencies:
-    "@ckeditor/ckeditor5-ui" "41.2.0"
-    ckeditor5 "41.2.0"
+    "@ckeditor/ckeditor5-ui" "41.2.1"
+    ckeditor5 "41.2.1"
     lodash-es "4.17.21"
 
 "@ckeditor/ckeditor5-list@^41.2.0":
