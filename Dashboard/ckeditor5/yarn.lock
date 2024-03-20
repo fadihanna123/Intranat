@@ -126,12 +126,12 @@
   dependencies:
     ckeditor5 "41.2.1"
 
-"@ckeditor/ckeditor5-basic-styles@^41.2.0":
-  version "41.2.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-basic-styles/-/ckeditor5-basic-styles-41.2.0.tgz#334da3fead4468175ff14051e0e524edfbe376f2"
-  integrity sha512-zk0XsEpsogpJpAU9i3xugA7YKtHbZug9a+8C2I2zCATDwS5DLzvogILJ9VokbauSxlW04HPw6mT70xmPQmAkHw==
+"@ckeditor/ckeditor5-basic-styles@^41.2.1":
+  version "41.2.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-basic-styles/-/ckeditor5-basic-styles-41.2.1.tgz#0af728105cafa6f5e77bebb8344fb22e5ef534a3"
+  integrity sha512-noOO9j3zyFbyEC96hwxk7vPSKruxIc5vBtKPwrn5kx9KNYJOO0l/tzAi+FmYww1W64nX5/V1g26FcLDQlb814A==
   dependencies:
-    ckeditor5 "41.2.0"
+    ckeditor5 "41.2.1"
 
 "@ckeditor/ckeditor5-block-quote@^41.2.1":
   version "41.2.1"
