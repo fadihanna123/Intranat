@@ -112,12 +112,12 @@
   dependencies:
     ckeditor5 "41.2.0"
 
-"@ckeditor/ckeditor5-alignment@^41.2.0":
-  version "41.2.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-alignment/-/ckeditor5-alignment-41.2.0.tgz#ea8f59fbd5a6ac0b3c2afc3a657e009a16328153"
-  integrity sha512-H7ZycE9g8Shiuzh2DY0/F2g90kfaltBbOrk9ZdaxOxt7X7DKwI8D3Kg4FGYFSA5zWiXkL5q6M/RUHBiUDH65Uw==
+"@ckeditor/ckeditor5-alignment@^41.2.1":
+  version "41.2.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-alignment/-/ckeditor5-alignment-41.2.1.tgz#2b6bc12f97470896d3fe28eb16d55fff706b8289"
+  integrity sha512-HfQWn+FrvTDL0nFGGxHEaTsHJlSuB0RH3ITr49sXQZETH6YawesU7bV79o84ZGUvRQd1CK/yW2nAkkOrijzhJg==
   dependencies:
-    ckeditor5 "41.2.0"
+    ckeditor5 "41.2.1"
 
 "@ckeditor/ckeditor5-autoformat@^41.2.1":
   version "41.2.1"
