@@ -383,12 +383,12 @@
     "@ckeditor/ckeditor5-ui" "41.2.1"
     "@ckeditor/ckeditor5-utils" "41.2.1"
 
-"@ckeditor/ckeditor5-paste-from-office@^41.2.0":
-  version "41.2.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-41.2.0.tgz#375ef30a80f516dc0765ce987d2a044a4d1f195b"
-  integrity sha512-q1JNioeg20or4baFQDIwjXNvKwY+KixYMWfWe5aSGTmWb3sUWXtp81/CF7FiX3ULqwdrhmHixFRggUx6oPhtOw==
+"@ckeditor/ckeditor5-paste-from-office@^41.2.1":
+  version "41.2.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-41.2.1.tgz#7e94b09fd02cfbcae2d085cdae53096a812a5de4"
+  integrity sha512-grT0W/ammC9PNa6u/9vPY9u5BX4y3ZpHAAgziirvZNaFNswzeXBNEIBGzTS0qK+7111eBEy255O+T4S6okBmCQ==
   dependencies:
-    ckeditor5 "41.2.0"
+    ckeditor5 "41.2.1"
 
 "@ckeditor/ckeditor5-select-all@41.2.0":
   version "41.2.0"
