@@ -31,7 +31,7 @@
     "@ckeditor/ckeditor5-media-embed": "^41.2.1",
     "@ckeditor/ckeditor5-paragraph": "^41.2.1",
     "@ckeditor/ckeditor5-paste-from-office": "^41.2.1",
-    "@ckeditor/ckeditor5-table": "^41.2.1",
+    "@ckeditor/ckeditor5-table": "^41.3.0",
     "@ckeditor/ckeditor5-theme-lark": "^41.2.1",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
