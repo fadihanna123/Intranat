@@ -334,12 +334,12 @@
     ckeditor5 "41.2.1"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-indent@^41.2.1":
-  version "41.2.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-indent/-/ckeditor5-indent-41.2.1.tgz#9f6115ba8b07b19f738fc473624f8e11c50935c4"
-  integrity sha512-3kFrufnqt2nRCID+up6iy+Fp2OJgXkrtbKMbqYd4fHD0wuhD8MxqMvo5AmFBNXhlhO7YXns8Gmpps38WfD7UrA==
+"@ckeditor/ckeditor5-indent@^41.3.0":
+  version "41.3.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-indent/-/ckeditor5-indent-41.3.0.tgz#a9236119801d7bf4a423c16c77384c61d9d7067e"
+  integrity sha512-GbqTHvWnLjqlqqxmmC1gO0Tfg6mXjah6TuI/JvRzID1fOwddFKFrBX+bk9LlWz0HlGEouW/aDTihbyE4ODZXXQ==
   dependencies:
-    ckeditor5 "41.2.1"
+    ckeditor5 "41.3.0"
 
 "@ckeditor/ckeditor5-link@^41.2.1":
   version "41.2.1"
