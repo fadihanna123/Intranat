@@ -350,12 +350,12 @@
     ckeditor5 "41.2.1"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-list@^41.2.1":
-  version "41.2.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-41.2.1.tgz#5c325216a588ec41f460fe3b857e8ef05d4abf7d"
-  integrity sha512-KM/B2osFTUi3I8ONyyJdhPd6sygBeplZt1IW5W/3QmDp+LDJqGg1pNDroo1ePIDlf6e67+OfW82pAuvtxmB11Q==
+"@ckeditor/ckeditor5-list@^41.3.0":
+  version "41.3.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-41.3.0.tgz#6b6b072dec984f7454bb2ef8c5fc6728220b6e52"
+  integrity sha512-UxdRba5hLkP1Nl/gfbNoivcvXdQYavcgZZl36zO+CCuEgIcP7qcFRhye2oitiGZ1tSJfXD2/JAkkLOITdsKSjg==
   dependencies:
-    ckeditor5 "41.2.1"
+    ckeditor5 "41.3.0"
 
 "@ckeditor/ckeditor5-media-embed@^41.3.0":
   version "41.3.0"
