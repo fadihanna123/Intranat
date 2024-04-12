@@ -350,12 +350,12 @@
     ckeditor5 "41.2.1"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-list@^41.2.1":
-  version "41.2.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-41.2.1.tgz#5c325216a588ec41f460fe3b857e8ef05d4abf7d"
-  integrity sha512-KM/B2osFTUi3I8ONyyJdhPd6sygBeplZt1IW5W/3QmDp+LDJqGg1pNDroo1ePIDlf6e67+OfW82pAuvtxmB11Q==
+"@ckeditor/ckeditor5-list@^41.3.0":
+  version "41.3.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-41.3.0.tgz#6b6b072dec984f7454bb2ef8c5fc6728220b6e52"
+  integrity sha512-UxdRba5hLkP1Nl/gfbNoivcvXdQYavcgZZl36zO+CCuEgIcP7qcFRhye2oitiGZ1tSJfXD2/JAkkLOITdsKSjg==
   dependencies:
-    ckeditor5 "41.2.1"
+    ckeditor5 "41.3.0"
 
 "@ckeditor/ckeditor5-media-embed@^41.3.0":
   version "41.3.0"
@@ -365,7 +365,7 @@
     "@ckeditor/ckeditor5-ui" "41.3.0"
     ckeditor5 "41.3.0"
 
-"@ckeditor/ckeditor5-paragraph@41.2.1", "@ckeditor/ckeditor5-paragraph@^41.2.1":
+"@ckeditor/ckeditor5-paragraph@41.2.1":
   version "41.2.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paragraph/-/ckeditor5-paragraph-41.2.1.tgz#8a4da3459795a924ada3491c3ab4e67aa249899a"
   integrity sha512-j6OdPBFlA7BzU5wSmYFNfTuQbr64kq1uuTyDwXUvfQQvUqTAiA05sqWEzV1hc14Kc6uqVfoCFsYFI7xUEaaNvw==
@@ -374,7 +374,7 @@
     "@ckeditor/ckeditor5-ui" "41.2.1"
     "@ckeditor/ckeditor5-utils" "41.2.1"
 
-"@ckeditor/ckeditor5-paragraph@41.3.0":
+"@ckeditor/ckeditor5-paragraph@41.3.0", "@ckeditor/ckeditor5-paragraph@^41.3.0":
   version "41.3.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paragraph/-/ckeditor5-paragraph-41.3.0.tgz#a4bed001f763d07882a5940a1c416f46347777fe"
   integrity sha512-9wcGu99fltVZNq+vn6PEiib+4pERIR8ntDZr+Gi++4jqDEehVbQbaqKRwy/fLCl0JFaRVnmtsRm+iaUnkL3R3Q==
@@ -383,12 +383,12 @@
     "@ckeditor/ckeditor5-ui" "41.3.0"
     "@ckeditor/ckeditor5-utils" "41.3.0"
 
-"@ckeditor/ckeditor5-paste-from-office@^41.2.1":
-  version "41.2.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-41.2.1.tgz#7e94b09fd02cfbcae2d085cdae53096a812a5de4"
-  integrity sha512-grT0W/ammC9PNa6u/9vPY9u5BX4y3ZpHAAgziirvZNaFNswzeXBNEIBGzTS0qK+7111eBEy255O+T4S6okBmCQ==
+"@ckeditor/ckeditor5-paste-from-office@^41.3.0":
+  version "41.3.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-41.3.0.tgz#ae68d1d0ce0b4e792dc7bfdddab62c34c139b893"
+  integrity sha512-jItJg9tpQxSv3FjH90RSX+bZmqwVlHZcgTRI03rkQlwi+hlneP6Cu8vxRt0zRRbNLxy0gdnk6QpD1vbq/8riHQ==
   dependencies:
-    ckeditor5 "41.2.1"
+    ckeditor5 "41.3.0"
 
 "@ckeditor/ckeditor5-select-all@41.2.1":
   version "41.2.1"
