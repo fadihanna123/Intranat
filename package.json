@@ -16,10 +16,13 @@
     "email": "fhanna181@gmail.com"
   },
   "scripts": {
+    "setup": "yarn --emoji && cd Dashboard/ckeditor5 && yarn --emoji",
+    "dev": "concurrently \"yarn preview\"",
     "preview": "yarn openWebPage && php -S localhost:8000",
     "openWebPage": "start http://localhost:8000",
     "lint": "eslint .",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "clear": "rimraf node_modules && cd Dashboard/ckeditor5 && rimraf node_modules"
   },
   "dependencies": {
     "@manypkg/cli": "^0.21.2",
