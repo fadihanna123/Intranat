@@ -5,7 +5,7 @@ ini_set("display_errors", 1);
 error_reporting(E_ALL | E_STRICT);
 
 spl_autoload_register(function ($class) {
-    include 'Classes/' . $class . '.class.php';
+  include 'Classes/' . $class . '.class.php';
 });
 
 define("DB_HOST", "localhost");
