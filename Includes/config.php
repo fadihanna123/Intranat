@@ -9,6 +9,6 @@ spl_autoload_register(function ($class) {
 });
 
 define("DB_HOST", "localhost");
-define("DB_USRNAME", "root");
+define("DB_USRNAME", "fadi");
 define("DB_PSW", "0000");
 define("DB_NAME", "intranat");
