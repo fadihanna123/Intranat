@@ -8,7 +8,7 @@ spl_autoload_register(function ($class) {
   include 'Classes/' . $class . '.class.php';
 });
 
-define("DB_HOST", "localhost");
+define("DB_HOST", "localhost:3316");
 define("DB_USRNAME", "fadi");
 define("DB_PSW", "0000");
 define("DB_NAME", "intranat");
