@@ -24,7 +24,7 @@
     "@ckeditor/ckeditor5-editor-classic": "^41.3.0",
     "@ckeditor/ckeditor5-essentials": "^41.2.1",
     "@ckeditor/ckeditor5-heading": "^41.3.0",
-    "@ckeditor/ckeditor5-image": "^41.2.1",
+    "@ckeditor/ckeditor5-image": "^41.4.1",
     "@ckeditor/ckeditor5-indent": "^41.3.0",
     "@ckeditor/ckeditor5-link": "^41.2.1",
     "@ckeditor/ckeditor5-list": "^41.3.0",
