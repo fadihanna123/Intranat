@@ -156,19 +156,12 @@
     ckeditor5 "41.4.2"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-basic-styles@41.4.2":
+"@ckeditor/ckeditor5-basic-styles@41.4.2", "@ckeditor/ckeditor5-basic-styles@^41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-basic-styles/-/ckeditor5-basic-styles-41.4.2.tgz#9edf35a11fc99b58d95f04b34b3dd2a0e0b09644"
   integrity sha512-+Y+M9/JRX3xSHX/E5zFwzuKPzEeeuL61wcig1DuEz7GvK5sRLJcbdVQmiJnfDh3iOcf/ob1nahNgHAEoCno0Dw==
   dependencies:
     ckeditor5 "41.4.2"
-
-"@ckeditor/ckeditor5-basic-styles@^41.3.1":
-  version "41.3.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-basic-styles/-/ckeditor5-basic-styles-41.3.1.tgz#c24ed7a87d9111d64013df89a8ba72a194e89e1c"
-  integrity sha512-vr0UR5JdQtHUhXFVF+7yebaQ/iEugmXIH2eC+pC5BNJuBwuFt1Hxt6U6qRh7f7ve4UFBky3MZ84lGuGsheirCA==
-  dependencies:
-    ckeditor5 "41.3.1"
 
 "@ckeditor/ckeditor5-block-quote@41.4.2":
   version "41.4.2"
