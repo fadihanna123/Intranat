@@ -657,22 +657,13 @@
     ckeditor5 "41.4.2"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-image@41.4.2":
+"@ckeditor/ckeditor5-image@41.4.2", "@ckeditor/ckeditor5-image@^41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-image/-/ckeditor5-image-41.4.2.tgz#bbcde2ef2e32310431d655442e27896ed003d1c6"
   integrity sha512-4AgXdvYr6tGzEqwAHVRl+LA8nPRER7vQthVBuT4g1FEkRB6w9kgRsPM2JfsGekoGd8GU0WnMaz8kAcL4C2urYg==
   dependencies:
     "@ckeditor/ckeditor5-ui" "41.4.2"
     ckeditor5 "41.4.2"
-    lodash-es "4.17.21"
-
-"@ckeditor/ckeditor5-image@^41.2.1":
-  version "41.3.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-image/-/ckeditor5-image-41.3.1.tgz#c9400c7488aa0f144d0f1933d42c28b816779b1b"
-  integrity sha512-v8lcXET3TDP/yPKhdUCmIcukMQ6GNdTyVAjkTip5JhVKFv8bFWBp5Xn616L6T+8OeQ6DggF9QVGcskmTiGQv7g==
-  dependencies:
-    "@ckeditor/ckeditor5-ui" "41.3.1"
-    ckeditor5 "41.3.1"
     lodash-es "4.17.21"
 
 "@ckeditor/ckeditor5-indent@41.4.2":
