@@ -149,19 +149,12 @@
   dependencies:
     ckeditor5 "41.4.2"
 
-"@ckeditor/ckeditor5-block-quote@41.4.2":
+"@ckeditor/ckeditor5-block-quote@41.4.2", "@ckeditor/ckeditor5-block-quote@^41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-block-quote/-/ckeditor5-block-quote-41.4.2.tgz#502f9c41f70acb90b27e8448f7c6ff8adddfcc61"
   integrity sha512-tkEKd3pmDO8QWm243FRDRUv5COayXYZJpMFUL6blw3m6IXb4ujcXKn61A+UwUO+kM0NGTuepHZJkFSuV1/90sw==
   dependencies:
     ckeditor5 "41.4.2"
-
-"@ckeditor/ckeditor5-block-quote@^41.2.1":
-  version "41.3.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-block-quote/-/ckeditor5-block-quote-41.3.1.tgz#a05ad4f33af74259a43408df239ed0f11ef19a6a"
-  integrity sha512-iRm6MthhcyRbUpPxjjXhLuZpNGGNnUqp8RurN8rSzX3KcBXKHm/vfxOugk06ebF2FFbP0u5aiL3K7fIniuo2pQ==
-  dependencies:
-    ckeditor5 "41.3.1"
 
 "@ckeditor/ckeditor5-build-balloon-block@41.4.2":
   version "41.4.2"
