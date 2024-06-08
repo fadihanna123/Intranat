@@ -22,7 +22,8 @@
     "openWebPage": "start http://localhost:8000",
     "lint": "eslint .",
     "format": "prettier -w .",
-    "clear": "rimraf node_modules && cd Dashboard/ckeditor5 && rimraf node_modules"
+    "clear": "rimraf node_modules && cd Dashboard/ckeditor5 && rimraf node_modules",
+    "prepare": "husky"
   },
   "dependencies": {
     "@manypkg/cli": "^0.21.2",
