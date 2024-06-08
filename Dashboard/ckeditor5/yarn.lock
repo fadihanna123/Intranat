@@ -106,7 +106,7 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@ckeditor/ckeditor5-adapter-ckfinder@41.4.2":
+"@ckeditor/ckeditor5-adapter-ckfinder@41.4.2", "@ckeditor/ckeditor5-adapter-ckfinder@^41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-adapter-ckfinder/-/ckeditor5-adapter-ckfinder-41.4.2.tgz#d2888419e87606efc36623a9d4b7aa90108e9372"
   integrity sha512-yXVVEy+lEmyvYwTxn76Ff53fK/qJphf9stoBF4kFKKK/Tfi59EMog2Ctk3iIkLLyt74KmxzvuCXZwE00wDqfLA==
@@ -121,6 +121,7 @@
     ckeditor5 "41.3.1"
 
 "@ckeditor/ckeditor5-alignment@41.4.2", "@ckeditor/ckeditor5-alignment@^41.4.2":
+"@ckeditor/ckeditor5-alignment@41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-alignment/-/ckeditor5-alignment-41.4.2.tgz#8ff9a93278b48e22c6d7060777829293ce9e9a3d"
   integrity sha512-kFiEIZfUNt2TCrwJgM4mot6LLqzbH4vbfYcjbrsUz28kLv8guzcwKXPRe0ZrHo+WS7Cny8j5aCEuUAs3sxEmAg==
@@ -149,19 +150,12 @@
   dependencies:
     ckeditor5 "41.4.2"
 
-"@ckeditor/ckeditor5-block-quote@41.4.2":
+"@ckeditor/ckeditor5-block-quote@41.4.2", "@ckeditor/ckeditor5-block-quote@^41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-block-quote/-/ckeditor5-block-quote-41.4.2.tgz#502f9c41f70acb90b27e8448f7c6ff8adddfcc61"
   integrity sha512-tkEKd3pmDO8QWm243FRDRUv5COayXYZJpMFUL6blw3m6IXb4ujcXKn61A+UwUO+kM0NGTuepHZJkFSuV1/90sw==
   dependencies:
     ckeditor5 "41.4.2"
-
-"@ckeditor/ckeditor5-block-quote@^41.2.1":
-  version "41.3.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-block-quote/-/ckeditor5-block-quote-41.3.1.tgz#a05ad4f33af74259a43408df239ed0f11ef19a6a"
-  integrity sha512-iRm6MthhcyRbUpPxjjXhLuZpNGGNnUqp8RurN8rSzX3KcBXKHm/vfxOugk06ebF2FFbP0u5aiL3K7fIniuo2pQ==
-  dependencies:
-    ckeditor5 "41.3.1"
 
 "@ckeditor/ckeditor5-build-balloon-block@41.4.2":
   version "41.4.2"
@@ -395,10 +389,10 @@
     "@ckeditor/ckeditor5-utils" "41.4.2"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-dev-translations@^40.2.0":
-  version "40.2.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-translations/-/ckeditor5-dev-translations-40.2.0.tgz#25a042802f422f66f5510cdca9a391ef8ecae158"
-  integrity sha512-rtmdAYpTDGp8OYUCjsFFf1NphrPTTHF7qBnsmH3XKWCpVKwTW4CA0lI8inz9hv+oGoDxMxfuRzz0zLM/I8WIlg==
+"@ckeditor/ckeditor5-dev-translations@^40.2.1":
+  version "40.2.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-translations/-/ckeditor5-dev-translations-40.2.1.tgz#5ff05cbf68b575fa8d87a347f3dc3e72a866a4e3"
+  integrity sha512-KWKJ9nmobLyfOtsTdRx0P+IqT4WvNBwiRWJ8/FCRxjqPsaECwVlomb6zS8l5yuByaYVodMIVe6uWiH5E6SOZrQ==
   dependencies:
     "@babel/parser" "^7.18.9"
     "@babel/traverse" "^7.18.9"
@@ -437,12 +431,12 @@
     through2 "^3.0.1"
     ts-loader "^9.3.0"
 
-"@ckeditor/ckeditor5-dev-utils@^40.2.0":
-  version "40.2.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-utils/-/ckeditor5-dev-utils-40.2.0.tgz#1a1361292947360256812783cd2d3e4c37ee5f15"
-  integrity sha512-TNAaqHrEig4U06xMXPBqPIUBTc0clSAE55IScixrGWFL2njIzhtJcVyVy4dShUhaoLdJrPNssEXBQiwlUyOKag==
+"@ckeditor/ckeditor5-dev-utils@^40.2.1":
+  version "40.2.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-utils/-/ckeditor5-dev-utils-40.2.1.tgz#268f2f7e3eecbe98999846e2f15a8765975547f0"
+  integrity sha512-hHaLuDY/UALx19XOQG6x6tH3RXEhl/955TFkviFf1ZYrwGLN56hRcFY/Bc4I4RalSph+9Yrs5dPdNtuwx+Tzvw==
   dependencies:
-    "@ckeditor/ckeditor5-dev-translations" "^40.2.0"
+    "@ckeditor/ckeditor5-dev-translations" "^40.2.1"
     chalk "^3.0.0"
     cli-cursor "^3.1.0"
     cli-spinners "^2.6.1"
@@ -624,19 +618,12 @@
     ckeditor5 "41.4.2"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-indent@41.4.2":
+"@ckeditor/ckeditor5-indent@41.4.2", "@ckeditor/ckeditor5-indent@^41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-indent/-/ckeditor5-indent-41.4.2.tgz#902ce239f96f939bd38ab15f6f8d067230fec203"
   integrity sha512-pghHa+DKya6788nTiU1ZItKmAgjf+up4Rqe5GOkxKB7vJc189KSBJYc5foov65nM831rXcWgTk4jybK+JGHmjQ==
   dependencies:
     ckeditor5 "41.4.2"
-
-"@ckeditor/ckeditor5-indent@^41.3.0":
-  version "41.3.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-indent/-/ckeditor5-indent-41.3.1.tgz#e59e5e92a8b14718e5eaec8bc305960672239492"
-  integrity sha512-JYXF/Clfw+j06wt1+qo43n+y3fmVKPSaN5NXzw4a5Rce0dMaWctH53X8KP3tIuOfEzW9xPhsTUQBJI8rsc+f9g==
-  dependencies:
-    ckeditor5 "41.3.1"
 
 "@ckeditor/ckeditor5-language@41.4.2":
   version "41.4.2"
@@ -671,21 +658,13 @@
     turndown "6.0.0"
     turndown-plugin-gfm "1.0.2"
 
-"@ckeditor/ckeditor5-media-embed@41.4.2":
+"@ckeditor/ckeditor5-media-embed@41.4.2", "@ckeditor/ckeditor5-media-embed@^41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-media-embed/-/ckeditor5-media-embed-41.4.2.tgz#a231b3badd12392cde2eee9425bb3fdb5fa056a6"
   integrity sha512-+4JqfbnMrB9Si2gAKKCRZTY1hixlk11mY8+PA+32UezyCq/myoAlVGT8ytCr3rywe58nbkGGAv2QbVo6fy8zoQ==
   dependencies:
     "@ckeditor/ckeditor5-ui" "41.4.2"
     ckeditor5 "41.4.2"
-
-"@ckeditor/ckeditor5-media-embed@^41.3.1":
-  version "41.3.1"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-media-embed/-/ckeditor5-media-embed-41.3.1.tgz#5cb9b3d757f3d558cb612df5c28b5851e639090d"
-  integrity sha512-3yXePmVPR2WmzeT+fj6WotMbEIJ6lYka0aUG02LxZV0oCL5LU8nF1wFIFhk77wrQVlQtjmLVtvaPcSdNIz/+pA==
-  dependencies:
-    "@ckeditor/ckeditor5-ui" "41.3.1"
-    ckeditor5 "41.3.1"
 
 "@ckeditor/ckeditor5-mention@41.4.2":
   version "41.4.2"
@@ -3672,10 +3651,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha512-ESF23V4SKG6lVSGZgYNpbsiaAkdab6ZgOxe52p7+Kid3W3u3bxR4Vfd/o21dmN7jSt0IwgZ4v5MUd26FEtXE9w==
 
-prettier@^3.2.5:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.5.tgz#e52bc3090586e824964a8813b09aba6233b28368"
-  integrity sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==
+prettier@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.3.1.tgz#e68935518dd90bb7ec4821ba970e68f8de16e1ac"
+  integrity sha512-7CAwy5dRsxs8PHXT3twixW9/OEll8MLE0VRPCJyl7CkS6VHGPSlsVaWTiASPTyGyYRyApxlaWTzwUxVNrhcwDg==
 
 promise-inflight@^1.0.1:
   version "1.0.1"
