@@ -800,14 +800,14 @@
     ckeditor5 "42.0.0"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-indent@41.4.2", "@ckeditor/ckeditor5-indent@^41.4.2":
+"@ckeditor/ckeditor5-indent@41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-indent/-/ckeditor5-indent-41.4.2.tgz#902ce239f96f939bd38ab15f6f8d067230fec203"
   integrity sha512-pghHa+DKya6788nTiU1ZItKmAgjf+up4Rqe5GOkxKB7vJc189KSBJYc5foov65nM831rXcWgTk4jybK+JGHmjQ==
   dependencies:
     ckeditor5 "41.4.2"
 
-"@ckeditor/ckeditor5-indent@42.0.0":
+"@ckeditor/ckeditor5-indent@42.0.0", "@ckeditor/ckeditor5-indent@^42.0.0":
   version "42.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-indent/-/ckeditor5-indent-42.0.0.tgz#61c3c89ef93b7e6d956161dc1598a2c7594afb71"
   integrity sha512-Ba7cTreIEFoF0mJXRjBZdwgyzSvdmnqtlwMInM/IBIJDo6Vi4zx4svA2G1PvY/hV3UCvCAxzSqQ7s62yQT4KEQ==
