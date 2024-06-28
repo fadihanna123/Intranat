@@ -1098,14 +1098,14 @@
     ckeditor5 "42.0.0"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-theme-lark@41.4.2", "@ckeditor/ckeditor5-theme-lark@^41.4.2":
+"@ckeditor/ckeditor5-theme-lark@41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-theme-lark/-/ckeditor5-theme-lark-41.4.2.tgz#a1374e8049406575b76a93df12b0f80d6a020824"
   integrity sha512-rzFSAhdPMD2QylJDwgGniiBoCuHWQAQIEKDtMbQ4FH+/7JiCfKgUsnZxqhDPJwQyV1MWVz4wmXK/1RKqHohOvg==
   dependencies:
     "@ckeditor/ckeditor5-ui" "41.4.2"
 
-"@ckeditor/ckeditor5-theme-lark@42.0.0":
+"@ckeditor/ckeditor5-theme-lark@42.0.0", "@ckeditor/ckeditor5-theme-lark@^42.0.0":
   version "42.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-theme-lark/-/ckeditor5-theme-lark-42.0.0.tgz#b8668d06647a75899fe143ca955dc398207fa946"
   integrity sha512-G9rda0cxoi2qrTxsUQyOTnj8cH/66ZRPYd2v2cCuWxfjkNELzqjWtl1e9v5cQQvUrxcp7gPCTOtvc3lchdD5tg==
