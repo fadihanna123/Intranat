@@ -664,14 +664,14 @@
     "@ckeditor/ckeditor5-engine" "42.0.0"
     "@ckeditor/ckeditor5-utils" "42.0.0"
 
-"@ckeditor/ckeditor5-essentials@41.4.2", "@ckeditor/ckeditor5-essentials@^41.4.2":
+"@ckeditor/ckeditor5-essentials@41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-essentials/-/ckeditor5-essentials-41.4.2.tgz#0119e78b63f48712bb9f9014d5db52549543e827"
   integrity sha512-1UCvk76v2+NDfHfTo3Qg0EJYpddgSC/i66jY3NnQUFt1zt68rAzm/kFOVYjTD/QDn6pyiMAIUeMlKFkswF+upg==
   dependencies:
     ckeditor5 "41.4.2"
 
-"@ckeditor/ckeditor5-essentials@42.0.0":
+"@ckeditor/ckeditor5-essentials@42.0.0", "@ckeditor/ckeditor5-essentials@^42.0.0":
   version "42.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-essentials/-/ckeditor5-essentials-42.0.0.tgz#92f8d30fd4ae4df9179259ba1f3eca740ba08b83"
   integrity sha512-DYWrEcraXiw+S9lbAk3UfvOnSe2ActOchk15hTishQKhRBzPqLDWr8bTYy4TwgwaMJg1gW9KK5o19oHLfW0P3A==

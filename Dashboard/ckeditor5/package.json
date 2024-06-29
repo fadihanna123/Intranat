@@ -22,7 +22,7 @@
     "@ckeditor/ckeditor5-ckfinder": "^42.0.0",
     "@ckeditor/ckeditor5-dev-utils": "^40.2.2",
     "@ckeditor/ckeditor5-editor-classic": "^42.0.0",
-    "@ckeditor/ckeditor5-essentials": "^41.4.2",
+    "@ckeditor/ckeditor5-essentials": "^42.0.0",
     "@ckeditor/ckeditor5-heading": "^42.0.0",
     "@ckeditor/ckeditor5-image": "^42.0.0",
     "@ckeditor/ckeditor5-indent": "^42.0.0",
