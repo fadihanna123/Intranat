@@ -134,14 +134,14 @@
   dependencies:
     ckeditor5 "42.0.0"
 
-"@ckeditor/ckeditor5-autoformat@41.4.2", "@ckeditor/ckeditor5-autoformat@^41.4.2":
+"@ckeditor/ckeditor5-autoformat@41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-autoformat/-/ckeditor5-autoformat-41.4.2.tgz#49f7c7ed0e58ed7820c810ea7f2e4b2862cd7005"
   integrity sha512-Ukit63jHiAuLyfESdLSc6ya12xKJxDP83krZFiMY5bfXssg0z39CGuHOZlwaI9r7bBjWWMGJJeaC/9i/6L9y7g==
   dependencies:
     ckeditor5 "41.4.2"
 
-"@ckeditor/ckeditor5-autoformat@42.0.0":
+"@ckeditor/ckeditor5-autoformat@42.0.0", "@ckeditor/ckeditor5-autoformat@^42.0.0":
   version "42.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-autoformat/-/ckeditor5-autoformat-42.0.0.tgz#363e05ecdce9eac43d55ca04d14bf7e5f182a7f1"
   integrity sha512-dGMwLPk4Q3Np/dVAOqwVefnS0dRGqARmcnV9lhpeC44mw+1ba3pxpCitxHkZY8epQHkLyhOuacWTPqSqAcB+bQ==
