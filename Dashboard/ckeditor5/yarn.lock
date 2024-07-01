@@ -958,14 +958,14 @@
     "@ckeditor/ckeditor5-ui" "42.0.0"
     "@ckeditor/ckeditor5-utils" "42.0.0"
 
-"@ckeditor/ckeditor5-paste-from-office@41.4.2", "@ckeditor/ckeditor5-paste-from-office@^41.4.2":
+"@ckeditor/ckeditor5-paste-from-office@41.4.2":
   version "41.4.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-41.4.2.tgz#fba18bd318897f9bee12afed53462ceb64654021"
   integrity sha512-jby5YQ2QowGdDCshPq5Ej11wTFcBZP2dYhQTu6fRZRc+mdihKCILxh0rwBgBOCCf+buflx8RYp/WKd76Kcuq5g==
   dependencies:
     ckeditor5 "41.4.2"
 
-"@ckeditor/ckeditor5-paste-from-office@42.0.0":
+"@ckeditor/ckeditor5-paste-from-office@42.0.0", "@ckeditor/ckeditor5-paste-from-office@^42.0.0":
   version "42.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-42.0.0.tgz#1f0be3d835b8a8de47b129c9d5cdf046d9d7cd73"
   integrity sha512-pfBOovJz+CnXXX4XQLJQTBRWHTnlG7gibzzMnnmK+KIzsjlVOGrl09c2uafQo0QvgNSH0bF6Yhxn6T2CTCWcYw==
