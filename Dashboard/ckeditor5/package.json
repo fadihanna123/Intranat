@@ -20,7 +20,7 @@
     "@ckeditor/ckeditor5-basic-styles": "^42.0.0",
     "@ckeditor/ckeditor5-block-quote": "^42.0.0",
     "@ckeditor/ckeditor5-ckfinder": "^42.0.0",
-    "@ckeditor/ckeditor5-dev-utils": "^40.2.3",
+    "@ckeditor/ckeditor5-dev-utils": "^40.3.0",
     "@ckeditor/ckeditor5-editor-classic": "^42.0.0",
     "@ckeditor/ckeditor5-essentials": "^42.0.0",
     "@ckeditor/ckeditor5-heading": "^42.0.0",
