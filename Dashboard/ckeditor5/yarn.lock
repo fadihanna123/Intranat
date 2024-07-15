@@ -800,14 +800,14 @@
     "@ckeditor/ckeditor5-ui" "42.0.1"
     "@ckeditor/ckeditor5-utils" "42.0.1"
 
-"@ckeditor/ckeditor5-paste-from-office@42.0.0", "@ckeditor/ckeditor5-paste-from-office@^42.0.0":
+"@ckeditor/ckeditor5-paste-from-office@42.0.0":
   version "42.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-42.0.0.tgz#1f0be3d835b8a8de47b129c9d5cdf046d9d7cd73"
   integrity sha512-pfBOovJz+CnXXX4XQLJQTBRWHTnlG7gibzzMnnmK+KIzsjlVOGrl09c2uafQo0QvgNSH0bF6Yhxn6T2CTCWcYw==
   dependencies:
     ckeditor5 "42.0.0"
 
-"@ckeditor/ckeditor5-paste-from-office@42.0.1":
+"@ckeditor/ckeditor5-paste-from-office@42.0.1", "@ckeditor/ckeditor5-paste-from-office@^42.0.1":
   version "42.0.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-42.0.1.tgz#bbd9f4177abde14aa830f42b79469ed8c8c6bd66"
   integrity sha512-OKeWTHPrt7Yjp+rzZomxYmhEqZRQmGy+YGkWCdnfy2CH4ypsQVLI07hZazuZ8ZNVZ+/P7gxD7m+1y6EOj3SC5w==
