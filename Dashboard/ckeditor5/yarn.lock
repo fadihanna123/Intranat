@@ -782,7 +782,7 @@
   dependencies:
     ckeditor5 "42.0.1"
 
-"@ckeditor/ckeditor5-paragraph@42.0.0", "@ckeditor/ckeditor5-paragraph@^42.0.0":
+"@ckeditor/ckeditor5-paragraph@42.0.0":
   version "42.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paragraph/-/ckeditor5-paragraph-42.0.0.tgz#d4fda15ec640c4d72665c7543410e5dc3b94b088"
   integrity sha512-CNEc+YBDD5vysMxzSkCRXNtCeWJH2Drq2ynFc6YAOVXnfAQvpW3PnuwHMUQvS6r1BCk35xEbUpuRLCXxOuoipg==
@@ -791,7 +791,7 @@
     "@ckeditor/ckeditor5-ui" "42.0.0"
     "@ckeditor/ckeditor5-utils" "42.0.0"
 
-"@ckeditor/ckeditor5-paragraph@42.0.1":
+"@ckeditor/ckeditor5-paragraph@42.0.1", "@ckeditor/ckeditor5-paragraph@^42.0.1":
   version "42.0.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paragraph/-/ckeditor5-paragraph-42.0.1.tgz#0b9be8f5ade22a9754a0c174c3534349bc32ac5c"
   integrity sha512-rxGX+vnrxUGpTXZQSIO5XBP2Cz8CaYyufLF8Ad4fTpT6VT++BAczI0r2ij5SZLK7iCKQfHBrzz1BvatJmxjr5Q==
