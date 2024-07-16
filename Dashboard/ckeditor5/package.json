@@ -29,7 +29,7 @@
     "@ckeditor/ckeditor5-link": "^42.0.0",
     "@ckeditor/ckeditor5-list": "^42.0.1",
     "@ckeditor/ckeditor5-media-embed": "^42.0.1",
-    "@ckeditor/ckeditor5-paragraph": "^42.0.0",
+    "@ckeditor/ckeditor5-paragraph": "^42.0.1",
     "@ckeditor/ckeditor5-paste-from-office": "^42.0.1",
     "@ckeditor/ckeditor5-table": "^42.0.1",
     "@ckeditor/ckeditor5-theme-lark": "^42.0.1",
