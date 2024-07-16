@@ -552,14 +552,14 @@
   dependencies:
     ckeditor5 "42.0.1"
 
-"@ckeditor/ckeditor5-heading@42.0.0", "@ckeditor/ckeditor5-heading@^42.0.0":
+"@ckeditor/ckeditor5-heading@42.0.0":
   version "42.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-heading/-/ckeditor5-heading-42.0.0.tgz#a1cb73cc9318c3f5ea35b71db493ae344f5aa0e6"
   integrity sha512-KLquk1q0yOjw9rGgq+beigc3uzIk5+5fq1VJCfyeq2qkrLdezWf21Up0h8zCBjJGt4Dw7jodJyMnK4GH3885Xw==
   dependencies:
     ckeditor5 "42.0.0"
 
-"@ckeditor/ckeditor5-heading@42.0.1":
+"@ckeditor/ckeditor5-heading@42.0.1", "@ckeditor/ckeditor5-heading@^42.0.1":
   version "42.0.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-heading/-/ckeditor5-heading-42.0.1.tgz#26d52410f5135edaee16fa8c9475283e7e4caf8a"
   integrity sha512-Uf6IlamcgnZn3VkliP4+qWxEFKdaZNGfCntU08oW4b0Wf3i3P7lbBz73ZQ1sUF79QWZVlZiMIuQNL5RjAc93eA==
