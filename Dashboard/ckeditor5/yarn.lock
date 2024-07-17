@@ -106,14 +106,14 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@ckeditor/ckeditor5-adapter-ckfinder@42.0.0", "@ckeditor/ckeditor5-adapter-ckfinder@^42.0.0":
+"@ckeditor/ckeditor5-adapter-ckfinder@42.0.0":
   version "42.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-adapter-ckfinder/-/ckeditor5-adapter-ckfinder-42.0.0.tgz#f5791bc2c53fa85354a849ae7ebae891cefc9b43"
   integrity sha512-d07ywmOA3ZwqL9tTT1c8oAScqqhA0Az8GC6HqIkPuSaCRKVC55aOLDkmPyACiHFkUkrhmCV9ldkVKoqptxRJVQ==
   dependencies:
     ckeditor5 "42.0.0"
 
-"@ckeditor/ckeditor5-adapter-ckfinder@42.0.1":
+"@ckeditor/ckeditor5-adapter-ckfinder@42.0.1", "@ckeditor/ckeditor5-adapter-ckfinder@^42.0.1":
   version "42.0.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-adapter-ckfinder/-/ckeditor5-adapter-ckfinder-42.0.1.tgz#ad6339d63fc7782ee63b784a8b16451f7c8c75eb"
   integrity sha512-dfyULdo7vQDnFJWZfm0Qv6scW2TVnWLPEVo5r1D9knZbDC4zWFCmr0GeSjMHYKbtstPJzQ1QiVWKMFhWPvOeLg==
