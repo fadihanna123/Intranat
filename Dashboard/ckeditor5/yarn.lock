@@ -798,14 +798,14 @@
     ckeditor5 "42.0.2"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-list@42.0.1", "@ckeditor/ckeditor5-list@^42.0.1":
+"@ckeditor/ckeditor5-list@42.0.1":
   version "42.0.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-42.0.1.tgz#6bdd57fdfa0a7becf3de01e9c7225db294469045"
   integrity sha512-yEzFuO28msXm8I65lpF/D6eWLDK6ZsWnKsYDcQI45QlsVGxrs9r0t4mJzmHv26lN4p4/2pv5CPM1w1+ovvC6Ww==
   dependencies:
     ckeditor5 "42.0.1"
 
-"@ckeditor/ckeditor5-list@42.0.2":
+"@ckeditor/ckeditor5-list@42.0.2", "@ckeditor/ckeditor5-list@^42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-42.0.2.tgz#bbed64ff90c3e764667f0a737a8f9566894dd1e3"
   integrity sha512-NTNDb01QDyjDZis8nyOsvgSNwy6YniulGDZdyeulhmFy6zyHG0GFeYA0kAyW6/bnniWyW9cpfUrAK9KTLuql4A==
