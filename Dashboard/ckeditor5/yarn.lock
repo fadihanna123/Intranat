@@ -842,7 +842,7 @@
     turndown "7.2.0"
     turndown-plugin-gfm "1.0.2"
 
-"@ckeditor/ckeditor5-media-embed@42.0.1", "@ckeditor/ckeditor5-media-embed@^42.0.1":
+"@ckeditor/ckeditor5-media-embed@42.0.1":
   version "42.0.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-media-embed/-/ckeditor5-media-embed-42.0.1.tgz#cd30d69e28c22c6b9025d5c21a91cd8f0e62db49"
   integrity sha512-OnaZb8LdXKS7jyWRSInXFtA/u+t9KcSJAO68MxRnI1bkUdegudaj4JzXX7/ifIocgFTdG+QlG+v40PAUfXYTkQ==
@@ -850,7 +850,7 @@
     "@ckeditor/ckeditor5-ui" "42.0.1"
     ckeditor5 "42.0.1"
 
-"@ckeditor/ckeditor5-media-embed@42.0.2":
+"@ckeditor/ckeditor5-media-embed@42.0.2", "@ckeditor/ckeditor5-media-embed@^42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-media-embed/-/ckeditor5-media-embed-42.0.2.tgz#62372daa2d05f79e54b28c1844b89691cb4a0c0e"
   integrity sha512-iXGcfgOm0IWa600ln5YeSssg7Sew6Lf1z9ziTxsQsmforPIqXgZQEvdLoo0tABddSRQZI+yQZnRnwrus9sZXIA==
