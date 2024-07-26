@@ -139,14 +139,14 @@
     "@ckeditor/ckeditor5-utils" "42.0.2"
     ckeditor5 "42.0.2"
 
-"@ckeditor/ckeditor5-autoformat@42.0.1", "@ckeditor/ckeditor5-autoformat@^42.0.1":
+"@ckeditor/ckeditor5-autoformat@42.0.1":
   version "42.0.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-autoformat/-/ckeditor5-autoformat-42.0.1.tgz#101bef5b3fae3dfe50ad48882cc36a6e1a220ccd"
   integrity sha512-jJvtrbgtvbB4gcgWnAXIyHpb51i3dxY84Uwoc1KIRJyBeCX2vSoXKZ9frnQZp1r5r/MZfW0esuqyMHDI9R+TJQ==
   dependencies:
     ckeditor5 "42.0.1"
 
-"@ckeditor/ckeditor5-autoformat@42.0.2":
+"@ckeditor/ckeditor5-autoformat@42.0.2", "@ckeditor/ckeditor5-autoformat@^42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-autoformat/-/ckeditor5-autoformat-42.0.2.tgz#eccf1ffce62a8c20bd85d38057e8c742bfe3de86"
   integrity sha512-tnMdNc8VJ4y4wqbkSAbBGRiUukByOo1nBqyvzYS+SZ2Wzo67OmzKybvqz60PFYIbPAQJa0/uFkvgd55c+VTaqg==
@@ -842,7 +842,7 @@
     turndown "7.2.0"
     turndown-plugin-gfm "1.0.2"
 
-"@ckeditor/ckeditor5-media-embed@42.0.1", "@ckeditor/ckeditor5-media-embed@^42.0.1":
+"@ckeditor/ckeditor5-media-embed@42.0.1":
   version "42.0.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-media-embed/-/ckeditor5-media-embed-42.0.1.tgz#cd30d69e28c22c6b9025d5c21a91cd8f0e62db49"
   integrity sha512-OnaZb8LdXKS7jyWRSInXFtA/u+t9KcSJAO68MxRnI1bkUdegudaj4JzXX7/ifIocgFTdG+QlG+v40PAUfXYTkQ==
@@ -850,7 +850,7 @@
     "@ckeditor/ckeditor5-ui" "42.0.1"
     ckeditor5 "42.0.1"
 
-"@ckeditor/ckeditor5-media-embed@42.0.2":
+"@ckeditor/ckeditor5-media-embed@42.0.2", "@ckeditor/ckeditor5-media-embed@^42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-media-embed/-/ckeditor5-media-embed-42.0.2.tgz#62372daa2d05f79e54b28c1844b89691cb4a0c0e"
   integrity sha512-iXGcfgOm0IWa600ln5YeSssg7Sew6Lf1z9ziTxsQsmforPIqXgZQEvdLoo0tABddSRQZI+yQZnRnwrus9sZXIA==
@@ -3819,10 +3819,10 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.1.0, postcss-value-parser@^
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^8.2.15, postcss@^8.4.12, postcss@^8.4.39:
-  version "8.4.39"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.39.tgz#aa3c94998b61d3a9c259efa51db4b392e1bde0e3"
-  integrity sha512-0vzE+lAiG7hZl1/9I8yzKLx3aR9Xbof3fBHKunvMfOCYAtMhrsnccJY2iTURb9EZd5+pLuiNV9/c/GZJOHsgIw==
+postcss@^8.2.15, postcss@^8.4.12, postcss@^8.4.40:
+  version "8.4.40"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.40.tgz#eb81f2a4dd7668ed869a6db25999e02e9ad909d8"
+  integrity sha512-YF2kKIUzAofPMpfH6hOi2cGnv/HrUlfucspc7pDyvv7kGdqXrfj8SCl/t8owkEgKEuu8ZcRjSOxFxVLqwChZ2Q==
   dependencies:
     nanoid "^3.3.7"
     picocolors "^1.0.1"
