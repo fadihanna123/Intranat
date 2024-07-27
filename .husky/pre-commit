@@ -1,7 +1,6 @@
 yarn
-npx manypkg check
 stylelint "**/*.scss"
 yarn lint
 npx pretty-quick --staged
-rimraf node_modules
+rm -rf node_modules Dashboard/ckeditor5/node_modules
 git add -A
