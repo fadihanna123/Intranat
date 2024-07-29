@@ -236,10 +236,10 @@
     "@ckeditor/ckeditor5-watchdog" "42.0.2"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-dev-translations@^41.0.0":
-  version "41.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-translations/-/ckeditor5-dev-translations-41.0.0.tgz#c6c69e3aba0e1ca9f8820d534956113661f4c624"
-  integrity sha512-v9oT81xkjrDaF6hzXvCWR+2wQtrIKw9W3fUNlP05fludKw3vzxy1pYEeO7IW/6UY9yQdFEpzey4UwRuNvIkNNA==
+"@ckeditor/ckeditor5-dev-translations@^42.0.0":
+  version "42.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-translations/-/ckeditor5-dev-translations-42.0.0.tgz#e5f6215c20f49cdd5088ff3f0127dd53a3c1872e"
+  integrity sha512-qdme0GXrefAH+7hpBNRnU7nxXsUWvrLrc/AnbsWr+4pjsoU4NXHHdjLqJdlQE0u371LlYjj+HYZ/V50NdeHzIw==
   dependencies:
     "@babel/parser" "^7.18.9"
     "@babel/traverse" "^7.18.9"
@@ -278,12 +278,12 @@
     through2 "^3.0.1"
     ts-loader "^9.3.0"
 
-"@ckeditor/ckeditor5-dev-utils@^41.0.0":
-  version "41.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-utils/-/ckeditor5-dev-utils-41.0.0.tgz#90b9432b7359768a8010e85fdabc5e0dfd0b233c"
-  integrity sha512-eJifykiUV3OcbbHCJ4KZWofCo82btYrfjQRrWXctvCMkRW6PvcFvwHU73TEFEcoM9mCXZdtPeYNHOJ51H4EBLQ==
+"@ckeditor/ckeditor5-dev-utils@^42.0.0":
+  version "42.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-utils/-/ckeditor5-dev-utils-42.0.0.tgz#daf83462d3ce743d454722b118ed0b0493d9a808"
+  integrity sha512-zfzTnKN6uZmRK+4uXgVY5eWajxeXGirMK2Yac8HsQVankTfQkhA1UZCeJMFOWJIU3SUqbEVTL9Rg5XvieZjc7Q==
   dependencies:
-    "@ckeditor/ckeditor5-dev-translations" "^41.0.0"
+    "@ckeditor/ckeditor5-dev-translations" "^42.0.0"
     chalk "^3.0.0"
     cli-cursor "^3.1.0"
     cli-spinners "^2.6.1"
