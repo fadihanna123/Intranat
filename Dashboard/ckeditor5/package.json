@@ -23,7 +23,7 @@
     "@ckeditor/ckeditor5-dev-utils": "^42.0.0",
     "@ckeditor/ckeditor5-editor-classic": "^43.0.0",
     "@ckeditor/ckeditor5-essentials": "^42.0.2",
-    "@ckeditor/ckeditor5-heading": "^42.0.2",
+    "@ckeditor/ckeditor5-heading": "^43.0.0",
     "@ckeditor/ckeditor5-image": "^42.0.2",
     "@ckeditor/ckeditor5-indent": "^42.0.2",
     "@ckeditor/ckeditor5-link": "^43.0.0",
