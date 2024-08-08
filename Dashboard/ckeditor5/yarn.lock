@@ -692,7 +692,7 @@
     "@ckeditor/ckeditor5-utils" "43.0.0"
     ckeditor5 "43.0.0"
 
-"@ckeditor/ckeditor5-heading@42.0.2", "@ckeditor/ckeditor5-heading@^42.0.2":
+"@ckeditor/ckeditor5-heading@42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-heading/-/ckeditor5-heading-42.0.2.tgz#be597db9f9b36f895cdbb244b6dd05c66cf7dd5f"
   integrity sha512-1lwxsxzJRikSerwhH1By9FlAO2EQhcrt3xnpxBFME3pS2Y6tbkHj81W5Lu2cf+0ew5Bzcp5uqTvaArRtVssY1A==
@@ -704,7 +704,7 @@
     "@ckeditor/ckeditor5-utils" "42.0.2"
     ckeditor5 "42.0.2"
 
-"@ckeditor/ckeditor5-heading@43.0.0":
+"@ckeditor/ckeditor5-heading@43.0.0", "@ckeditor/ckeditor5-heading@^43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-heading/-/ckeditor5-heading-43.0.0.tgz#03f6ce9648c5f78790932b0241c03d8ccba2e305"
   integrity sha512-15h4KH4LmH8h0udTI9Apvw4YuEopjx+srt/++Uxv/AasLfNSOMfZ8lIjhqieuqWjeCGotnV8sG3TPJDi55JOZw==
