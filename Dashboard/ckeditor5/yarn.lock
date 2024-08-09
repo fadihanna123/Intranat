@@ -124,7 +124,7 @@
     "@ckeditor/ckeditor5-upload" "43.0.0"
     ckeditor5 "43.0.0"
 
-"@ckeditor/ckeditor5-alignment@42.0.2", "@ckeditor/ckeditor5-alignment@^42.0.2":
+"@ckeditor/ckeditor5-alignment@42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-alignment/-/ckeditor5-alignment-42.0.2.tgz#b0a6a480d04837cec8311e9a6d3168bd47ca7868"
   integrity sha512-g6I0f5Ko7tckHrKYyZhNQL3dGHTcMbjypIfEkk3SAv68X4bDKLImVUJ1L6y0aZnGNoI40cMr0byEyln5rOq67Q==
@@ -134,7 +134,7 @@
     "@ckeditor/ckeditor5-utils" "42.0.2"
     ckeditor5 "42.0.2"
 
-"@ckeditor/ckeditor5-alignment@43.0.0":
+"@ckeditor/ckeditor5-alignment@43.0.0", "@ckeditor/ckeditor5-alignment@^43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-alignment/-/ckeditor5-alignment-43.0.0.tgz#fc29cade48008dca8b9b5f265617145de3527667"
   integrity sha512-GxLw0l/l+CnqDavcHciegjmKsR4nZCMlrIdlvxPrQXAZOU2/EEEQE95UPVwbJCvIX4BB3LgF31FBbiDMWT3jbg==
