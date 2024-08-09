@@ -1076,7 +1076,7 @@
     "@ckeditor/ckeditor5-ui" "43.0.0"
     "@ckeditor/ckeditor5-utils" "43.0.0"
 
-"@ckeditor/ckeditor5-paste-from-office@42.0.2", "@ckeditor/ckeditor5-paste-from-office@^42.0.2":
+"@ckeditor/ckeditor5-paste-from-office@42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-42.0.2.tgz#17bd46fc7f839158edf3859cb9706168ec13bac5"
   integrity sha512-9K54E44rEjvLqWKRRHeifOlb1bICKzzX8gOv/i90sFQfMeQphA6qEn3WJZNQY4NY9Uwhu3kF/gh3/dqlcBhsvw==
@@ -1086,7 +1086,7 @@
     "@ckeditor/ckeditor5-engine" "42.0.2"
     ckeditor5 "42.0.2"
 
-"@ckeditor/ckeditor5-paste-from-office@43.0.0":
+"@ckeditor/ckeditor5-paste-from-office@43.0.0", "@ckeditor/ckeditor5-paste-from-office@^43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-43.0.0.tgz#9e86ae38ddc15db57360ba1ff94cacceea46f501"
   integrity sha512-VMONY8JUdSfWQ0GNjtpjqWvA1BGunIqhDp4dIvbSyiAoK/3p7QQfjdAm9OOxHIwyns5gO5+sBiEHC5GZadgSMg==
