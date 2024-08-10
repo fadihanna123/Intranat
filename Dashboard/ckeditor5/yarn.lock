@@ -206,7 +206,7 @@
     "@ckeditor/ckeditor5-ui" "43.0.0"
     ckeditor5 "43.0.0"
 
-"@ckeditor/ckeditor5-block-quote@42.0.2", "@ckeditor/ckeditor5-block-quote@^42.0.2":
+"@ckeditor/ckeditor5-block-quote@42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-block-quote/-/ckeditor5-block-quote-42.0.2.tgz#c23faa72d5cb4b12ffddb57b5c23e2712cd5059d"
   integrity sha512-xfX+tdAhn7WPHNNZR5Wkjl+OnmbNlEOVVZCL2iAjfswf4r3CglLnJOa529FO+4MyNcwkP+joQ3iVBclZNbETLw==
@@ -218,7 +218,7 @@
     "@ckeditor/ckeditor5-utils" "42.0.2"
     ckeditor5 "42.0.2"
 
-"@ckeditor/ckeditor5-block-quote@43.0.0":
+"@ckeditor/ckeditor5-block-quote@43.0.0", "@ckeditor/ckeditor5-block-quote@^43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-block-quote/-/ckeditor5-block-quote-43.0.0.tgz#0104fa44bc413af95d7ddb85ed8a2b35598903da"
   integrity sha512-FispEZZOZTpau6L3ft+hbpOqi1nDSrPRdEl4oObcHXdisHEYrTdfPXUtGDlcCcaU5mekNzVt4BNRikx2wNP9oQ==
