@@ -620,7 +620,7 @@
     "@ckeditor/ckeditor5-engine" "43.0.0"
     "@ckeditor/ckeditor5-utils" "43.0.0"
 
-"@ckeditor/ckeditor5-essentials@42.0.2", "@ckeditor/ckeditor5-essentials@^42.0.2":
+"@ckeditor/ckeditor5-essentials@42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-essentials/-/ckeditor5-essentials-42.0.2.tgz#12e43283d209a8b865fae7d0026e6eabd45a4998"
   integrity sha512-4qhW/7zm69KHnotKEs05YB6YTD6WB6QWJ6U44V6dFGJUUUmYN1fOt9ri6lU8snUVhJrU0C9IuGpVkb8Aby79GQ==
@@ -634,7 +634,7 @@
     "@ckeditor/ckeditor5-undo" "42.0.2"
     ckeditor5 "42.0.2"
 
-"@ckeditor/ckeditor5-essentials@43.0.0":
+"@ckeditor/ckeditor5-essentials@43.0.0", "@ckeditor/ckeditor5-essentials@^43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-essentials/-/ckeditor5-essentials-43.0.0.tgz#366a5e8bd4465d74d3879598e30afbdb95b63828"
   integrity sha512-UGXxAhmod1QSM6t5ZEPklqBpoAHFqS2ZWXhGZdQaEVzt13MR+tZanug/+3XTs46yhM5401jKT7BGhfkUZwQnVA==
