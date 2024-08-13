@@ -908,7 +908,7 @@
     ckeditor5 "43.0.0"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-list@42.0.2":
+"@ckeditor/ckeditor5-list@42.0.2", "@ckeditor/ckeditor5-list@^42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-42.0.2.tgz#bbed64ff90c3e764667f0a737a8f9566894dd1e3"
   integrity sha512-NTNDb01QDyjDZis8nyOsvgSNwy6YniulGDZdyeulhmFy6zyHG0GFeYA0kAyW6/bnniWyW9cpfUrAK9KTLuql4A==
@@ -922,7 +922,7 @@
     "@ckeditor/ckeditor5-utils" "42.0.2"
     ckeditor5 "42.0.2"
 
-"@ckeditor/ckeditor5-list@43.0.0", "@ckeditor/ckeditor5-list@^43.0.0":
+"@ckeditor/ckeditor5-list@43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-43.0.0.tgz#5f0f909fe995605eac852d00ab14234d1c24b278"
   integrity sha512-pBEI7UNNmO8egc97f1oNHZZvDzZn0TAVzxpYifQcUsVwnsobFk9pojQIpEdJjKoPWcIMJO6SfHe+DYvrB2kqPg==
@@ -1242,7 +1242,7 @@
     ckeditor5 "43.0.0"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-table@42.0.2", "@ckeditor/ckeditor5-table@^42.0.2":
+"@ckeditor/ckeditor5-table@42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-table/-/ckeditor5-table-42.0.2.tgz#7642a840649f3b6bc074ba3b80204bc93b9ea207"
   integrity sha512-fFMXbQCa7UR4aAmwVkKzDcRmKCd2YwE1iNLeGWJz7tz1c+hGeadej0aHgUxBw+hHu6DhS9AyvtwmNweQpc3PnQ==
@@ -1256,7 +1256,7 @@
     ckeditor5 "42.0.2"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-table@43.0.0":
+"@ckeditor/ckeditor5-table@43.0.0", "@ckeditor/ckeditor5-table@^43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-table/-/ckeditor5-table-43.0.0.tgz#71ffe11132b210f51d05ce00e41b25617cdafb67"
   integrity sha512-yHru16jsCG7Zr71hWVvCFyc08ol2dbUNwV4wAZUmM27sYyW8ue6ATML6NQQUiL+7gwbm1xit/Gm9hxuRBtzz+Q==
