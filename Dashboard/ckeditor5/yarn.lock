@@ -366,10 +366,10 @@
     "@ckeditor/ckeditor5-watchdog" "43.0.0"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-dev-translations@^42.0.0":
-  version "42.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-translations/-/ckeditor5-dev-translations-42.0.0.tgz#e5f6215c20f49cdd5088ff3f0127dd53a3c1872e"
-  integrity sha512-qdme0GXrefAH+7hpBNRnU7nxXsUWvrLrc/AnbsWr+4pjsoU4NXHHdjLqJdlQE0u371LlYjj+HYZ/V50NdeHzIw==
+"@ckeditor/ckeditor5-dev-translations@^42.0.1":
+  version "42.0.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-translations/-/ckeditor5-dev-translations-42.0.1.tgz#00112eb72a8ad0855185828606f4cf92f9684b4a"
+  integrity sha512-m17XjzKMQl7kIhFYTAeBIAUBTgib0K4POuj01Wq+lMd51aL++JwXQK3fVqR5SzYgLhKZx2p8gyJiEQqCTBFzHQ==
   dependencies:
     "@babel/parser" "^7.18.9"
     "@babel/traverse" "^7.18.9"
@@ -408,12 +408,12 @@
     through2 "^3.0.1"
     ts-loader "^9.3.0"
 
-"@ckeditor/ckeditor5-dev-utils@^42.0.0":
-  version "42.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-utils/-/ckeditor5-dev-utils-42.0.0.tgz#daf83462d3ce743d454722b118ed0b0493d9a808"
-  integrity sha512-zfzTnKN6uZmRK+4uXgVY5eWajxeXGirMK2Yac8HsQVankTfQkhA1UZCeJMFOWJIU3SUqbEVTL9Rg5XvieZjc7Q==
+"@ckeditor/ckeditor5-dev-utils@^42.0.1":
+  version "42.0.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-utils/-/ckeditor5-dev-utils-42.0.1.tgz#18b33fa7023f5080e06267f9e19e380741b387dc"
+  integrity sha512-MBdWumuUjdNgWkOUYsgjpZ6lsHZEs8ZMzfURUeEjtt2756AB/PmVBY3XfsTnqf/rhX8AA44UipxKKK1TVAVb7g==
   dependencies:
-    "@ckeditor/ckeditor5-dev-translations" "^42.0.0"
+    "@ckeditor/ckeditor5-dev-translations" "^42.0.1"
     chalk "^3.0.0"
     cli-cursor "^3.1.0"
     cli-spinners "^2.6.1"
@@ -908,7 +908,7 @@
     ckeditor5 "43.0.0"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-list@42.0.2":
+"@ckeditor/ckeditor5-list@42.0.2", "@ckeditor/ckeditor5-list@^42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-42.0.2.tgz#bbed64ff90c3e764667f0a737a8f9566894dd1e3"
   integrity sha512-NTNDb01QDyjDZis8nyOsvgSNwy6YniulGDZdyeulhmFy6zyHG0GFeYA0kAyW6/bnniWyW9cpfUrAK9KTLuql4A==
@@ -922,7 +922,7 @@
     "@ckeditor/ckeditor5-utils" "42.0.2"
     ckeditor5 "42.0.2"
 
-"@ckeditor/ckeditor5-list@43.0.0", "@ckeditor/ckeditor5-list@^43.0.0":
+"@ckeditor/ckeditor5-list@43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-43.0.0.tgz#5f0f909fe995605eac852d00ab14234d1c24b278"
   integrity sha512-pBEI7UNNmO8egc97f1oNHZZvDzZn0TAVzxpYifQcUsVwnsobFk9pojQIpEdJjKoPWcIMJO6SfHe+DYvrB2kqPg==
