@@ -836,7 +836,7 @@
     ckeditor5 "43.0.0"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-indent@42.0.2", "@ckeditor/ckeditor5-indent@^42.0.2":
+"@ckeditor/ckeditor5-indent@42.0.2":
   version "42.0.2"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-indent/-/ckeditor5-indent-42.0.2.tgz#428d2d1a63e39ab36744c3465bbcae2c927a3019"
   integrity sha512-qXVXqvflW8kKa7odjiSTrQtj75C5opmnGUyrM+37f7CC8OmrcjXJ5GgrFnKwHyny9YHtvQyyN+GCuzuir6a9eA==
@@ -847,7 +847,7 @@
     "@ckeditor/ckeditor5-utils" "42.0.2"
     ckeditor5 "42.0.2"
 
-"@ckeditor/ckeditor5-indent@43.0.0":
+"@ckeditor/ckeditor5-indent@43.0.0", "@ckeditor/ckeditor5-indent@^43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-indent/-/ckeditor5-indent-43.0.0.tgz#6179b1296de74cd7d0ec9ac5215621161eea2750"
   integrity sha512-GnG9LsVWXE8Otyxt3ZN4Ild4yYNHy06sQwcRSuByPePKzFb34l/0AfH8IqLJv8SQT/z35Tb7K64zKOriZFX53g==
