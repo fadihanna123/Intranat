@@ -144,7 +144,7 @@
     "@ckeditor/ckeditor5-utils" "43.1.0"
     ckeditor5 "43.1.0"
 
-"@ckeditor/ckeditor5-autoformat@43.0.0", "@ckeditor/ckeditor5-autoformat@^43.0.0":
+"@ckeditor/ckeditor5-autoformat@43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-autoformat/-/ckeditor5-autoformat-43.0.0.tgz#8f36da4e7cae179bb0b93a6bb2ef7c36b4318d6a"
   integrity sha512-wCPNWhgnUQctU7c8JdDVbf9m8Ai1dugvnFnR7xTLY3SLh7LvUCF0q0QQ4CysHdNVGSoGVJBmdjU7Qg3qNwD9Ng==
@@ -155,7 +155,7 @@
     "@ckeditor/ckeditor5-utils" "43.0.0"
     ckeditor5 "43.0.0"
 
-"@ckeditor/ckeditor5-autoformat@43.1.0":
+"@ckeditor/ckeditor5-autoformat@43.1.0", "@ckeditor/ckeditor5-autoformat@^43.1.0":
   version "43.1.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-autoformat/-/ckeditor5-autoformat-43.1.0.tgz#8d6d2469cf768f5d00873e9b96cf91175e739d33"
   integrity sha512-gjeya6q5LtgCZ2APJw1CuhAfr5YcSeb5qWlbJfSa4Jk7m4UKRLBN6dqWC4XGTJjNE3mnt9KLIswCBgrLPa+Jqw==
