@@ -1270,14 +1270,14 @@
     ckeditor5 "43.1.0"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-theme-lark@43.0.0", "@ckeditor/ckeditor5-theme-lark@^43.0.0":
+"@ckeditor/ckeditor5-theme-lark@43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-theme-lark/-/ckeditor5-theme-lark-43.0.0.tgz#79130211afe748d5bf7355661d28741536f3e9ec"
   integrity sha512-cd66o/cdKFDhjMnhabgtrsl1K1cyRYzsQnS2459Ly7ApxreOF5w8MRQuGIfr7NmjDwu7xTo4CXowCxmRoxf3JQ==
   dependencies:
     "@ckeditor/ckeditor5-ui" "43.0.0"
 
-"@ckeditor/ckeditor5-theme-lark@43.1.0":
+"@ckeditor/ckeditor5-theme-lark@43.1.0", "@ckeditor/ckeditor5-theme-lark@^43.1.0":
   version "43.1.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-theme-lark/-/ckeditor5-theme-lark-43.1.0.tgz#4e4071c3762f1f6192117e7319ead5df45acb2d3"
   integrity sha512-slYiSdG2ZRSyysO7ApjLcrys1v8QgR6jOAXunEgRrtV/LsPOMjIYLzf9Dyu6oas2NjJdoIsYmwYL9mbP4llbNA==
