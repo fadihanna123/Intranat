@@ -878,7 +878,7 @@
     "@ckeditor/ckeditor5-utils" "43.1.0"
     ckeditor5 "43.1.0"
 
-"@ckeditor/ckeditor5-link@43.0.0", "@ckeditor/ckeditor5-link@^43.0.0":
+"@ckeditor/ckeditor5-link@43.0.0":
   version "43.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-link/-/ckeditor5-link-43.0.0.tgz#0d26dad73fcfec85e0464cfce909e87244909bc1"
   integrity sha512-BAkjg+bfiYCPOvK7WLLlqL2Hy0tcNVgspWLRNr3RJWhCSZMEbtgF8DR97mRA/vWkzTR/htNGKXlbp7OOmBk2Pw==
@@ -893,7 +893,7 @@
     ckeditor5 "43.0.0"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-link@43.1.0":
+"@ckeditor/ckeditor5-link@43.1.0", "@ckeditor/ckeditor5-link@^43.1.0":
   version "43.1.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-link/-/ckeditor5-link-43.1.0.tgz#b432074fbb45d416dd93e0edb939bca11b858b8c"
   integrity sha512-Ait1Ox85lTi/OeFwC4dDNcBJ8FEoLWS6BOZ9TPT4lAOTcrtbSFB4osbFdaix527oDErSXFQJylcVyGQ3o02Fpg==
