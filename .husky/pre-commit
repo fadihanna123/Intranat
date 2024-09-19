@@ -1,5 +1,4 @@
 yarn
-stylelint "**/*.scss"
 yarn lint
 npx pretty-quick --staged
 rm -rf node_modules Dashboard/ckeditor5/node_modules

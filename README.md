@@ -39,7 +39,6 @@ Webbapplikationen är responsivt.<br>
 
 CSS/<br>
 CSS/main.css<br>
-CSS/main.scss<br>
 Images/<br>
 Images/Admin/<br>
 Images/Admin/admin_header_logo.png<br>

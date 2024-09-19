@@ -20,7 +20,7 @@
     "dev": "concurrently \"yarn preview\"",
     "preview": "yarn openWebPage && php -S localhost:8000",
     "openWebPage": "start http://localhost:8000",
-    "lint": "eslint .",
+    "lint": "eslint . && npx stylelint **/*.css",
     "format": "prettier -w .",
     "clear": "rimraf node_modules && cd Dashboard/ckeditor5 && rimraf node_modules",
     "prepare": "husky"
