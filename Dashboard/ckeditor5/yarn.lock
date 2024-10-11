@@ -922,7 +922,7 @@
     "@ckeditor/ckeditor5-utils" "43.1.0"
     ckeditor5 "43.1.0"
 
-"@ckeditor/ckeditor5-list@43.2.0":
+"@ckeditor/ckeditor5-list@43.2.0", "@ckeditor/ckeditor5-list@^43.2.0":
   version "43.2.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-43.2.0.tgz#c6ddc43e279081f4a61dea5052527562b377d45a"
   integrity sha512-HljK5Ew3fgPX/FYiK0ieuGIrjCqiNeVG825UaAeuRHkNm1QgCBF0xQ1fsaiJw7/lTXfPA5KhzD3ezEwI1qWytQ==
@@ -1067,7 +1067,7 @@
     "@ckeditor/ckeditor5-ui" "43.1.0"
     "@ckeditor/ckeditor5-utils" "43.1.0"
 
-"@ckeditor/ckeditor5-paragraph@43.2.0":
+"@ckeditor/ckeditor5-paragraph@^43.2.0":
   version "43.2.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paragraph/-/ckeditor5-paragraph-43.2.0.tgz#e064ad2ccb871cdcbd941b0f057aafbf3c4743eb"
   integrity sha512-Gi7Plu75rlwiV55K1V06iVdPAGOn1FKX2JPgK+eTfYe2uZeJlJWkjvkl8x32IxJxT9Z8V1yECcg/I8A0J4IdlA==
@@ -1076,7 +1076,7 @@
     "@ckeditor/ckeditor5-ui" "43.2.0"
     "@ckeditor/ckeditor5-utils" "43.2.0"
 
-"@ckeditor/ckeditor5-paste-from-office@43.1.0":
+"@ckeditor/ckeditor5-paste-from-office@43.1.0", "@ckeditor/ckeditor5-paste-from-office@^43.1.0":
   version "43.1.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-43.1.0.tgz#a2345b88356a6bc6db91ebd519e1bb82586e47de"
   integrity sha512-jmOiPmLR3mXYDHGw+dZ/jSHpk9olKDOlQajJlME/SwAZ7o/GD6BrVd3if+hNzPaQVFbrIo/2wX2DBdAZcM0Ocg==
