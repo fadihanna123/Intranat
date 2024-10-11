@@ -836,7 +836,7 @@
     ckeditor5 "43.2.0"
     lodash-es "4.17.21"
 
-"@ckeditor/ckeditor5-indent@43.1.0":
+"@ckeditor/ckeditor5-indent@43.1.0", "@ckeditor/ckeditor5-indent@^43.1.0":
   version "43.1.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-indent/-/ckeditor5-indent-43.1.0.tgz#a435d78533d1619d7c7d5251cbe0af8b3777cdc5"
   integrity sha512-4EmCg8CxBNGdtK9eOyf5xWN1pXdNDRrErLfLffNNFLvEWZtwN+I11WDHzVCappqZX1Br5kRigaDEYLlDB0q5Yw==
@@ -922,7 +922,7 @@
     "@ckeditor/ckeditor5-utils" "43.1.0"
     ckeditor5 "43.1.0"
 
-"@ckeditor/ckeditor5-list@43.2.0":
+"@ckeditor/ckeditor5-list@43.2.0", "@ckeditor/ckeditor5-list@^43.2.0":
   version "43.2.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-list/-/ckeditor5-list-43.2.0.tgz#c6ddc43e279081f4a61dea5052527562b377d45a"
   integrity sha512-HljK5Ew3fgPX/FYiK0ieuGIrjCqiNeVG825UaAeuRHkNm1QgCBF0xQ1fsaiJw7/lTXfPA5KhzD3ezEwI1qWytQ==
@@ -1067,7 +1067,7 @@
     "@ckeditor/ckeditor5-ui" "43.1.0"
     "@ckeditor/ckeditor5-utils" "43.1.0"
 
-"@ckeditor/ckeditor5-paragraph@43.2.0":
+"@ckeditor/ckeditor5-paragraph@^43.2.0":
   version "43.2.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paragraph/-/ckeditor5-paragraph-43.2.0.tgz#e064ad2ccb871cdcbd941b0f057aafbf3c4743eb"
   integrity sha512-Gi7Plu75rlwiV55K1V06iVdPAGOn1FKX2JPgK+eTfYe2uZeJlJWkjvkl8x32IxJxT9Z8V1yECcg/I8A0J4IdlA==
@@ -1086,7 +1086,7 @@
     "@ckeditor/ckeditor5-engine" "43.1.0"
     ckeditor5 "43.1.0"
 
-"@ckeditor/ckeditor5-paste-from-office@43.2.0":
+"@ckeditor/ckeditor5-paste-from-office@43.2.0", "@ckeditor/ckeditor5-paste-from-office@^43.2.0":
   version "43.2.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-43.2.0.tgz#c81aa7bee6b2e7289448aa819d345db2d2a39695"
   integrity sha512-+jPVd79p1oyuIcW5Pq4LsxAN5ZxjtJaasx2flGi9mLMFaLxnO/JteFs0rH7BAavURrxdhvXuIosYMGfPWleGLw==
