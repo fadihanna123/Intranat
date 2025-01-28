@@ -1,6 +1,6 @@
 {
   "name": "intranat",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "private": "true",
   "license": "MIT",
   "bugs": {
@@ -20,26 +20,27 @@
     "dev": "concurrently \"yarn preview\"",
     "preview": "yarn openWebPage && php -S localhost:8000",
     "openWebPage": "start http://localhost:8000",
-    "lint": "eslint . && npx stylelint **/*.css",
+    "lint": "eslint . && npx stylelint **/*.css && yarn type-check",
     "format": "prettier -w .",
     "clear": "rimraf node_modules && cd Dashboard/ckeditor5 && rimraf node_modules",
-    "prepare": "husky"
+    "prepare": "husky",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@types/jquery": "^3.5.30",
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
-    "eslint": "8.57.0",
-    "eslint-plugin-css": "^0.10.0",
+    "@types/jquery": "^3.5.32",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "eslint": "9.19.0",
+    "eslint-plugin-css": "^0.11.0",
     "eslint-plugin-editorconfig": "^4.0.3",
-    "eslint-plugin-html": "^8.1.1",
-    "eslint-plugin-sql": "^2.5.0",
-    "husky": "^9.1.4",
-    "prettier": "^3.3.3",
-    "stylelint": "^16.8.1",
-    "stylelint-config-standard": "^36.0.1",
-    "stylelint-config-standard-scss": "^13.1.0",
-    "typescript": "^5.5.4"
+    "eslint-plugin-html": "^8.1.2",
+    "eslint-plugin-sql": "^3.2.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "stylelint": "^16.14.1",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "typescript": "^5.7.3"
   },
   "engines": {
     "node": ">=16.0.0",
@@ -47,5 +48,10 @@
   },
   "config": {
     "port": 8000
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.19.0",
+    "globals": "^15.14.0"
   }
 }

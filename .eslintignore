@@ -1,5 +1,0 @@
-node_modules/*
-*.html
-Js/*
-Dashboard/Js/*
-Dashboard/ckeditor5/webpack.config.js
