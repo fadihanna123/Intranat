@@ -28,7 +28,7 @@
     "@ckeditor/ckeditor5-indent": "^44.1.0",
     "@ckeditor/ckeditor5-link": "^44.1.0",
     "@ckeditor/ckeditor5-list": "^44.1.0",
-    "@ckeditor/ckeditor5-media-embed": "^44.1.0",
+    "@ckeditor/ckeditor5-media-embed": "^45.0.0",
     "@ckeditor/ckeditor5-paragraph": "^44.1.0",
     "@ckeditor/ckeditor5-paste-from-office": "^44.1.0",
     "@ckeditor/ckeditor5-table": "^44.1.0",
