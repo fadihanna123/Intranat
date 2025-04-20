@@ -1,8 +1,7 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
+  "extends": ["stylelint-config-standard"],
   "rules": {
     "selector-class-pattern": null,
-    "scss/at-mixin-pattern": null,
     "media-feature-range-notation": null
   }
 }

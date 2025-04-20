@@ -1,9 +1,13 @@
 @charset "UTF-8";
+
 * {
   /* Återställa alla margin till 0 */
+
   margin: 0;
+
   /* Återställa alla padding till 0 */
   padding: 0;
+
   /* Inkludera padding och ramkanter i bredd och höjd. */
   box-sizing: border-box;
 }
@@ -11,6 +15,7 @@
 .icon {
   /* Ikonerna ska ha bredden 20px. */
   width: 20px;
+
   /* Ikonerna ska ha höjden 2 vh. */
   height: 2vh;
 }
@@ -18,8 +23,10 @@
 #logobild {
   /* Inkludera logobildkoden. */
   width: 250px;
+
   /* Låt breeden för logobilden ha 250 pixlar. */
   height: auto;
+
   /* Låt höjden för logobilden vara automatiskt. */
 }
 
@@ -31,6 +38,7 @@
 #sidfoten {
   /* Låt texten ha fetstil i sidfoten. */
   font-weight: bold;
+
   /* Låt texten ha textstorlek: 1.5 em i sidfoten. */
   font-size: 1.5em;
 }
@@ -50,8 +58,10 @@
   body {
     /* Låt hela sidan ha bredden 100%. */
     width: 100%;
+
     /* Ta bort uttrymme från alla sidor. */
     margin: 0;
+
     /* Låt texten vara responsivt att ha 100% beroende på skärmens storlek */
     font-size: 100%;
   }
@@ -84,8 +94,10 @@
   #main {
     /* Visa innehållet som tabellcell. */
     display: table-cell;
+
     /* Låt innehållet ha bredden 1000 vw. */
     width: 1000vw;
   }
 }
+
 /* Inkludera svarkoden */
