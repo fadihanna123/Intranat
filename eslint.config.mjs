@@ -2,7 +2,6 @@ import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import html from 'eslint-plugin-html';
 import css from 'eslint-plugin-css';
 import sql from 'eslint-plugin-sql';
-import editorconfig from 'eslint-plugin-editorconfig';
 import globals from 'globals';
 import tsParser from '@typescript-eslint/parser';
 import path from 'node:path';
@@ -30,8 +29,7 @@ export default [
   ...compat.extends(
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:css/recommended',
-    'plugin:editorconfig/all'
+    'plugin:css/recommended'
   ),
   {
     plugins: {
@@ -39,7 +37,6 @@ export default [
       html,
       css,
       sql,
-      editorconfig,
     },
 
     languageOptions: {
@@ -59,7 +56,6 @@ export default [
       quotes: ['error', 'single'],
       semi: ['error', 'always'],
       'at-rule-no-unknown': 0,
-      'editorconfig/eol-last': 'off',
 
       'sql/format': [
         2,
