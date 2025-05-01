@@ -39,7 +39,7 @@
     "raw-loader": "4.0.2",
     "style-loader": "4.0.0",
     "terser-webpack-plugin": "5.3.14",
-    "webpack": "5.99.6"
+    "webpack": "5.99.7"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-dev-webpack-plugin": "31.1.13",
