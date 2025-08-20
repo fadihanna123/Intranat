@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "./" # Location of package manifests
+    schedule:
+      interval: "monthly"
+
+version: 2
+updates:
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "./Dashboard/ckeditor5" # Location of package manifests
+    schedule:
+      interval: "monthly"
