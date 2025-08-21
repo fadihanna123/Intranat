@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php 
+
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+
+?>
 <?php require "Includes/config.php"; ?>
 <!DOCTYPE html>
 <html lang="sv">

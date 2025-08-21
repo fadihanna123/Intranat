@@ -1,5 +1,4 @@
 <?php ob_start(); ?>
-<?php session_start(); ?>
 <?php $title = "Anmälan"; ?>
 <?php require "Includes/header.php"; ?>
 <?php require "Includes/nav.php"; ?>
