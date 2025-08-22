@@ -659,7 +659,7 @@ class Dashboard
         $result = $this->db->query($sql);
         echo '
       <img src="Images/Ikoner/help.png" class="img-fluid FAQicon" alt="Hjälp ikon" />
-        <h1 class="ml-5">FAQ</h1>
+        <h1 class="ms-5">FAQ</h1>
           <ul class="list-group">';
         $num = mysqli_num_rows($result);
         if ($num > 0) {
@@ -1055,7 +1055,7 @@ class Dashboard
         // Personalinnehåll.
         echo "
         <img src='./Images/Ikoner/staff.png' class='img-fluid stafficon' alt='Personalikon' />
-          <h1 class='ml-4'>Personal</h1>
+          <h1 class='ms-4'>Personal</h1>
             <div class='row'>
               <div class='card-deck w-75'>";
         if ($num > 0) {

@@ -10,7 +10,7 @@
 
 <!-- Nyhetersdelen -->  
   <img src='Images/Ikoner/news.png' class='img-fluid specheadicon' alt='Nyhetersikon' />
-        <h2 class='rubrik specrubriktxt ml-3'>Alla nyheter</h2>
+        <h2 class='rubrik specrubriktxt ms-3'>Alla nyheter</h2>
     <br />
   
   <?php

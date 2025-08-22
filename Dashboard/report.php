@@ -67,7 +67,7 @@
                     <div class="row">
                         <div class="col-md-6">
                       <img src="Images/Ikoner/add-1.png" class="img-fluid ml-1 specheadicon" alt="Lägg till nyhet ikonen" />
-                        <h2 class="rubrik ml-5">Sjukanmälan</h2>
+                        <h2 class="rubrik ms-5">Sjukanmälan</h2>
                           <p class="ml-1">
                             Här kan du sjukanmäla dig.
                           </p>'; // Sjukanmälans formulär.
@@ -105,7 +105,7 @@
         echo '
             <div class="col-md-6">
               <img src="Images/Ikoner/register.png" class="img-fluid leaveicon" alt="Anmälanikon" />
-                <h2 class="ml-5 rubrik mt-2">Ledighetsansökan</h2>
+                <h2 class="ms-5 rubrik mt-2">Ledighetsansökan</h2>
                     <p class="spec">
                       Här kan du söka om ledighet.
                     </p>

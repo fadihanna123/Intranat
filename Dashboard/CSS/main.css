@@ -11,6 +11,14 @@
   box-sizing: border-box;
 }
 
+.mymain {
+  /* Flytta mittensinnehåll till vänster 300 pixlar. */
+  margin-left: 300px;
+
+  /* Flytta mittensinnehåll neråt 470 pixlar. */
+  margin-top: -410px;
+}
+
 .card {
   /* Maxbredd för kortet ska vara 100%. */
   max-width: 100%;

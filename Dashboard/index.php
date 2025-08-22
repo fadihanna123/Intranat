@@ -9,7 +9,9 @@
           <?php echo $dashboard->getCompanyName(); ?>
         </h1>
 
-<?php if (!isset($_SESSION['loginuname'])) {
+<?php 
+
+if (!isset($_SESSION['loginuname'])) {
     // Om man inte är inloggad.
     header("location: ../login.php?msg=true");
 }
@@ -17,8 +19,7 @@
 else {
     // Om man är inloggad.
     $dashboard->getNewsHome();
-}
-// Slut om man är inloggad.
+} // Slut om man är inloggad.
 ?></div>
   </div>
 <?php require "Includes/footer.php"; ?>
