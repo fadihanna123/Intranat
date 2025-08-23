@@ -12,7 +12,7 @@
         // Om användaren har administratörsbehörigheter.
         if (isset($_GET['msg']) && $_GET['msg'] == "true") {
             // Om det finns msg och är true i adressfältet.
-            echo "<div class='alert alert-success ml-4 w-75'>
+            echo "<div class='alert alert-success ms-4 w-75'>
                           Filen lades till i databasen.
                       </div>";
         } // Slut om det finns msg och är true i adressfältet.
@@ -81,28 +81,28 @@
                             <div class="row">
                                 <div class="col-sm-10">
                                   <img src="Images/Ikoner/upload.png" class="img-fluid uploadicon" alt="Ladda upp ikonen" />
-                                    <h1 class="ml-5 uploadheading">Ladda upp filer</h1><br />
+                                    <h1 class="ms-5 uploadheading">Ladda upp filer</h1><br />
                           
                                         <form action="filarkiv.php" id="addfileform" method="post" enctype="multipart/form-data" class="p-4 myform w-100">
                                     
                                                 <div class="row">
-                                                  <div class="form-group col-md-7">
-                                                    <label id="addfilenamelabel" for="addfilename">Namn:*</label>
+                                                  <div class="form-row col-md-7">
+                                                    <label class="form-label" id="addfilenamelabel" for="addfilename">Namn:*</label>
                                                       <input type="text" name="addfilename" class="form-control" id="addfilename" required />
                                                   </div>
                                                 </div>
 
                                                 <div class="row">
-                                                  <div class="form-group col-md-7">
-                                                      <label id="addfilelabel" for="addfile">Dokument:*</label>
+                                                  <div class="form-row col-md-7">
+                                                      <label class="form-label" id="addfilelabel" for="addfile">Dokument:*</label>
                                                         <input type="file" name="addfile" class="form-control" id="addfile" required />
                                                     </div>
                                                 </div>
 
                                                 <div class="row">
-                                                  <div class="form-group col-md-7">
-                                                      <label for="addcat">Kategori:*</label>
-                                                      <select name="addcat" id="addcat" class="ml-1 form-control">
+                                                  <div class="form-row col-md-7">
+                                                      <label class="form-label" for="addcat">Kategori:*</label>
+                                                      <select name="addcat" id="addcat" class="ms-1 form-control">
                                                       <option value="">Välj</option>
                                                       <option value="">---</option>';
         $dashboard->getArkivCategories();
@@ -111,15 +111,15 @@
                                                           </div>
                                             
                                                         <div class="row">
-                                                          <div class="form-group col-md-7">
-                                                            <label id="adddeslabel" for="adddes">Beskrivning:*</label>
+                                                          <div class="form-row col-md-7">
+                                                            <label class="form-label" id="adddeslabel" for="adddes">Beskrivning:*</label>
                                                               <textarea class="adddes" name="adddes" id="adddes"></textarea>
                                                         </div>
                                                         </div>      
                                                         
                                             
                                                         <div class="row">
-                                                          <div class="form-group mx-auto col-md-7">
+                                                          <div class="form-row mx-auto col-md-7">
                                                             <input class="btn btn-primary btn-lg" name="addfilebtn" id="addfilebtn" type="submit" value="Ladda upp" />
                                                           </div>
                                                         </div>

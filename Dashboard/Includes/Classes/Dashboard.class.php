@@ -172,7 +172,7 @@ class Dashboard
         else {
             // Om det saknas användare som inte blev godkänd än.
             echo "
-        <span class='ml-4'>
+        <span class='ms-4'>
             Det finns inga nya medlemmar som väntar godkännande.
         </span>";
         } // Slut om det saknas användare som inte blev godkänd än.
@@ -296,7 +296,7 @@ class Dashboard
             // Om det finns nyheter i databasen.
             echo "
         <div class='row'>
-          <div class='card-deck ml-1 w-100'>";
+          <div class='card-deck ms-1 w-100'>";
             while ($getdata = mysqli_fetch_array($result)) {
                 $id = mysqli_real_escape_string($this->db, $getdata['id']);
                 $bild = mysqli_real_escape_string($this->db, $getdata['img']);
@@ -344,7 +344,7 @@ class Dashboard
         // Slut om det finns nyheter i databasen.
         else {
             // Om det saknas nyheter i databasen.
-            echo "<div class='alert alert-danger ml-3'>
+            echo "<div class='alert alert-danger ms-3'>
                   Det finns inga nyheter just nu.
                 </div>";
         } // Slut om det saknas nyheter i databasen.
@@ -382,14 +382,14 @@ class Dashboard
         if ($result2) {
             // Om uppdateringen av data lyckades.
             header("Refresh: 3");
-            echo "<div class='alert alert-success ml-3'>
+            echo "<div class='alert alert-success ms-3'>
                   Dina ändringar har sparats.
               </div>";
         }
         // Slut om uppdateringen av data lyckades.
         else {
             // Om uppdateringen av data misslyckades.
-            echo "<div class='alert alert-danger ml-3'>
+            echo "<div class='alert alert-danger ms-3'>
                   Det uppstod ett okänt fel. Kontakta administratören.
               </div>";
         } // Slut om uppdateringen av data misslyckades.
@@ -428,14 +428,14 @@ class Dashboard
         $result2 = $this->db->query($sql2);
         if ($result2) {
             // Om uppdateringen av data lyckades.
-            echo "<div class='alert alert-success ml-3'>
+            echo "<div class='alert alert-success ms-3'>
                   Dina ändringar har sparats.
               </div>";
         }
         // Slut om uppdateringen av data lyckades.
         else {
             // Om uppdateringen av data misslyckades.
-            echo "<div class='alert alert-danger ml-3'>
+            echo "<div class='alert alert-danger ms-3'>
                   Det uppstod ett okänt fel. Kontakta administratören.
               </div>";
         } // Slut om uppdateringen av data misslyckades.
@@ -491,7 +491,7 @@ class Dashboard
               <form action='admin.php' class='form-horizontal' method='post' enctype='multipart/form-data'>
             
                 <div class='row'>
-                      <label class='col-sm-2' for='editcompanyname'>Företagets namn:</label>
+                      <label class='form-label col-sm-2' for='editcompanyname'>Företagets namn:</label>
                       <div class='col-sm-10'>
                           <input type='text' value='$getcompanyname' class='form-control' name='editcompanyname' id='editcompanyname' />
                       </div>
@@ -499,7 +499,7 @@ class Dashboard
                 </div>
 
               <div class='row'>
-                      <label class='col-sm-2' for='editimglogo'>Logotyp:</label>
+                      <label class='form-label col-sm-2' for='editimglogo'>Logotyp:</label>
                       <div class='col-sm-5'>
                           <input type='file' accept='image/*' class='form-control' name='editimglogo' id='editimglogo' />
                       </div>
@@ -511,12 +511,12 @@ class Dashboard
               </div>
               
               <div class='row'>
-                  <label for='editaddressstreet' class='col-sm-2'>Gata:</label>
+                  <label for='editaddressstreet' class='form-label col-sm-2'>Gata:</label>
                   <div class='col-sm-5'>
                       <input type='text' value='$getaddress_street' class='form-control mb-2' name='editaddressstreet' id='editaddressstreet' />
               </div>
 
-              <label for='editaddressbox' class='col-sm-2'>Postnummer:</label>
+              <label for='editaddressbox' class='form-label col-sm-2'>Postnummer:</label>
                   <div class='col-sm-3'>
                         <input type='text' value='$getaddress_box' class='form-control mb-2' name='editaddressbox' id='editaddressbox' />
                   </div>
@@ -524,12 +524,12 @@ class Dashboard
               </div>
 
             <div class='row'>
-                  <label for='editaddresscity' class='col-sm-2'>Stad:</label>
+                  <label for='editaddresscity' class='form-label col-sm-2'>Stad:</label>
                   <div class='col-sm-5'>
                         <input type='text' value='$getaddress_city' class='form-control mb-2' name='editaddresscity' id='editaddresscity' />
                   </div>
 
-            <label for='editorgnr' class='col-sm-2'>Orgnr:</label>
+            <label for='editorgnr' class='form-label col-sm-2'>Orgnr:</label>
                     <div class='col-sm-3'>
                         <input type='text' value='$getorgnr' class='form-control mb-2' name='editorgnr' id='editorgnr' />
                     </div>
@@ -537,24 +537,24 @@ class Dashboard
 
 
             <div class='row'>
-                <label for='editinvoiceinfo' class='col-sm-2'>Fakturainfo:</label>
+                <label for='editinvoiceinfo' class='form-label col-sm-2'>Fakturainfo:</label>
                   <div class='col-sm-10'>
                     <textarea class='form-control' name='editinvoiceinfo' id='editinvoiceinfo'>$getinvoiceinfo</textarea>
                   </div>
             </div>
             <div class='row'>
-                    <label for='editvisitaddress' class='col-sm-2'>Besöksadress:</label>
+                    <label for='editvisitaddress' class='form-label col-sm-2'>Besöksadress:</label>
                     <div class='col-sm-10'>
                       <input type='text' value='$getvisitaddress' class='form-control mt-1 mb-2' name='editvisitaddress' id='editvisitaddress' />
                     </div>
             </div>
         <div class='row'>
-                <label for='editfirstcolor' class='col-sm-2'>Primär färg:</label>
+                <label for='editfirstcolor' class='form-label col-sm-2'>Primär färg:</label>
                 <div class='col-sm-5'>
                   <input type='color' value='$getfirstcolor' class='form-control mb-2' name='editfirstcolor' id='editfirstcolor' />
                 </div>
 
-        <label for='editsecondcolor' class='col-sm-2'>Sekundär färg:</label>
+        <label for='editsecondcolor' class='form-label col-sm-2'>Sekundär färg:</label>
                   <div class='col-sm-3'>
                     <input type='color' value='$getsecondcolor' class='form-control mb-2' name='editsecondcolor' id='editsecondcolor' />
                   </div>
@@ -563,7 +563,7 @@ class Dashboard
                 
           <div class='row'>
                   <div class='mx-auto'>
-                    <input class='btn btn-primary ml-1 btn-lg mb-3' name='editadmininfobtn' id='editadmininfobtn' type='submit' value='Uppdatera' />
+                    <input class='btn btn-primary ms-1 btn-lg mb-3' name='editadmininfobtn' id='editadmininfobtn' type='submit' value='Uppdatera' />
                   </div>
           </div>
               </form>
@@ -589,30 +589,30 @@ class Dashboard
             $getepost = mysqli_real_escape_string($this->db, $getdata['email']);
             // E-postadressändringsformulär.
             echo "<div class='row'>
-                    <label for='currentepost' class='col-sm-4 ml-2 mt-3'>Nuvarande e-postadress:</label>
+                    <label for='currentepost' class='form-label col-sm-4 ms-2 mt-3'>Nuvarande e-postadress:</label>
                       <div class='col-sm-5'>
-                        <input value='$getepost' id='currentepost' type='text' class='form-control ml-1 mb-1' disabled />
+                        <input value='$getepost' id='currentepost' type='text' class='form-control ms-1 mb-1' disabled />
                     </div>
                   </div>
             
                 <div class='row'>
-                    <label for='editepost' class='col-sm-4 ml-2 mt-3'>Ny e-postadress:*</label>
+                    <label for='editepost' class='form-label col-sm-4 ms-2 mt-3'>Ny e-postadress:*</label>
                       <div class='col-sm-5'>
-                        <input type='text' name='editepost' class='editepost ml-1 mt-1 form-control' id='editepost' required />
+                        <input type='text' name='editepost' class='editepost ms-1 mt-1 form-control' id='editepost' required />
                       </div>
                 </div>
               <br />
               <div class='row'>
-                  <label for='editconfirmepost' class='ml-2 col-sm-4 mt-3'>Bekräfta e-postadress:*</label>
+                  <label for='editconfirmepost' class='form-label ms-2 col-sm-4 mt-3'>Bekräfta e-postadress:*</label>
                     <div class='col-sm-5'>
-                      <input type='text' class='form-control ml-1 mb-2' name='editconfirmepost' id='editconfirmepost' required />
+                      <input type='text' class='form-control ms-1 mb-2' name='editconfirmepost' id='editconfirmepost' required />
                     </div>
               </div>
 
               <br />
               <div class='row'>
                 <div class='mx-auto'>
-                  <input class='btn btn-primary ml-4 btn-lg' name='editepostbtn' id='editepostbtn' type='submit' value='Ändra' />
+                  <input class='btn btn-primary ms-4 btn-lg' name='editepostbtn' id='editepostbtn' type='submit' value='Ändra' />
                 </div>
               </div>
             ";
@@ -743,12 +743,12 @@ class Dashboard
             echo "
               <form action='accountsettings.php' class='form-horizontal needs-validation' novalidate method='post' enctype='multipart/form-data'>
                 <div class='row'>
-                      <label class='col-sm-2' for='editusername'>Användarnamn:</label>
+                      <label class='form-label col-sm-2' for='editusername'>Användarnamn:</label>
                       <div class='col-sm-5'>
                           <input type='text' value='$getusername' class='form-control' name='editusername' id='editusername' />
                       </div>
 
-                      <label for='editfullname' class='col-sm-2'>Fullständigt namn:</label>
+                      <label for='editfullname' class='form-label col-sm-2'>Fullständigt namn:</label>
                         <div class='col-sm-3'>
                           <input type='text' value='$getfullname' class='form-control mb-2' name='editfullname' id='editfullname' />
                         </div>
@@ -756,7 +756,7 @@ class Dashboard
  
  
                     <div class='row'>
-                            <label class='col-sm-2' for='editavatar'>Profilbild:</label>
+                            <label class='form-label col-sm-2' for='editavatar'>Profilbild:</label>
                             <div class='col-sm-5'>
                                 <input type='file' accept='image/*' class='form-control' name='editavatar' id='editavatar' />
                             </div>
@@ -768,12 +768,12 @@ class Dashboard
                       </div>
                
                     <div class='row'>
-                          <label for='editaddressstreet' class='col-sm-2'>Gata:</label>
+                          <label for='editaddressstreet' class='form-label col-sm-2'>Gata:</label>
                           <div class='col-sm-5'>
                               <input type='text' value='$getaddressstreet' class='form-control mb-2' name='editaddressstreet' id='editaddressstreet' />
                           </div>
         
-                          <label for='editaddressbox' class='col-sm-2'>Postnummer:</label>
+                          <label for='editaddressbox' class='form-label col-sm-2'>Postnummer:</label>
                           <div class='col-sm-3'>
                                 <input type='text' value='$getaddressbox' class='form-control mb-2' name='editaddressbox' id='editaddressbox' />
                           </div>
@@ -781,18 +781,18 @@ class Dashboard
                       </div>
       
                     <div class='row'>
-                          <label for='editaddresscity' class='col-sm-2'>Stad:</label>
+                          <label for='editaddresscity' class='form-label col-sm-2'>Stad:</label>
                           <div class='col-sm-10'>
                                 <input type='text' value='$getaddresscity' class='form-control mb-2' name='editaddresscity' id='editaddresscity' />
                           </div>
                     </div>
                     <div class='row'>
-                          <label for='editmobnr' class='col-sm-2'>Mobilnummer:</label>
+                          <label for='editmobnr' class='form-label col-sm-2'>Mobilnummer:</label>
                           <div class='col-sm-5'>
                               <input type='text' value='$getmobnr' class='form-control mb-2' name='editmobnr' id='editmobnr' />
                           </div>      
       
-                      <label for='edittfnr' class='col-sm-2'>Telefonnummer:</label>
+                      <label for='edittfnr' class='form-label col-sm-2'>Telefonnummer:</label>
                         <div class='col-sm-3'>
                           <input value='$gettfnr' class='form-control' name='edittfnr' id='edittfnr' />
                         </div>
@@ -800,7 +800,7 @@ class Dashboard
                   <br />
                       <div class='row'>
                         <div class='mx-auto'>
-                          <input class='btn btn-primary ml-1 btn-lg' name='editaccountbtn' id='editaccountbtn' type='submit' value='Uppdatera' />
+                          <input class='btn btn-primary ms-1 btn-lg' name='editaccountbtn' id='editaccountbtn' type='submit' value='Uppdatera' />
                         </div>
                       </div>
                     </form>
@@ -1179,14 +1179,14 @@ class Dashboard
     {
         echo "<form action='admin.php' method='post' class='p-4 needs-validation' novalidate>
             <div class='row'>
-              <label for='catname' class='col-sm-4 ml-2 mt-3'>Kategorinamn:*</label>
+              <label for='catname' class='form-label col-sm-4 ms-2 mt-3'>Kategorinamn:*</label>
                 <div class='col-sm-5'>
-                  <input type='text' name='addcatname' class='form-control ml-1 mb-1' id='catname' required />
+                  <input type='text' name='addcatname' class='form-control ms-1 mb-1' id='catname' required />
                 </div>
 
-            <label for='catregister' class='col-sm-4 ml-2 mt-3'>Register:*</label>
+            <label for='catregister' class='form-label col-sm-4 ms-2 mt-3'>Register:*</label>
               <div class='col-sm-5'>
-                  <select class='form-control ml-1' name='addcatdb' id='catregister' required>
+                  <select class='form-control ms-1' name='addcatdb' id='catregister' required>
                     <option value=''>Välj</option>
                     <option value=''>---</option>
                     <option value='news_categories'>Nyhetkategorier</option>
@@ -1287,18 +1287,18 @@ class Dashboard
 
             </div>
           </div>
-        <form action='editnews.php?id=$id' class='ml-3 w-75' method='post' enctype='multipart/form-data'>
+        <form action='editnews.php?id=$id' class='ms-3 w-75' method='post' enctype='multipart/form-data'>
           
           <div class='row'>
-            <div class='form-group col-md-7'>
-                <label for='edittitle'>Rubrik:</label>
+            <div class='form-row col-md-7'>
+                <label class='form-label' for='edittitle'>Rubrik:</label>
                 <input type='text' value='$gettitle' class='form-control' name='edittitle' id='edittitle' />
             </div>
           </div>
 
           <div class='row'>
-            <div class='form-group col-md-7'>
-              <label for='editcat'>Kategori:</label>
+            <div class='form-row col-md-7'>
+              <label class='form-label' for='editcat'>Kategori:</label>
                 <select class='form-control' name='editcat' id='editcat'>
                   <option value='$getcat'>$getcat</option>
                   <option value='$getsortedcat'>$getsortedcat</option>
@@ -1307,8 +1307,8 @@ class Dashboard
         </div>
 
             <div class='row'>
-                <div class='form-group col-md-7'>
-                  <label for='editcontent'>Innehåll:</label>
+                <div class='form-row col-md-7'>
+                  <label class='form-label' for='editcontent'>Innehåll:</label>
                     <textarea class='editcontent form-control' id='editcontent' name='editcontent'>$getcontent</textarea>
                 </div>
             </div>
@@ -1316,22 +1316,22 @@ class Dashboard
           <br />
 
             <div class='row'>
-              <div class='form-group col-md-7'>
-              <label for='editcontent'>Bild:</label>  
+              <div class='form-row col-md-7'>
+              <label class='form-label' for='editcontent'>Bild:</label>  
                 <input type='file' name='editimg' class='form-control' accept='image/*' id='editimg' />  
               </div>
           </div>
 
             <div class='row'>
-              <div class='form-group col-md-7'>
+              <div class='form-row col-md-7'>
                 <div>Nuvarande bild:</div>
                   <img src='$getimg' class='img-fluid thumb' alt='$gettitle' /><br /><br />
               </div>
             </div>
 
           <div class='row'>
-              <div class='form-group ml-auto col-md-10'>
-                <input class='btn btn-primary ml-1 btn-lg' name='editbtn' id='editbtn' type='submit' value='Uppdatera' />
+              <div class='form-row ms-auto col-md-10'>
+                <input class='btn btn-primary ms-1 btn-lg' name='editbtn' id='editbtn' type='submit' value='Uppdatera' />
               </div>
           </div>
 
@@ -1412,7 +1412,7 @@ class Dashboard
         // Slut om det finns nyheter i databasen.
         else {
             // Om det saknas nyheter i databasen.
-            echo "<div class='alert alert-danger ml-3 overflow-hidden' style='width: 95%;'>
+            echo "<div class='alert alert-danger ms-3 overflow-hidden' style='width: 95%;'>
                 Det finns inga nyheter just nu.
               </div>";
         } // Om det saknas nyheter i databasen.

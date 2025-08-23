@@ -40,21 +40,21 @@
                       <div class='row'>
                         <div class='col-sm-10'>
                           <img src='Images/Ikoner/add-1.png' alt='Lägga till ikon' class='img-fluid addicon' />
-                          <h1 class='ml-4'>Lägg till frågor</h1>
+                          <h1 class='ms-4'>Lägg till frågor</h1>
                           <div class='alert alert-info'>
                               Alla fält är obligatoriska.
                           </div>
                             <form action='FAQ.php' method='post'>
                               <div class='row'>
-                                <div class='form-group col-md-7'>
-                                    <label for='addquestion'>Fråga:*</label>
+                                <div class='form-row col-md-7'>
+                                    <label class='form-label' for='addquestion'>Fråga:*</label>
                                       <input type='text' name='addquestion' class='form-control' id='addquestion' required />
                                 </div>
                               </div>
 
                               <div class='row'>
-                                <div class='form-group col-md-7'>
-                                    <label for='addanswer'>Svar:*</label>
+                                <div class='form-row col-md-7'>
+                                    <label class='form-label' for='addanswer'>Svar:*</label>
                                       <textarea name='addanswer' id='addanswer'></textarea>
                                 </div>
                               </div>

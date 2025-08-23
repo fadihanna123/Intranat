@@ -222,28 +222,28 @@
                     
                     
                     <div class='row'>
-                        <label for='editpsw' class='col-sm-4 ml-3 mt-3'>Nytt lösenord:*</label>
+                        <label for='editpsw' class='form-label col-sm-4 ms-3 mt-3'>Nytt lösenord:*</label>
                           <div class='col-sm-5'>
-                            <input type='password' name='editpsw' class='ml-1 form-control' id='editpsw' required />
+                            <input type='password' name='editpsw' class='ms-1 form-control' id='editpsw' required />
                           </div>
                     </div>
                       <br />
                       <div class='row'>
-                          <label for='editconfirmpsw' class='ml-3 mt-3 col-sm-4'>Bekräfta lösenord:*</label>
+                          <label for='editconfirmpsw' class='form-label ms-3 mt-3 col-sm-4'>Bekräfta lösenord:*</label>
                             <div class='col-sm-5'>
-                              <input type='password' class='form-control ml-1' name='editconfirmpsw' id='editconfirmpsw' required />
+                              <input type='password' class='form-control ms-1' name='editconfirmpsw' id='editconfirmpsw' required />
                             </div>
                       </div>
 
                       <br />
                   <div class='row'>
                       <div class='col-sm-5'>
-                        <input type='checkbox' class='ml-3' onclick='showPsw()' id='showpsw' name='showpsw' /> Visa lösenordet
+                        <input type='checkbox' class='ms-3' onclick='showPsw()' id='showpsw' name='showpsw' /> Visa lösenordet
                       </div>    
                   </div>
                   <div class='row'>
                         <div class='mx-auto'>
-                          <input class='btn btn-primary ml-4 mb-2 btn-lg' name='editpswbtn' id='editpswbtn' type='submit' value='Ändra' />
+                          <input class='btn btn-primary ms-4 mb-2 btn-lg' name='editpswbtn' id='editpswbtn' type='submit' value='Ändra' />
                         </div>
                   </div>
 

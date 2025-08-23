@@ -71,7 +71,7 @@
           </div>
           </div>
       </div>
-        <button class="btn btn-primary mb-5 mr-1 btn-lg" type="submit" name="loginbtn">Logga in</button>
+        <button class="btn btn-primary mb-5 me-1 btn-lg" type="submit" name="loginbtn">Logga in</button>
       </form>
     </div>
   </div>

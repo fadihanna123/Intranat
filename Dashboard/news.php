@@ -20,7 +20,7 @@
           // Om användaren har administratörsbehörigheter.
           echo "
             <form action='addnews.php' method='post'>
-              <button type='submit' class='btn btn-primary ml-1 mb-3'>Nytt nyhetsinlägg</button>
+              <button type='submit' class='btn btn-primary ms-1 mb-3'>Nytt nyhetsinlägg</button>
             </form>";
       } // Slut om användaren har administratörsbehörigheter.
       $dashboard->getNews($_SESSION['loginuname']);

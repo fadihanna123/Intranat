@@ -5,7 +5,7 @@
   <div class="container-fluid">
     <div id="main" class="mymain">
         <!-- De senaste nyheter -->
-        <h1 class="ml-3">Senaste nytt från 
+        <h1 class="ms-3">Senaste nytt från 
           <?php echo $dashboard->getCompanyName(); ?>
         </h1>
 

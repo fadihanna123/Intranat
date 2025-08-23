@@ -144,13 +144,13 @@
             $dashboard->GetAdminForm();
             echo "
                         <div class='col-sm-6'>
-                          <img src='Images/Ikoner/add-1.png' class='img-fluid specheadicon ml-1' alt='Lägg till ikon' />
-                            <h2 class='rubrik specrubriktxt ml-2 text-nowrap'>Lägg till kategorier</h2>";
+                          <img src='Images/Ikoner/add-1.png' class='img-fluid specheadicon ms-1' alt='Lägg till ikon' />
+                            <h2 class='rubrik specrubriktxt ms-2 text-nowrap'>Lägg till kategorier</h2>";
             $dashboard->GetAddCategoriesForm();
             echo "
                         <div class='col-sm-10'>
-                          <img src='Images/Ikoner/confirm.png' class='img-fluid specheadicon ml-1' alt='Godkännaikon' />
-                          <h2 class='rubrik specrubriktxt ml-2 text-nowrap'>Godkänna personal</h2>";
+                          <img src='Images/Ikoner/confirm.png' class='img-fluid specheadicon ms-1' alt='Godkännaikon' />
+                          <h2 class='rubrik specrubriktxt ms-2 text-nowrap'>Godkänna personal</h2>";
             $dashboard->GetApproveList();
             echo "</div></div>";
         }

@@ -83,18 +83,18 @@
             Samtliga fält är obligatoriska. <br />
             Observera att du måste ha minst 6 tecken i det utvalda lösenordet.
           </div>
-          <div class='container mr-lg-1'>
+          <div class='container me-lg-1'>
             <form action='doforgetpsw.php?key=$key&uid=$uid' method='post' class='p-2 needs-validation myform' novalidate>
               <div class='row h-100 justify-content-center align-items-center'>
-                <div class='form-group'>
-                  <label for='forgetpsw'>Det nya lösenordet:*</label>
+                <div class='form-row'>
+                  <label class='form-label' for='forgetpsw'>Det nya lösenordet:*</label>
                     <input type='password' name='forgetpsw' id='forgetpsw' class='form-control forgetpsw' required />
                   </div>
               </div>
 
               <div class='row h-100 justify-content-center align-items-center'>
-                <div class='form-group'>
-                  <label for='confirmpsw'>Bekräfta det nya lösenordet:*</label>
+                <div class='form-row'>
+                  <label class='form-label' for='confirmpsw'>Bekräfta det nya lösenordet:*</label>
                     <input type='password' name='confirmpsw' id='confirmpsw' class='form-control forgetpsw' required />
                 </div>
               </div>

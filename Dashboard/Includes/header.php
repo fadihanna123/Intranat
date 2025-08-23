@@ -49,7 +49,7 @@ echo "<div class='container-fluid'>
 <?php if (isset($_SESSION['loginuname'])) {
     // Om man är inloggad.
     $dashboard = new Dashboard(); // Navigeringsmeny.
-    echo '<div class="ms-auto mr-4 inloggad">Inloggad som: ' .
+    echo '<div class="ms-auto me-4 inloggad">Inloggad som: ' .
         $dashboard->getFullName($_SESSION['loginuname']) .
         '
           </div>  

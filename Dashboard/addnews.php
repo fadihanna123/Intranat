@@ -12,12 +12,12 @@
         // Om användaren har administratörsbehörigheter.
         echo '
                   <img src="Images/Ikoner/add-1.png" class="img-fluid headicon" alt="Lägg till nyhet ikonen" />
-                    <h2 class="rubrik ml-5">Lägg till nyheter</h2>
-                      <p class="ml-3">
+                    <h2 class="rubrik ms-5">Lägg till nyheter</h2>
+                      <p class="ms-3">
                         Här kan du lägga till nyheter.
                       </p>
 
-                      <div class="alert alert-info ml-2">
+                      <div class="alert alert-info ms-2">
                         Alla fält är obligatoriska.
                       </div>
                   
@@ -54,7 +54,7 @@
                         empty($filename)
                     ) {
                 // Om det saknas samtliga fält.
-                echo "<div class='alert alert-danger ml-2'>
+                echo "<div class='alert alert-danger ms-2'>
                                 Du behöver fylla in samtliga fält.
                           </div>";
             }
@@ -99,16 +99,16 @@
               <form action="addnews.php" id="addnewsform" method="post" enctype="multipart/form-data">
                     
                   <div class="row">
-                    <div class="form-group col-md-7 col-xs-12">
-                      <label for="addtitle" class="ml-3">Rubrik:*</label>
-                        <input type="text" name="addtitle" class="form-control ml-2" id="addtitle" required />
+                    <div class="form-row col-md-7 col-xs-12">
+                      <label for="addtitle" class="form-label ms-3">Rubrik:*</label>
+                        <input type="text" name="addtitle" class="form-control ms-2" id="addtitle" required />
                     </div>
                   </div>
                   
                   <div class="row">
-                    <div class="form-group col-md-7 col-xs-11">
-                      <label for="addcat" class="ml-3">Kategori:*</label>
-                          <select name="addcat" class="ml-1 form-control" id="addcat" required>';
+                    <div class="form-row col-md-7 col-xs-11">
+                      <label for="addcat" class="form-label ms-3">Kategori:*</label>
+                          <select name="addcat" class="ms-1 form-control" id="addcat" required>';
         $dashboard->getList();
         echo '
                       </div>
@@ -116,16 +116,16 @@
 
 
                   <div class="row">
-                    <div class="form-group col-md-7">
-                      <label class="ml-3">Innehåll:*</label>
-                        <textarea name="addcontent" class="addcontent ml-5 form-control" id="addcontent"></textarea>
+                    <div class="form-row col-md-7">
+                      <label class="form-label ms-3">Innehåll:*</label>
+                        <textarea name="addcontent" class="addcontent ms-5 form-control" id="addcontent"></textarea>
                     </div>
                   </div>
                     <br />
                     
-                  <div id="addimglabel" class="ml-3">Bild:*</div>
+                  <div id="addimglabel" class="ms-3">Bild:*</div>
 
-                    <div class="form-group">
+                    <div class="form-row">
                       <div class="input-group input-file">
                             <input type="file" class="form-control col-sm-2" name="addimg" accept="image/*" id="addimg" required />
                       </div>
@@ -133,7 +133,7 @@
 
                     
                     <div class="row">
-                      <div class="form-group col-md-7">
+                      <div class="form-row col-md-7">
                         <input class="btn btn-primary btn-lg" name="addbtn" id="addbtn" type="submit" value="Lägg till" />
                       </div>
                     </div>

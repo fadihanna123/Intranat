@@ -3,7 +3,7 @@
     // Om man är inloggad
     $page = $_SERVER['REQUEST_URI'];
     echo '<nav class="jumbotron navbar navbar-expand-md navbar-light m-4 p-4 dashboardnav d-flex">
-          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#dashboardnav">
+          <button class="navbar-toggler ms-auto" type="button" data-toggle="collapse" data-target="#dashboardnav">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse text-center" id="dashboardnav">

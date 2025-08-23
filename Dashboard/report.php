@@ -66,37 +66,37 @@
         echo '<div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                      <img src="Images/Ikoner/add-1.png" class="img-fluid ml-1 specheadicon" alt="Lägg till nyhet ikonen" />
+                      <img src="Images/Ikoner/add-1.png" class="img-fluid ms-1 specheadicon" alt="Lägg till nyhet ikonen" />
                         <h2 class="rubrik ms-5">Sjukanmälan</h2>
-                          <p class="ml-1">
+                          <p class="ms-1">
                             Här kan du sjukanmäla dig.
                           </p>'; // Sjukanmälans formulär.
         echo "
               <form action='report.php' method='post'>   
                 <div class='row'>
-                  <div class='form-group col-md-9'>
-                    <label for='sickreason' class='ml-3'>Anledning:*</label>
+                  <div class='form-row col-md-9'>
+                    <label for='sickreason' class='form-label ms-3'>Anledning:*</label>
                       <textarea name='sickreason' class='form-control report' id='sickreason'></textarea>
                 </div>
               </div>
               
               <div class='row'>
-                <div class='form-group col-md-9'>
-                  <label for='sickfrom' class='ml-3'>Från:*</label>
+                <div class='form-row col-md-9'>
+                  <label for='sickfrom' class='form-label ms-3'>Från:*</label>
                       <input type='date' class='form-control' name='sickfrom' id='sickfrom' required />
                 </div>
               </div>
 
               <div class='row'>
-              <div class='form-group col-md-9'>
-                  <label for='sickto' class='ml-3'>Till:</label>
+              <div class='form-row col-md-9'>
+                  <label for='sickto' class='form-label ms-3'>Till:</label>
                         <input type='date' class='form-control' name='sickto' id='sickto' />
                   </div>
                 </div>
 
                 
                 <div class='row'>
-                  <div class='col-md-3 mr-5 col-md-offset-4 text-center'>
+                  <div class='col-md-3 me-5 col-md-offset-4 text-center'>
                     <input class='btn btn-primary btn-lg' name='sendsickrequest' id='sendsickrequest' type='submit' value='Sjukanmäla sig' />
                   </div>
                 </div>
@@ -111,28 +111,28 @@
                     </p>
                       <form action="report.php" method="post">
                         <div class="row">
-                          <div class="form-group col-md-9">
-                            <label for="leavereason" class="ml-3">Anledning:*</label>
+                          <div class="form-row col-md-9">
+                            <label for="leavereason" class="form-label ms-3">Anledning:*</label>
                               <textarea name="leavereason" class="form-control report" id="leavereason"></textarea>
                           </div>
                         </div>
                       
                           <div class="row">
-                            <div class="form-group col-md-9">
-                              <label for="leavefrom" class="ml-3">Från:*</label>
+                            <div class="form-row col-md-9">
+                              <label for="leavefrom" class="form-label ms-3">Från:*</label>
                                 <input type="date" class="form-control" name="leavefrom" id="leavefrom" required />
                             </div>
                       </div>
 
                             <div class="row">
-                                    <div class="form-group col-md-9">
-                                        <label for="leaveto" class="ml-3">Till:</label>
+                                    <div class="form-row col-md-9">
+                                        <label for="leaveto" class="form-label ms-3">Till:</label>
                                               <input type="date" class="form-control" name="leaveto" id="leaveto" />
                                         </div>
                                       </div>
 
                                       <div class="row">
-                                          <div class="col-md-4 mr-5 col-md-offset-4 text-center">
+                                          <div class="col-md-4 me-5 col-md-offset-4 text-center">
                                               <input class="btn btn-primary btn-lg" name="sendleaverequest" id="sendleaverequest" type="submit" value="Anmäla" />
                                           </div>
                                       </div>

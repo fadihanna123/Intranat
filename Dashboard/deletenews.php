@@ -16,7 +16,7 @@
             $dashboard->DeleteNews($getid);
             exit();
         } // Slut om användare klickade på Radera knappen.
-        echo '<h2 class="rubrik ml-1">Är du säker att du vill ta bort detta inlägg?</h2>
+        echo '<h2 class="rubrik ms-1">Är du säker att du vill ta bort detta inlägg?</h2>
          
         <div class="container-fluid">
             <div>';

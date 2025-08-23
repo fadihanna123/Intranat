@@ -55,13 +55,13 @@
       </div>
   </div>
     <!-- Lösenordsåterställningsfrågansform -->
-    <div class="container mr-lg-2">
+    <div class="container me-lg-2">
       <form action="<?= $_SERVER[
           'PHP_SELF'
       ] ?>" method="post" class="p-2 myform needs-validation" novalidate>
       <div class="row h-100 justify-content-center align-items-center">
-        <div class="form-group">
-          <label for="forgetepost">E-postadress:</label>
+        <div class="form-row">
+          <label class='form-label' for="forgetepost" class="form-label">E-postadress:</label>
           <input type="text" name="forgetepost" class="form-control" id="forgetepost" required />
         </div>
       </div>
