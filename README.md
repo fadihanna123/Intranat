@@ -67,7 +67,7 @@ Intranat is a web application that provides a dashboard interface with user auth
 Intranat/
 ├── Dashboard/         # Dashboard related files
 ├── CSS/              # Stylesheets
-├── Js/               # JavaScript files
+├── js/               # JavaScript files
 ├── TS/               # TypeScript files
 ├── Images/           # Image assets
 ├── Includes/         # PHP includes

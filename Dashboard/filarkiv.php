@@ -86,23 +86,29 @@
                                         <form action="filarkiv.php" id="addfileform" method="post" enctype="multipart/form-data" class="p-4 myform w-100">
                                     
                                                 <div class="row">
-                                                  <div class="form-row col-md-7">
-                                                    <label class="form-label" id="addfilenamelabel" for="addfilename">Namn:*</label>
-                                                      <input type="text" name="addfilename" class="form-control" id="addfilename" required />
+                                                  <div class="form-row col-md-2">
+                                                    <label class="form-label" for="addfilename">Namn:*</label>
+                                                  </div>
+                                                  <div class="form-row col-md-5">    
+                                                    <input type="text" name="addfilename" class="form-control" id="addfilename" required />
                                                   </div>
                                                 </div>
 
-                                                <div class="row">
-                                                  <div class="form-row col-md-7">
+                                                <div class="row mt-2">
+                                                  <div class="form-row col-md-2">
                                                       <label class="form-label" id="addfilelabel" for="addfile">Dokument:*</label>
+                                                  </div>
+                                                  <div class="form-row col-md-5">
                                                         <input type="file" name="addfile" class="form-control" id="addfile" required />
                                                     </div>
                                                 </div>
 
-                                                <div class="row">
-                                                  <div class="form-row col-md-7">
+                                                <div class="row mt-2">
+                                                  <div class="form-row col-md-2">
                                                       <label class="form-label" for="addcat">Kategori:*</label>
-                                                      <select name="addcat" id="addcat" class="ms-1 form-control">
+                                                  </div>
+                                                  <div class="form-row col-md-5">
+                                                      <select name="addcat" id="addcat" class="form-control">
                                                       <option value="">Välj</option>
                                                       <option value="">---</option>';
         $dashboard->getArkivCategories();
@@ -110,16 +116,18 @@
                                                 </div>
                                                           </div>
                                             
-                                                        <div class="row">
-                                                          <div class="form-row col-md-7">
+                                                        <div class="row mt-2">
+                                                          <div class="form-row col-md-2">
                                                             <label class="form-label" id="adddeslabel" for="adddes">Beskrivning:*</label>
-                                                              <textarea class="adddes" name="adddes" id="adddes"></textarea>
-                                                        </div>
+                                                          </div>
+                                                          <div class="form-row col-md-5">
+                                                              <textarea class="form-control adddes" name="adddes" id="adddes"></textarea>
+                                                          </div>
                                                         </div>      
                                                         
                                             
-                                                        <div class="row">
-                                                          <div class="form-row mx-auto col-md-7">
+                                                        <div class="row mt-2">
+                                                          <div class="form-row mx-auto col-md-5">
                                                             <input class="btn btn-primary btn-lg" name="addfilebtn" id="addfilebtn" type="submit" value="Ladda upp" />
                                                           </div>
                                                         </div>
@@ -165,6 +173,15 @@
     .catch( error => {
         console.error(`❌ ${error}`);
     } );
+
+    function bytesToSize(bytes) 
+    {
+      var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+      if (bytes == 0) return 'n/a';
+      var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+      if (i == 0) return bytes + ' ' + sizes[i];
+      return (bytes / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+  };
    
     </script>
 <?php require "Includes/footer.php"; ?>

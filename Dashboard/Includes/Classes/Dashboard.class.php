@@ -611,7 +611,7 @@ class Dashboard
 
               <br />
               <div class='row'>
-                <div class='mx-auto'>
+                <div class='mx-auto col-md-5'>
                   <input class='btn btn-primary ms-4 btn-lg' name='editepostbtn' id='editepostbtn' type='submit' value='Ändra' />
                 </div>
               </div>
@@ -799,7 +799,7 @@ class Dashboard
                   </div> 
                   <br />
                       <div class='row'>
-                        <div class='mx-auto'>
+                        <div class='mx-auto col-md-5'>
                           <input class='btn btn-primary ms-1 btn-lg' name='editaccountbtn' id='editaccountbtn' type='submit' value='Uppdatera' />
                         </div>
                       </div>
@@ -1179,21 +1179,25 @@ class Dashboard
     {
         echo "<form action='admin.php' method='post' class='p-4 needs-validation' novalidate>
             <div class='row'>
-              <label for='catname' class='form-label col-sm-4 ms-2 mt-3'>Kategorinamn:*</label>
-                <div class='col-sm-5'>
-                  <input type='text' name='addcatname' class='form-control ms-1 mb-1' id='catname' required />
-                </div>
+              <div class='form-row col-md-2'>
+                <label for='catname' class='form-label ms-2 mt-3'>Kategorinamn:*</label>
+              </div>
+                  <div class='form-row col-md-5'>
+                    <input type='text' name='addcatname' class='form-control ms-1 mb-1' id='catname' required />
+                  </div>
+              </div>
 
-            <label for='catregister' class='form-label col-sm-4 ms-2 mt-3'>Register:*</label>
-              <div class='col-sm-5'>
+            <div class='row'>
+              <div class='form-row col-md-2'>
+                <label for='catregister' class='form-label ms-2 mt-3'>Register:*</label>
+              </div>
+              <div class='form-row col-md-2'>
                   <select class='form-control ms-1' name='addcatdb' id='catregister' required>
                     <option value=''>Välj</option>
                     <option value=''>---</option>
                     <option value='news_categories'>Nyhetkategorier</option>
                     <option value='arkiv_categories'>Filarkivkategorier</option>
                 </select>
-              </div>
-          </div>
           <br />
           <div class='row'>
             <div class='mx-auto'>
@@ -1412,7 +1416,7 @@ class Dashboard
         // Slut om det finns nyheter i databasen.
         else {
             // Om det saknas nyheter i databasen.
-            echo "<div class='alert alert-danger ms-3 overflow-hidden' style='width: 95%;'>
+            echo "<div class='alert alert-danger overflow-hidden' style='width: 95%;'>
                 Det finns inga nyheter just nu.
               </div>";
         } // Om det saknas nyheter i databasen.

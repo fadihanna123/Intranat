@@ -21,8 +21,8 @@ export default [
   {
     ignores: [
       'node_modules/*',
-      'Js/*',
-      'Dashboard/Js/*',
+      'js/*',
+      'Dashboard/js/*',
       'Dashboard/ckeditor5/webpack.config.js',
     ],
   },

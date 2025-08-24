@@ -16,8 +16,8 @@
   <meta http-equiv="cache-control" content="no-cache" />
   <meta http-equiv="expires" content="0" />
   <meta http-equiv="pragma" content="no-cache" />
-  <script src="./ckeditor5/build/ckeditor.js"></script>
-  <script src="./Js/main.js?t=<?= time() ?>"></script>
+  <script src="./ckeditor5/src/ckeditor.js"></script>
+  <script src="./js/main.js?t=<?= time() ?>"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./CSS/main.css?t=<?= time() ?>" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">

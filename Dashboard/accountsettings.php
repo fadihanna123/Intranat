@@ -242,7 +242,7 @@
                       </div>    
                   </div>
                   <div class='row'>
-                        <div class='mx-auto'>
+                        <div class='mx-auto col-md-5'>
                           <input class='btn btn-primary ms-4 mb-2 btn-lg' name='editpswbtn' id='editpswbtn' type='submit' value='Ändra' />
                         </div>
                   </div>
@@ -264,14 +264,17 @@
             // Den styr om lösenordet ska visas eller intei lösenordsändringsformulär.   
             function showPsw() 
             {
-              let x = document.getElementById("editpsw");
-              if (x.type === "password") 
+              let editPswEl = document.getElementById("editpsw");
+              let editconfirmpswEl = document.getElementById("editconfirmpsw");
+              if (editPswEl.type === "password" && editconfirmpswEl.type === "password") 
               { // Om typen för fältet är password.
-                x.type = "text";
+                editPswEl.type = "text";
+                editconfirmpswEl.type = "text";
               } // Slut om typen för fältet är password.
               else 
               { // Om typen för fältet är text.
-                x.type = "password";
+                editPswEl.type = "password";
+                editconfirmpswEl.type = "password";
               } // Slut om typen för fältet är text.
             }
   

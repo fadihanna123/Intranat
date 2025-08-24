@@ -96,44 +96,53 @@
 
                     </div>
                 </div>
-              <form action="addnews.php" id="addnewsform" method="post" enctype="multipart/form-data">
+              <form action="addnews.php" method="post" enctype="multipart/form-data">
                     
                   <div class="row">
-                    <div class="form-row col-md-7 col-xs-12">
+                    <div class="form-row col-md-2 col-xs-12">
                       <label for="addtitle" class="form-label ms-3">Rubrik:*</label>
+                      </div>
+                      <div class="form-row col-md-5 col-xs-12">
                         <input type="text" name="addtitle" class="form-control ms-2" id="addtitle" required />
-                    </div>
+                      </div>
                   </div>
                   
-                  <div class="row">
-                    <div class="form-row col-md-7 col-xs-11">
+                  <div class="row mt-2">
+                    <div class="form-row col-md-2 col-xs-11">
                       <label for="addcat" class="form-label ms-3">Kategori:*</label>
-                          <select name="addcat" class="ms-1 form-control" id="addcat" required>';
+                    </div>
+                    <div class="form-row col-md-5 col-xs-11">
+                          <select name="addcat" class="ms-2 form-control" id="addcat" required>';
         $dashboard->getList();
         echo '
                       </div>
                     </div>
 
 
-                  <div class="row">
-                    <div class="form-row col-md-7">
+                  <div class="row mt-2">
+                    <div class="form-row col-md-2">
                       <label class="form-label ms-3">Innehåll:*</label>
-                        <textarea name="addcontent" class="addcontent ms-5 form-control" id="addcontent"></textarea>
+                    </div>
+                    <div class="form-row col-md-5">
+                        <textarea name="addcontent" class="addcontent ms-2 form-control" id="addcontent"></textarea>
                     </div>
                   </div>
                     <br />
-                    
-                  <div id="addimglabel" class="ms-3">Bild:*</div>
-
-                    <div class="form-row">
-                      <div class="input-group input-file">
-                            <input type="file" class="form-control col-sm-2" name="addimg" accept="image/*" id="addimg" required />
+                  
+                  <div class="row mt-2">
+                    <div class="form-row col-md-2 col-xs-12">  
+                      <label class="form-label ms-3">Bild:*</label>
+                    </div>
+                    <div class="form-row col-md-5 col-xs-12">
+                        <div class="input-group input-file">
+                              <input type="file" class="form-control ms-2" name="addimg" accept="image/*" id="addimg" required />
+                        </div>
                       </div>
                     </div>
 
                     
-                    <div class="row">
-                      <div class="form-row col-md-7">
+                    <div class="row mt-2">
+                      <div class="form-row col-md-8">
                         <input class="btn btn-primary btn-lg" name="addbtn" id="addbtn" type="submit" value="Lägg till" />
                       </div>
                     </div>

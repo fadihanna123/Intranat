@@ -20,7 +20,7 @@
     "setup": "yarn --emoji && yarn --cwd ./Dashboard/ckeditor5 --emoji",
     "start": "php -S localhost:8080 && start localhost:8080",
     "lint": "eslint ./ && npx stylelint **/*.css && yarn type-check",
-    "build": "esbuild ./TS/* --bundle --outdir=Js --minify",
+    "build": "esbuild ./TS/* --bundle --outdir=js --minify",
     "format": "prettier -w ./",
     "clear": "rimraf ./node_modules && cd ./Dashboard/ckeditor5 && rimraf ./node_modules",
     "prepare": "husky",

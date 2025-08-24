@@ -46,21 +46,25 @@
                           </div>
                             <form action='FAQ.php' method='post'>
                               <div class='row'>
-                                <div class='form-row col-md-7'>
+                                <div class='form-row col-md-2'>
                                     <label class='form-label' for='addquestion'>Fråga:*</label>
+                                </div>
+                                <div class='form-row col-md-5'>
                                       <input type='text' name='addquestion' class='form-control' id='addquestion' required />
                                 </div>
                               </div>
 
-                              <div class='row'>
-                                <div class='form-row col-md-7'>
+                              <div class='row mt-2'>
+                                <div class='form-row col-md-2'>
                                     <label class='form-label' for='addanswer'>Svar:*</label>
-                                      <textarea name='addanswer' id='addanswer'></textarea>
+                                </div>
+                                <div class='form-row col-md-5'>
+                                      <textarea class='form-control' name='addanswer' id='addanswer'></textarea>
                                 </div>
                               </div>
 
-                              <div class='row'>
-                                <div class='col-md-7 mx-auto'>
+                              <div class='row mt-2'>
+                                <div class='col-md-5 mx-auto'>
                                     <input class='btn btn-primary btn-lg mb-1 addFAQbtn' name='addFAQbtn' type='submit' value='Lägg till' />
                                 </div>
                               </div>

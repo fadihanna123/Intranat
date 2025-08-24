@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "es6",
     "alwaysStrict": true,
     "baseUrl": ".",
     "esModuleInterop": true,
@@ -32,6 +32,6 @@
   "exclude": [
     "node_modules",
     "Dashboard/ckeditor5/node_modules",
-    "Dashboard/Js/main.js"
+    "Dashboard/js/main.js"
   ]
 }
