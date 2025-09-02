@@ -34,7 +34,7 @@
     "@ckeditor/ckeditor5-table": "45.0.0",
     "@ckeditor/ckeditor5-theme-lark": "45.0.0",
     "postcss": "8.5.3",
-    "postcss-loader": "8.1.1",
+    "postcss-loader": "8.2.0",
     "prettier": "3.5.3",
     "raw-loader": "4.0.2",
     "style-loader": "4.0.0",
