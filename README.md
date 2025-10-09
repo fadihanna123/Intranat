@@ -2,6 +2,8 @@
 
 A modern web application built with PHP, TypeScript, and a rich set of development tools.
 
+## [Visit](https://intranet.gssonsel.se.185-133-206-116.bb.kringelstan.se)
+
 ## Overview
 
 Intranat is a web application that provides a dashboard interface with user authentication, registration, and password recovery functionality. The project uses modern web technologies and development practices to ensure code quality and maintainability.
@@ -91,6 +93,9 @@ The project uses several development tools to maintain code quality:
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## Screenshot
+![Screenshot](screenshot.png "Screenshot")
 
 
 ## Author
