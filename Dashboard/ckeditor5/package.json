@@ -32,7 +32,7 @@
     "@ckeditor/ckeditor5-paragraph": "46.0.3",
     "@ckeditor/ckeditor5-paste-from-office": "46.0.3",
     "@ckeditor/ckeditor5-table": "46.0.3",
-    "@ckeditor/ckeditor5-theme-lark": "46.0.3",
+    "@ckeditor/ckeditor5-theme-lark": "47.1.0",
     "postcss": "8.5.6",
     "postcss-loader": "8.2.0",
     "prettier": "3.6.2",
