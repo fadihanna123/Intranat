@@ -5,11 +5,13 @@ class Functions
   protected $db;
   // Tillämpa inställningar för anslutning till databasen.
   public function __construct()
-  {
-    $this->db = mysqli_connect(DB_HOST, DB_USRNAME, DB_PSW, DB_NAME);
-    if ($this->db->connect_error) {
+  {try {
+
+    $this->db = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USRNAME, DB_PSW);
+    $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  } catch(PDOException $e) {
       // Om det finns eventuella fel att ansluta till databasen.
-      die("Anslutning misslyckades: " . $this->db->connect_error);
+      die("Anslutning misslyckades: " . $e->getMessage());
     } // Slut om det finns eventuella fel att ansluta till databasen.
   }
 
@@ -18,9 +20,9 @@ class Functions
   {
     $sql = "SELECT * FROM admininfo";
     $result = $this->db->query($sql);
-    $num = mysqli_num_rows($result);
-    $getdata = mysqli_fetch_array($result);
-    if ($getdata['avatar'] == "") {
+    $num = $result->rowCount();
+    $getdata = $result->fetch();
+    if (!$getdata || $getdata['avatar'] == "") {
       // Om logotypen för hemsidan saknas i databasen.
       return "./Images/Admin/admin_header_logo.png";
     }
@@ -36,9 +38,9 @@ class Functions
   {
     $sql = "SELECT * FROM admininfo";
     $result = $this->db->query($sql);
-    $num = mysqli_num_rows($result);
-    $getdata = mysqli_fetch_array($result);
-    if ($getdata['companyname'] == "") {
+    $num = $result->rowCount();
+    $getdata = $result->fetch();
+    if (!$getdata || $getdata['companyname'] == "") {
       // Om företagets namn saknas i databasen.
       return "Gssons El AB";
     }
@@ -84,11 +86,8 @@ class Functions
       // Om registreringen lyckades.
       $sql2 = "SELECT * FROM users WHERE username='$registeruname' AND psw='$registerpsw';";
       $result2 = $this->db->query($sql2);
-      $row2 = mysqli_fetch_array($result2);
-      $getusername = mysqli_real_escape_string(
-        $this->db,
-        $row2['username']
-      );
+      $row2 = $result2->fetch();
+      $getusername = $this->db->quote($row2['username']);
       $to = $registerepost;
       $subject = "Verifiera ditt konto";
       $message = "Tack för registrering.<br /><br />
@@ -113,7 +112,7 @@ class Functions
     else {
       // Om användaren inte blev registrerad av någon anledning.
       echo "<div class='alert alert-danger'>" .
-        mysqli_error($this->db) .
+        $this->db->errorInfo() .
         "</div>";
     } // Om användaren inte blev registrerad av någon anledning.
   }
@@ -124,20 +123,17 @@ class Functions
     $loginpsw = md5($loginpsw);
     $sql = "SELECT * FROM users WHERE username='$loginuname' AND psw='$loginpsw';";
     $result = $this->db->query($sql);
-    $num = mysqli_num_rows($result);
-    $row = mysqli_fetch_array($result);
+    $num = $result->rowCount();
+    $row = $result->fetch();
     if ($num > 0) {
       // Om användare hittades i databasen beroende på de skickade data.
-      $getactive = mysqli_escape_string($this->db, $row['active']);
-      $getapprove = mysqli_escape_string($this->db, $row['adminapprove']);
+      $getactive = $this->db->quote($row['active']);
+      $getapprove = $this->db->quote($row['adminapprove']);
       if ($getactive == "1") {
         // Om användaren är aktiv och verifierad.
         if ($getapprove == "1") {
           // Om administratören har godkänt registrering.
-          $_SESSION['loginuname'] = mysqli_escape_string(
-            $this->db,
-            $row['username']
-          );
+          $_SESSION['loginuname'] = $this->db->quote($row['username']);
           $this->UpdateLogindate();
           echo '<div class="alert alert-success">
                       Du blev inloggad. <br />
@@ -187,19 +183,13 @@ class Functions
   {
     $sql = "SELECT * FROM users WHERE id='$uid';";
     $result = $this->db->query($sql);
-    $num = mysqli_num_rows($result);
-    $row = mysqli_fetch_array($result);
-    $gettoken = mysqli_real_escape_string(
-      $this->db,
-      $row['register_tokenkey']
-    );
-    $getexpiretime = mysqli_real_escape_string(
-      $this->db,
-      $row['register_tokenexpiretime']
-    );
-    $getemail = mysqli_real_escape_string($this->db, $row['email']);
-    $getusername = mysqli_real_escape_string($this->db, $row['username']);
-    $getpsw = mysqli_real_escape_string($this->db, $row['psw']);
+    $num = $result->rowCount();
+    $row = $result->fetch();
+    $gettoken = $this->db->quote($row['register_tokenkey']);
+    $getexpiretime = $this->db->quote($row['register_tokenexpiretime']);
+    $getemail = $this->db->quote($row['email']);
+    $getusername = $this->db->quote($row['username']);
+    $getpsw = $this->db->quote($row['psw']);
     $nowtime = date("Y-m-d H:i:s");
     if ($getexpiretime <= $nowtime) {
       // Om tiden för aktivering har löpt ut.
@@ -211,7 +201,7 @@ class Functions
     } // Slut om tiden för aktivering har löpt ut.
     if ($gettoken == $key) {
       // Om aktiveringsnyckel som finns lagrad i databasen stämmer överens med den skickade nyckeln från aktiveringssida.
-      $getactive = mysqli_escape_string($this->db, $row['active']);
+      $getactive = $this->db->quote($row['active']);
       if ($getactive == "0") {
         // Om användaren är inte aktiv och inte verifierad.
         $sql2 = "UPDATE users SET active='1' WHERE id='$uid';";
@@ -246,15 +236,9 @@ class Functions
     date_default_timezone_set("Europe/Stockholm");
     $sql = "SELECT * FROM users WHERE id=$getuid;";
     $result = $this->db->query($sql);
-    $getdata = mysqli_fetch_array($result);
-    $gettoken = mysqli_real_escape_string(
-      $this->db,
-      $getdata['email_tokenkey']
-    );
-    $getexpiretime = mysqli_real_escape_string(
-      $this->db,
-      $getdata['email_expiretime']
-    );
+    $getdata = $result->fetch();
+    $gettoken = $this->db->quote($getdata['email_tokenkey']);
+    $getexpiretime = $this->db->quote($getdata['email_expiretime']);
     $nowtime = date("Y-m-d H:i:s");
     if ($getexpiretime <= $nowtime) {
       // Om tiden för aktivering har redan löpt ut.
@@ -269,7 +253,7 @@ class Functions
       $sql2 = "UPDATE users SET email='$getepost' WHERE id=$getuid;";
       if (
         ($result2 = $this->db->query($sql2)) or
-        die(mysqli_error($this->db))
+        die($this->db->errorInfo())
       ) {
         // Om uppdatering av e-postadressen lyckades.
         echo '<div class="alert alert-success">
@@ -300,10 +284,10 @@ class Functions
   {
     $sql = "SELECT * FROM users WHERE email='$forgetepost';";
     $result = $this->db->query($sql);
-    $num = mysqli_num_rows($result);
-    $row = mysqli_fetch_array($result);
-    $userid = mysqli_real_escape_string($this->db, $row['id']);
-    $getusername = mysqli_real_escape_string($this->db, $row['username']);
+    $num = $result->rowCount();
+    $row = $result->fetch();
+    $userid = $this->db->quote($row['id']);
+    $getusername = $this->db->quote($row['username']);
     $token_key = md5(time() . $getusername);
     $expformat = mktime(
       date("H"),
@@ -356,7 +340,7 @@ class Functions
   {
     $sql = "SELECT * FROM users WHERE email='$registerepost';";
     $result = $this->db->query($sql);
-    $num = mysqli_num_rows($result);
+    $num = $result->rowCount();
     if ($num == 1) {
       // Om det finns sådan e-postadress i databasen.
       return false;
@@ -373,13 +357,10 @@ class Functions
   {
     $sql = "SELECT * FROM password_reset WHERE userid='$uid';";
     $result = $this->db->query($sql);
-    $num = mysqli_num_rows($result);
-    $row = mysqli_fetch_array($result);
-    $gettoken = mysqli_real_escape_string($this->db, $row['token']);
-    $getexpiretime = mysqli_real_escape_string(
-      $this->db,
-      $row['tokenexpiretime']
-    );
+    $num = $result->rowCount();
+    $row = $result->fetch();
+    $gettoken = $this->db->quote($row['token']);
+    $getexpiretime = $this->db->quote($row['tokenexpiretime']);
     $nowtime = date("Y-m-d H:i:s");
     if ($num == 1) {
       // Om användaren begärde lösenordsåterställningförfrågan.
