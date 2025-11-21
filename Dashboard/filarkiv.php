@@ -80,7 +80,7 @@
               echo '<div class="container-fluid">
                             <div class="row">
                                 <div class="col-sm-10">
-                                  <img src="Images/Ikoner/upload.png" class="img-fluid uploadicon" alt="Ladda upp ikonen" />
+                                  <img src="Images/Ikoner/upload.png" loading="lazy" class="img-fluid uploadicon" alt="Ladda upp ikonen" />
                                     <h1 class="ms-5 uploadheading">Ladda upp filer</h1><br />
                           
                                         <form action="filarkiv.php" id="addfileform" method="post" enctype="multipart/form-data" class="p-4 myform w-100">
@@ -142,7 +142,7 @@
     }
     // Slut om användaren inte har administratörsbehörigheter.
     echo "
-                    <img src='Images/Ikoner/arkiv.png' class='arkivicon img-fluid' alt='Filarkivikon' />
+                    <img src='Images/Ikoner/arkiv.png' loading='lazy' class='arkivicon img-fluid' alt='Filarkivikon' />
                         <h1>Filarkiv</h1><br />";
     $dashboard->GetArkiv($_SESSION['loginuname']);
     echo "</div>";

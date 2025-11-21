@@ -11,7 +11,7 @@
     if ($dashboard->checkadminuser($_SESSION['loginuname']) == 1) {
         // Om användaren har administratörsbehörigheter.
         echo '
-                  <img src="Images/Ikoner/add-1.png" class="img-fluid headicon" alt="Lägg till nyhet ikonen" />
+                  <img src="Images/Ikoner/add-1.png" loading="lazy" class="img-fluid headicon" alt="Lägg till nyhet ikonen" />
                     <h2 class="rubrik ms-5">Lägg till nyheter</h2>
                       <p class="ms-3">
                         Här kan du lägga till nyheter.

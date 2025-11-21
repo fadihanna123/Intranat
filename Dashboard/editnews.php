@@ -16,7 +16,7 @@ if (isset($_SESSION['loginuname'])) {
     // Om man är inloggad.
     if ($dashboard->checkadminuser($_SESSION['loginuname']) == 1) {
         // Om användaren har administratörsbehörigheter.
-        echo '<img src="Images/Ikoner/register.png" class="img-fluid specheadicon2" alt="Redigera nyhet ikon" />
+        echo '<img src="Images/Ikoner/register.png" loading="lazy" class="img-fluid specheadicon2" alt="Redigera nyhet ikon" />
               <h2 class="rubrik ms-5">Uppdatera nyhetsinlägget</h2>
               <div class="container-fluid">
                 <div id="editnewsmain">';

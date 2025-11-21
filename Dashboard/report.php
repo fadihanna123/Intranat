@@ -66,7 +66,7 @@
         echo '<div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                      <img src="Images/Ikoner/add-1.png" class="img-fluid ms-1 specheadicon" alt="Lägg till nyhet ikonen" />
+                      <img src="Images/Ikoner/add-1.png" loading="lazy" class="img-fluid ms-1 specheadicon" alt="Lägg till nyhet ikonen" />
                         <h2 class="rubrik ms-5">Sjukanmälan</h2>
                           <p class="ms-1">
                             Här kan du sjukanmäla dig.
@@ -104,7 +104,7 @@
               </div>"; // Ledighetsansökan.
         echo '
             <div class="col-md-6">
-              <img src="Images/Ikoner/register.png" class="img-fluid leaveicon" alt="Anmälanikon" />
+              <img src="Images/Ikoner/register.png" loading="lazy" class="img-fluid leaveicon" alt="Anmälanikon" />
                 <h2 class="ms-5 rubrik mt-2">Ledighetsansökan</h2>
                     <p class="spec">
                       Här kan du söka om ledighet.

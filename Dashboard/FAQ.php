@@ -39,7 +39,7 @@
                     <div class='container-fluid'>
                       <div class='row'>
                         <div class='col-sm-10'>
-                          <img src='Images/Ikoner/add-1.png' alt='Lägga till ikon' class='img-fluid addicon' />
+                          <img src='Images/Ikoner/add-1.png' loading='lazy' alt='Lägga till ikon' class='img-fluid addicon' />
                           <h1 class='ms-4'>Lägg till frågor</h1>
                           <div class='alert alert-info'>
                               Alla fält är obligatoriska.

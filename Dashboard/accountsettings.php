@@ -211,7 +211,7 @@
         $dashboard->GetEmailSettingsForm();
         echo "</div>  </div>"; // Lösenordsändringsformulär.
         echo "<div class='col-sm-5'>
-                    <img src='Images/Ikoner/lock.png' class='pswicon img-fluid' alt='Lösenordsändringsikon' />
+                    <img loading='lazy' src='Images/Ikoner/lock.png' class='pswicon img-fluid' alt='Lösenordsändringsikon' />
                         <h2 class='rubrik specrubriktxt'>Ändra lösenord</h2>
                           <p class='specrubriktxt' style='z-index: 100;'>
                             Här kan du ändra ditt lösenord.<br />

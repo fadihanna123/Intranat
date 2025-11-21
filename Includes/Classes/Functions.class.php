@@ -67,9 +67,17 @@ class Functions
     $bild,
     $realpsw
   ) {
+    if(!registerfname || !registerlname || !registermobnr || !registertfnr || !registerepost || !registerpsw || !registerwork || !registerbornday || !registerbornmonth || !registerbornyear || !registersex || !realpsw) {
+      // Om något av de skickade data saknas.
+      echo "<div class='alert alert-danger'>
+                Du måste fylla in alla obligatoriska fälten.
+            </div>";
+      exit(0);
+    } // Slut om något av de skickade data saknas.
+
     date_default_timezone_set("Europe/Stockholm");
     $now = date("Y-m-d H:i:s", time());
-    $registerpsw = md5($registerpsw);
+    $registerpsw = md5(password_hash($registerpsw, PASSWORD_DEFAULT));
     $token_key = md5(time() . $registerfname . $registerlname);
     $expformat = mktime(
       date("H"),
@@ -87,7 +95,7 @@ class Functions
       $sql2 = "SELECT * FROM users WHERE username='$registeruname' AND psw='$registerpsw';";
       $result2 = $this->db->query($sql2);
       $row2 = $result2->fetch();
-      $getusername = $this->db->quote($row2['username']);
+      $getusername = $row2['username'];
       $to = $registerepost;
       $subject = "Verifiera ditt konto";
       $message = "Tack för registrering.<br /><br />
@@ -120,20 +128,30 @@ class Functions
   // checkloginsfunktionen kontrollerar om användare är redan registrerad inför inloggningen.
   public function checklogin($loginuname, $loginpsw)
   {
+    if(!$loginuname || !$loginpsw) {
+      // Om något av de skickade data saknas.
+      echo "<div class='alert alert-danger'>
+                Du måste fylla in alla obligatoriska fälten.
+            </div>";
+      exit(0);
+    } // Slut om något av de skickade data saknas.
+
     $loginpsw = md5($loginpsw);
     $sql = "SELECT * FROM users WHERE username='$loginuname' AND psw='$loginpsw';";
     $result = $this->db->query($sql);
     $num = $result->rowCount();
     $row = $result->fetch();
+
     if ($num > 0) {
       // Om användare hittades i databasen beroende på de skickade data.
-      $getactive = $this->db->quote($row['active']);
-      $getapprove = $this->db->quote($row['adminapprove']);
+      $getactive = $row['active'];
+      $getapprove = $row['adminapprove'];
+      
       if ($getactive == "1") {
         // Om användaren är aktiv och verifierad.
         if ($getapprove == "1") {
           // Om administratören har godkänt registrering.
-          $_SESSION['loginuname'] = $this->db->quote($row['username']);
+          $_SESSION['loginuname'] = $row['username'];
           $this->UpdateLogindate();
           echo '<div class="alert alert-success">
                       Du blev inloggad. <br />
@@ -150,16 +168,14 @@ class Functions
                       Kontakta administratörer för mer information
                     </div>';
         } // Slut om administratören inte har godkänt registrering.
-      }
-      // Slut om användaren är aktiv och verifierad.
+      }  // Slut om användaren är aktiv och verifierad.
       else {
         // Om användaren inte är verifierad.
         echo "<div class='alert alert-danger'>
                   Du måste aktivera ditt konto först.
                 </div>";
       } // Slut om användaren inte är verifierad.
-    }
-    // Slut om användare hittades i databasen beroende på de skickade data.
+    } // Slut om användare hittades i databasen beroende på de skickade data.
     else {
       // Om användare inte hittades i databasen enligt de skickade data.
       echo "<div class='alert alert-danger'>
@@ -181,15 +197,23 @@ class Functions
   // checkkeysfunktion kontrollerar om verifieringsnyckel stämmer överens med databasensnyckel.
   public function checkkey($key, $uid)
   {
+    if(!$key || !$uid) {
+      // Om något av de skickade data saknas.
+      echo "<div class='alert alert-danger'>
+                Key eller Uid saknas.
+            </div>";
+      exit(0);
+    } // Slut om något av de skickade data saknas.
+
     $sql = "SELECT * FROM users WHERE id='$uid';";
     $result = $this->db->query($sql);
     $num = $result->rowCount();
     $row = $result->fetch();
-    $gettoken = $this->db->quote($row['register_tokenkey']);
-    $getexpiretime = $this->db->quote($row['register_tokenexpiretime']);
-    $getemail = $this->db->quote($row['email']);
-    $getusername = $this->db->quote($row['username']);
-    $getpsw = $this->db->quote($row['psw']);
+    $gettoken = $row['register_tokenkey'];
+    $getexpiretime = $row['register_tokenexpiretime'];
+    $getemail = $row['email'];
+    $getusername = $row['username'];
+    $getpsw = $row['psw'];
     $nowtime = date("Y-m-d H:i:s");
     if ($getexpiretime <= $nowtime) {
       // Om tiden för aktivering har löpt ut.
@@ -201,7 +225,7 @@ class Functions
     } // Slut om tiden för aktivering har löpt ut.
     if ($gettoken == $key) {
       // Om aktiveringsnyckel som finns lagrad i databasen stämmer överens med den skickade nyckeln från aktiveringssida.
-      $getactive = $this->db->quote($row['active']);
+      $getactive = $row['active'];
       if ($getactive == "0") {
         // Om användaren är inte aktiv och inte verifierad.
         $sql2 = "UPDATE users SET active='1' WHERE id='$uid';";
@@ -233,12 +257,20 @@ class Functions
   // checkEmailKey kontrollerar om aktiveringsnyckel stämmer överens med databasensnyckel för e-postadressverifiering och om det lyckades då uppdateras e-postadressen.
   public function checkEmailKey($getkey, $getuid, $getepost)
   {
+    if(!$getepost) {
+      // Om e-post saknas.
+      echo "<div class='alert alert-danger'>
+                E-post adress saknas. Var vänlig fylla in det.
+            </div>";
+      exit(0);
+    } // Slut om e-post saknas.
+
     date_default_timezone_set("Europe/Stockholm");
     $sql = "SELECT * FROM users WHERE id=$getuid;";
     $result = $this->db->query($sql);
     $getdata = $result->fetch();
-    $gettoken = $this->db->quote($getdata['email_tokenkey']);
-    $getexpiretime = $this->db->quote($getdata['email_expiretime']);
+    $gettoken = $getdata['email_tokenkey'];
+    $getexpiretime = $getdata['email_expiretime'];
     $nowtime = date("Y-m-d H:i:s");
     if ($getexpiretime <= $nowtime) {
       // Om tiden för aktivering har redan löpt ut.
@@ -282,12 +314,20 @@ class Functions
   // forgetpswsfunktion lägger till begäran om lösenordsåterställning i databasen.
   public function forgetpsw($forgetepost)
   {
+    if(!$forgetepost) {
+      // Om e-post saknas.
+      echo "<div class='alert alert-danger'>
+                E-post adress saknas. Var vänlig fylla in det.
+            </div>";
+      exit(0);
+    } // Slut om e-post saknas.
+    
     $sql = "SELECT * FROM users WHERE email='$forgetepost';";
     $result = $this->db->query($sql);
     $num = $result->rowCount();
     $row = $result->fetch();
-    $userid = $this->db->quote($row['id']);
-    $getusername = $this->db->quote($row['username']);
+    $userid = $row['id'];
+    $getusername = $row['username'];
     $token_key = md5(time() . $getusername);
     $expformat = mktime(
       date("H"),
@@ -338,6 +378,14 @@ class Functions
   // checkemail kontrollerar om användare e-postadressen är redan registrerad i databasen.
   public function checkemail($registerepost)
   {
+    if(!$registerepost) {
+      // Om e-post saknas.
+      echo "<div class='alert alert-danger'>
+                E-post adress saknas. Var vänlig fylla in det.
+            </div>";
+      exit(0);
+    } // Slut om e-post saknas.
+    
     $sql = "SELECT * FROM users WHERE email='$registerepost';";
     $result = $this->db->query($sql);
     $num = $result->rowCount();
@@ -355,12 +403,20 @@ class Functions
   // changepsw implementerar lösenordsåterställning.
   public function changepsw($key, $uid, $forgetepswepost, $forgetpsw)
   {
+    if(!$forgetepswepost || !$forgetpsw) {
+      // Om e-postadressen saknas.
+      echo "<div class='alert alert-danger'>
+                E-post adressen saknas. Var vänlig fylla in det.
+            </div>";
+      exit(0);
+    } // Slut om e-postadressen saknas.
+    
     $sql = "SELECT * FROM password_reset WHERE userid='$uid';";
     $result = $this->db->query($sql);
     $num = $result->rowCount();
     $row = $result->fetch();
-    $gettoken = $this->db->quote($row['token']);
-    $getexpiretime = $this->db->quote($row['tokenexpiretime']);
+    $gettoken = $row['token'];
+    $getexpiretime = $row['tokenexpiretime'];
     $nowtime = date("Y-m-d H:i:s");
     if ($num == 1) {
       // Om användaren begärde lösenordsåterställningförfrågan.
@@ -374,7 +430,7 @@ class Functions
       } // Slut om tiden har löpt ut för lösenordsåterställning.
       if ($gettoken == $key) {
         // Om lösenordsåterställningsnyckel som finns lagrad i databasen stämmer överens med den skickade nyckeln från lösenordsåterställningssida.
-        $forgetpsw = md5($forgetpsw);
+        $forgetpsw = md5(password_hash($forgetpsw, PASSWORD_DEFAULT));
         $sql2 = "UPDATE users SET psw='$forgetpsw' WHERE id='$uid';";
         $result2 = $this->db->query($sql2);
         if ($result2) {

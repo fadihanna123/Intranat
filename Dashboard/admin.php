@@ -136,7 +136,7 @@
                       <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                              <img src="Images/Ikoner/admin.png" class="img-fluid adminicon" alt="Administratörsikon" />
+                              <img src="Images/Ikoner/admin.png" loading="lazy" class="img-fluid adminicon" alt="Administratörsikon" />
                                 <h2 class="rubrik specrubriktxt">Administratörsinställningar</h2>
                                     <p class="specrubriktxt">
                                       Här kan du ändra företagets inställningar.
@@ -144,12 +144,12 @@
             $dashboard->GetAdminForm();
             echo "
                         <div class='col-sm-6'>
-                          <img src='Images/Ikoner/add-1.png' class='img-fluid specheadicon ms-1' alt='Lägg till ikon' />
+                          <img src='Images/Ikoner/add-1.png' loading='lazy' class='img-fluid specheadicon ms-1' alt='Lägg till ikon' />
                             <h2 class='rubrik specrubriktxt ms-2 text-nowrap'>Lägg till kategorier</h2>";
             $dashboard->GetAddCategoriesForm();
             echo "
                         <div class='col-sm-10'>
-                          <img src='Images/Ikoner/confirm.png' class='img-fluid specheadicon ms-1' alt='Godkännaikon' />
+                          <img src='Images/Ikoner/confirm.png' loading='lazy' class='img-fluid specheadicon ms-1' alt='Godkännaikon' />
                           <h2 class='rubrik specrubriktxt ms-2 text-nowrap'>Godkänna personal</h2>";
             $dashboard->GetApproveList();
             echo "</div></div>";

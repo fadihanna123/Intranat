@@ -16,7 +16,7 @@
   <meta http-equiv="pragma" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="./CSS/main.css?t=<?= time() ?>" type="text/css" />
+  <link rel="stylesheet" href="./CSS/main.min.css?t=<?= time() ?>" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>  <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -37,7 +37,7 @@
     <nav class="navbar header navbar-expand-md bg-light navbar-dark">
       <!-- Logotypen --> 
       <a class="navbar-brand" href="index.php">
-        <img src="<?php echo $functions->getLogoImg(); ?>" class="img-fluid" id="logobild" alt="Logotypen" />
+        <img src="<?php echo $functions->getLogoImg(); ?>" loading="lazy" class="img-fluid" id="logobild" alt="Logotypen" />
       </a>
 
       <!-- Responsiv menyikon --> 
@@ -50,12 +50,12 @@
           <ul class="navbar-nav text-dark">
             <li class="nav-item">
               <a class="nav-link text-dark font-weight-bold" href="login.php">
-                <img class="img-fluid icon" alt="Inloggningsikon" src="Images/Ikoner/login.png" />Logga in
+                <img class="img-fluid icon" loading="lazy" alt="Inloggningsikon" src="Images/Ikoner/login.png" />Logga in
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark font-weight-bold" href="register.php">
-                <img class="icon img-fluid" alt="Registreringsikon" src="Images/Ikoner/register.png" />Registrera dig
+                <img class="icon img-fluid" loading="lazy" alt="Registreringsikon" src="Images/Ikoner/register.png" />Registrera dig
             </a>
             </li>
           

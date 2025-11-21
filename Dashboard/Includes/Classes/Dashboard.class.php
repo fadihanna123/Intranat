@@ -6,10 +6,12 @@ class Dashboard
     // Tillämpa inställningar för anslutning till databasen.
     public function __construct()
     {
-        $this->db = mysqli_connect(DB_HOST, DB_USRNAME, DB_PSW, DB_NAME);
-        if ($this->db->connect_error) {
+        try {
+            $this->db = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USRNAME, DB_PSW);
+            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
             // Om det finns eventuella fel att ansluta till databasen.
-            die("Anslutning misslyckades: " . $this->db->connect_error);
+            die("Anslutning misslyckades: " . $e->getMessage());
         } // Slut om det finns eventuella fel att ansluta till databasen.
     }
 
@@ -18,9 +20,9 @@ class Dashboard
     {
         $sql = "SELECT * FROM admininfo";
         $result = $this->db->query($sql);
-        $num = mysqli_num_rows($result);
-        $getdata = mysqli_fetch_array($result);
-        if ($getdata['companyname'] == "") {
+        $num = $result->rowCount();
+        $getdata = $result->fetch();
+        if (!$getdata || $getdata['companyname'] == "") {
             // Om företagets namn saknas i databasen.
             return "Gssons El AB";
         }
@@ -36,9 +38,10 @@ class Dashboard
     {
         $sql = "SELECT * FROM users WHERE id=$getid AND adminapprove=0;";
         $result = $this->db->query($sql);
-        $getdata = mysqli_fetch_array($result);
-        $getemail = mysqli_real_escape_string($this->db, $getdata['email']);
-        $num = mysqli_num_rows($result);
+        $getdata = $result->fetch();
+        $getemail = $getdata['email'];
+        $num = $result->rowCount();
+        
         if ($num == 1) {
             // Om det finns sådan användare i databasen.
             $sql2 = "UPDATE users SET adminapprove=1 WHERE id=$getid;";
@@ -64,7 +67,7 @@ class Dashboard
             // Slut om uppdatering lyckades.
             else {
                 // Om uppdatering inte lyckades av någon anledning.
-                echo mysqli_error($this->db);
+                echo $this->db->errorInfo();
             } // Slut om uppdatering inte lyckades av någon anledning.
         }
         // Slut om det finns sådan användare i databasen.
@@ -81,59 +84,34 @@ class Dashboard
     {
         $sql = "SELECT * FROM users WHERE adminapprove=0;";
         $result = $this->db->query($sql);
-        $num = mysqli_num_rows($result);
+        $num = $result->rowCount();
         if ($num > 0) {
             // Om det finns användare som inte blev godkänd än.
             echo "
       <div class='row'>
         <div class='card-deck w-100'>";
-            while ($getdata = mysqli_fetch_array($result)) {
-                $getid = mysqli_real_escape_string($this->db, $getdata['id']);
-                $getfname = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['fname']
-                );
-                $getlname = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['lname']
-                );
-                $getepost = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['email']
-                );
-                $getmobnr = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['mobnr']
-                );
-                $gettfnr = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['tfnr']
-                );
-                $getwork = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['work_title']
-                );
-                $getbornday = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['bornday']
-                );
-                $getbornmonth = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['bornmonth']
-                );
-                $getbornyear = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['bornyear']
-                );
-                $getsex = mysqli_real_escape_string($this->db, $getdata['sex']);
-                $getavatar = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['avatar']
-                );
+            while ($getdata = $result->fetch()) {
+                $getid = $getdata['id'];
+                $getfname = $getdata['fname'];
+                $getlname = $getdata['lname'];
+                $getepost = $getdata['email'];
+                $getmobnr = $getdata['mobnr'];
+                $gettfnr = $getdata['tfnr'];
+                $getwork = $getdata['work_title'];
+                $getbornday = $getdata['bornday'];
+                $getbornmonth = $getdata['bornmonth'];
+                $getbornyear = $getdata['bornyear'];
+                $getsex = $getdata['sex'];
+                $getavatar = $getdata['avatar'];
+                $getbornday = $getdata['bornday'];
+                $getbornmonth = $getdata['bornmonth'];
+                $getbornyear = $getdata['bornyear'];
+                $getsex = $getdata['sex'];
+                $getavatar = $getdata['avatar'];
                 echo "
         <div class='col-sm-6 col-md-6 col-lg-6 col-xl-6'>
           <div class='card h-100 w-100'>
-            <img src='$getavatar' class='img-fluid card-img-top cardimage' alt='$getfname profilbild' /><br />
+            <img src='$getavatar' loading='lazy' class='img-fluid card-img-top cardimage' alt='$getfname profilbild' /><br />
                     <div class='card-body'>
                       <p class='card-text'>
                         <b>Fullständigt namn: </b>
@@ -181,7 +159,15 @@ class Dashboard
     // UpdatePsw ändrar användarens lösenord.
     public function UpdatePsw($newpsw)
     {
-        $md5psw = md5($newpsw);
+        if(!$newpsw) {
+          // Om lösenordet saknas.
+          echo "<div class='alert alert-danger'>
+                    Lösenordet saknas. Var vänlig fylla in det.
+                </div>";
+          exit(0);
+        } // Slut om lösenordet saknas.
+
+        $md5psw = md5(password_hash($newpsw, PASSWORD_DEFAULT));
         $sql = "UPDATE users SET psw='$md5psw' WHERE username='$_SESSION[loginuname]';";
         $result = $this->db->query($sql);
         if ($result) {
@@ -194,13 +180,21 @@ class Dashboard
         // Slut om uppdateringen av lösenordet lyckades.
         else {
             // Om uppdateringen av lösenordet inte lyckades.
-            mysqli_error($this->db);
+            $this->db->errorInfo();
         } // Slut om uppdateringen av lösenordet inte lyckades.
     }
 
     // SendEmailActiviate skickar e-postverifiering till användaren.
     public function SendEmailActivate($newepost)
     {
+        if(!$newepost) {
+          // Om e-postadressen saknas.
+          echo "<div class='alert alert-danger'>
+                    E-postadressen saknas. Var vänlig fylla in det.
+                </div>";
+          exit(0);
+        } // Slut om e-postadressen saknas.
+        
         date_default_timezone_set("Europe/Stockholm");
         $token_key = md5(time() . $newepost);
         $expformat = mktime(
@@ -214,7 +208,7 @@ class Dashboard
         $exp = date("Y-m-d H:i:s", $expformat);
         $sql = "SELECT * FROM users WHERE username='$_SESSION[loginuname]';";
         $result = $this->db->query($sql);
-        $row = mysqli_fetch_array($result);
+        $row = $result->fetch();
         $getuserid = $row['id'];
         $getoldemail = $row['email'];
         $sql2 = "UPDATE users SET email_tokenkey='$token_key', email_expiretime='$exp';";
@@ -264,9 +258,9 @@ class Dashboard
     {
         $sql = "SELECT * FROM admininfo";
         $result = $this->db->query($sql);
-        $num = mysqli_num_rows($result);
-        $getdata = mysqli_fetch_array($result);
-        if ($getdata['avatar'] == "") {
+        $num = $result->rowCount();
+        $getdata = $result->fetch();
+        if (!$getdata || $getdata['avatar'] == "") {
             // Om bilden saknas i databasen.
             return "./Images/Admin/admin_header_logo.png";
         }
@@ -282,7 +276,7 @@ class Dashboard
     {
         $sql = "SELECT * FROM users WHERE username='$usrname';";
         $result = $this->db->query($sql);
-        $getdata = mysqli_fetch_array($result);
+        $getdata = $result->fetch();
         return $getfullname = $getdata['fullname'];
     }
 
@@ -291,28 +285,23 @@ class Dashboard
     {
         $sql = "SELECT * FROM news_db LIMIT 6";
         $result = $this->db->query($sql);
-        $num = mysqli_num_rows($result);
+        $num = $result->rowCount();
+        
         if ($num > 0) {
             // Om det finns nyheter i databasen.
             echo "
         <div class='row'>
           <div class='card-deck ms-1 w-100'>";
-            while ($getdata = mysqli_fetch_array($result)) {
-                $id = mysqli_real_escape_string($this->db, $getdata['id']);
-                $bild = mysqli_real_escape_string($this->db, $getdata['img']);
-                $title = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['title']
-                );
-                $content = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['content']
-                );
+            while ($getdata = $result->fetch()) {
+                $id =  $getdata['id'];
+                $bild = $getdata['img'];
+                $title = $getdata['title'];
+                $content = $getdata['content'];
                 // Nyhetsinnehåll i ett kort.
                 echo " 
           <div class='col-sm-6 col-md-4 col-lg-2 col-xl-4 cardparent'>
               <div class='card p-2 h-100 mycard'>
-                <img src='$bild' alt='$title' class='card-img-top img-fluid w-100 h-100 cardimage' />
+                <img src='$bild' loading='lazy' alt='$title' class='card-img-top img-fluid w-100 h-100 cardimage' />
                   <div class='card-body'>
                       <h4 class='card-title'>$title</h4>";
                 $addlink = "...<a href='showpost.php?id=$id' style='font-size: 22px;'>Läs mer > </a>";
@@ -365,9 +354,10 @@ class Dashboard
     ) {
         $sql = "SELECT * FROM admininfo";
         $result = $this->db->query($sql);
-        $getdata = mysqli_fetch_array($result);
-        $getimg = mysqli_real_escape_string($this->db, $getdata['avatar']);
+        $getdata = $result->fetch();
+        $getimg = $getdata['avatar'];
         $sql2 = "UPDATE admininfo SET companyname='$editcompanyname', orgnr='$editorgnr', invoiceinfo='$editinvoiceinfo', address_street='$editaddressstreet', address_box='$editaddressbox', address_city='$editaddresscity', visit_address='$editvisitaddress', firstcolor='$editfirstcolor', secondcolor='$editsecondcolor'";
+        
         if ($bild == $getimg || $bild == "") {
             // Om bilden som skickades från användaren är lika som nuvarande bild i databasen.
             $endimg = $getimg;
@@ -377,8 +367,10 @@ class Dashboard
             // Om bilden som skickades från användaren är inte lika som nuvarande bild i databasen.
             $endimg = $bild;
         } // Slut om bilden som skickades från användaren är intelika som nuvarande bild i databasen.
+        
         $sql2 .= ", avatar='$endimg' WHERE id=1;";
         $result2 = $this->db->query($sql2);
+        
         if ($result2) {
             // Om uppdateringen av data lyckades.
             header("Refresh: 3");
@@ -408,13 +400,11 @@ class Dashboard
     ) {
         $sql = "SELECT * FROM users WHERE username='$_SESSION[loginuname]';";
         $result = $this->db->query($sql);
-        $getdata = mysqli_fetch_array($result);
-        $getimg = mysqli_real_escape_string($this->db, $getdata['avatar']);
-        $getadminmange = mysqli_real_escape_string(
-            $this->db,
-            $getdata['adminmange']
-        );
+        $getdata = $result->fetch();
+        $getimg = $getdata['avatar'];
+        $getadminmange = $getdata['adminmange'];
         $sql2 = "UPDATE users SET username='$editusername', fullname='$editfullname', address_street='$editaddressstreet', address_box='$editaddressbox', address_city='$editaddresscity', mobnr='$editmobnr', tfnr='$edittfnr'";
+        
         if ($bild == $getimg || $bild == "") {
             // Om profilbilden är lika som nuvarande bild eller profilbilden som skickades saknar värde.
             $endimg = $getimg;
@@ -424,8 +414,10 @@ class Dashboard
             // Om profilbilden är inte lika som nuvarande bild.
             $endimg = $bild;
         }
+        
         $sql2 .= ", avatar='$endimg' WHERE username='$_SESSION[loginuname]';";
         $result2 = $this->db->query($sql2);
+        
         if ($result2) {
             // Om uppdateringen av data lyckades.
             echo "<div class='alert alert-success ms-3'>
@@ -446,45 +438,23 @@ class Dashboard
     {
         $sql = "SELECT * FROM admininfo WHERE id=1;";
         $result = $this->db->query($sql);
-        while ($getdata = mysqli_fetch_array($result)) {
-            $getavatar = mysqli_real_escape_string(
-                $this->db,
-                $getdata['avatar']
-            );
-            $getaddress_street = mysqli_real_escape_string(
-                $this->db,
-                $getdata['address_street']
-            );
-            $getaddress_box = mysqli_real_escape_string(
-                $this->db,
-                $getdata['address_box']
-            );
-            $getaddress_city = mysqli_real_escape_string(
-                $this->db,
-                $getdata['address_city']
-            );
-            $getorgnr = mysqli_real_escape_string($this->db, $getdata['orgnr']);
-            $getvisitaddress = mysqli_real_escape_string(
-                $this->db,
-                $getdata['visit_address']
-            );
-            $getorgnr = mysqli_real_escape_string($this->db, $getdata['orgnr']);
-            $getcompanyname = mysqli_real_escape_string(
-                $this->db,
-                $getdata['companyname']
-            );
-            $getinvoiceinfo = mysqli_real_escape_string(
-                $this->db,
-                $getdata['invoiceinfo']
-            );
-            $getfirstcolor = mysqli_real_escape_string(
-                $this->db,
-                $getdata['firstcolor']
-            );
-            $getsecondcolor = mysqli_real_escape_string(
-                $this->db,
-                $getdata['secondcolor']
-            );
+        
+        while ($getdata = $result->fetch()) {
+            $getavatar = $getdata['avatar'];
+            $getaddress_street = $getdata['address_street'];
+            $getaddress_box = $getdata['address_box'];
+            $getaddress_city = $getdata['address_city'];
+            $getorgnr = $getdata['orgnr'];
+            $getvisitaddress = $getdata['visit_address'];
+            $getcompanyname = $getdata['companyname'];
+            $getinvoiceinfo = $getdata['invoiceinfo'];
+            $getfirstcolor = $getdata['firstcolor'];
+            $getsecondcolor = $getdata['secondcolor'];
+
+            // Administratörsformulär
+            $getinvoiceinfo = $getdata['invoiceinfo'];
+            $getfirstcolor = $getdata['firstcolor'];
+            $getsecondcolor = $getdata['secondcolor'];
 
             // Administratörsformulär
             echo "
@@ -506,7 +476,7 @@ class Dashboard
               <br /><br /><br />
               <div id='editimg' class='col-sm-2'>Nuvarande logotyp:</div>
                   <div class='col-sm-3'>
-                    <img src='$getavatar' class='img-fluid thumb' alt='Logotypen' /><br /><br />
+                    <img src='$getavatar' loading='lazy' class='img-fluid thumb' alt='Logotypen' /><br /><br />
                   </div>
               </div>
               
@@ -576,17 +546,19 @@ class Dashboard
     {
         $sql = "SELECT * FROM users WHERE username='$_SESSION[loginuname]';";
         $result = $this->db->query($sql);
+        
         echo "
             
-            <img src='Images/Ikoner/mail.png' class='img-fluid emailicon' alt='Ändra e-postinställningar' />
+            <img src='Images/Ikoner/mail.png' loading='lazy' class='img-fluid emailicon' alt='Ändra e-postinställningar' />
             <h2 class='rubrik specrubriktxt'>E-postadressinställningar</h2>
               <p class='specrubriktxt'>
                 Här kan du ändra din e-postadress.
               </p>
               <form action='accountsettings.php' class='needs-validation' novalidate method='post'>
               ";
-        while ($getdata = mysqli_fetch_array($result)) {
-            $getepost = mysqli_real_escape_string($this->db, $getdata['email']);
+        
+        while ($getdata = $result->fetch()) {
+            $getepost = $getdata['email'];
             // E-postadressändringsformulär.
             echo "<div class='row'>
                     <label for='currentepost' class='form-label col-sm-4 ms-2 mt-3'>Nuvarande e-postadress:</label>
@@ -623,8 +595,17 @@ class Dashboard
     // AddFAQ lägger till frågor och svar i FAQ sidan.
     public function AddFAQ($addquestion, $addanswer)
     {
+        if(!$addquestion || !$addanswer) {
+          // Om något saknas.
+          echo "<div class='alert alert-danger'>
+                    Vissa fälten är tomma. Var vänlig och fyll in det.
+                </div>";
+          exit(0);
+        } // Slut om något saknas.
+
         $sql = "INSERT INTO FAQ(id, question, answer) VALUES('', '$addquestion', '$addanswer');";
         $result = $this->db->query($sql);
+        
         if ($result) {
             // Om frågan lades till i databasen.
             echo "<div class='alert alert-success'>
@@ -634,7 +615,7 @@ class Dashboard
         // Om frågan lades till i databasen.
         else {
             // Om frågan inte lades till i databasen av någon anledning.
-            echo mysqli_error($this->db);
+            echo $this->db->errorInfo();
         } // Slut om frågan inte lades till i databasen av någon anledning.
     }
 
@@ -643,11 +624,9 @@ class Dashboard
     {
         $sql = "SELECT * FROM arkiv_categories";
         $result = $this->db->query($sql);
-        while ($getdata = mysqli_fetch_array($result)) {
-            $getcat = mysqli_real_escape_string(
-                $this->db,
-                $getdata['cat_name']
-            );
+        
+        while ($getdata = $result->fetch()) {
+            $getcat = $getdata['cat_name'];
             echo "<option>$getcat</option>";
         }
     }
@@ -657,23 +636,20 @@ class Dashboard
     {
         $sql = "SELECT * FROM FAQ";
         $result = $this->db->query($sql);
+        
         echo '
-      <img src="Images/Ikoner/help.png" class="img-fluid FAQicon" alt="Hjälp ikon" />
+      <img src="Images/Ikoner/help.png" loading="lazy" class="img-fluid FAQicon" alt="Hjälp ikon" />
         <h1 class="ms-5">FAQ</h1>
           <ul class="list-group">';
-        $num = mysqli_num_rows($result);
+        $num = $result->rowCount();
+        
         if ($num > 0) {
             // Om det finns frågor i databasen.
 
-            while ($getdata = mysqli_fetch_array($result)) {
-                $getquestion = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['question']
-                );
-                $getanswer = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['answer']
-                );
+            while ($getdata = $result->fetch()) {
+                $getquestion = $getdata['question'];
+                $getanswer = $getdata['answer'];
+
                 echo "
                     <li class='list-group-item'>
                           <h2>$getquestion</h2>
@@ -699,46 +675,30 @@ class Dashboard
               </div>";
         }
     }
+    
     // GetAccountSettingsForm hämtar mitt konto inställningar till Mitt konto formulär.
     public function GetAccountSettingsForm()
     {
         $sql = "SELECT * FROM users WHERE username='$_SESSION[loginuname]';";
         $result = $this->db->query($sql);
         echo '
-      <img src="Images/Ikoner/settings-1.png" class="img-fluid accountsettingsicon" alt="Inställningarsikon" />
+      <img src="Images/Ikoner/settings-1.png" loading="lazy" class="img-fluid accountsettingsicon" alt="Inställningarsikon" />
         <h2 class="rubrik specrubriktxt">Mitt konto</h2>
           <p class="specrubriktxt">
             Här kan du ändra dina kontouppgifter.
           </p>
           ';
-        while ($getdata = mysqli_fetch_array($result)) {
-            $getusername = mysqli_real_escape_string(
-                $this->db,
-                $getdata['username']
-            );
-            $getfullname = mysqli_real_escape_string(
-                $this->db,
-                $getdata['fullname']
-            );
-            $getemail = mysqli_real_escape_string($this->db, $getdata['email']);
-            $getaddressstreet = mysqli_real_escape_string(
-                $this->db,
-                $getdata['address_street']
-            );
-            $getaddressbox = mysqli_real_escape_string(
-                $this->db,
-                $getdata['address_box']
-            );
-            $getaddresscity = mysqli_real_escape_string(
-                $this->db,
-                $getdata['address_city']
-            );
-            $getmobnr = mysqli_real_escape_string($this->db, $getdata['mobnr']);
-            $gettfnr = mysqli_real_escape_string($this->db, $getdata['tfnr']);
-            $getavatar = mysqli_real_escape_string(
-                $this->db,
-                $getdata['avatar']
-            );
+        
+        while ($getdata = $result->fetch()) {
+            $getusername = $getdata['username'];
+            $getfullname = $getdata['fullname'];
+            $getemail = $getdata['email'];
+            $getaddressstreet = $getdata['address_street'];
+            $getaddressbox = $getdata['address_box'];
+            $getaddresscity = $getdata['address_city'];
+            $getmobnr = $getdata['mobnr'];
+            $gettfnr = $getdata['tfnr'];
+            $getavatar = $getdata['avatar'];
             // Kontoinställningsformulär.
             echo "
               <form action='accountsettings.php' class='form-horizontal needs-validation' novalidate method='post' enctype='multipart/form-data'>
@@ -763,7 +723,7 @@ class Dashboard
                       <br /><br /><br />
                         <div class='col-sm-2'>Nuvarande profilbild:</div>
                           <div class='col-sm-3'>
-                          <img src='$getavatar' class='img-fluid thumb' alt='Profilbild' /><br /><br />
+                          <img src='$getavatar' loading='lazy' class='img-fluid thumb' alt='Profilbild' /><br /><br />
                         </div>
                       </div>
                
@@ -812,12 +772,21 @@ class Dashboard
     // SendSickRequest lägger till sjukanmälan i databasen.
     public function SendSickRequest($sickreason, $sickfrom, $sickto)
     {
+        if(!$sickreason || !$sickfrom) {
+          // Om något saknas.
+          echo "<div class='alert alert-danger'>
+                    Vissa fälten är inte ifyllda. Var vänlig och fyll in det.
+                </div>";
+          exit(0);
+        } // Slut om något saknas.
+        
         $sql = "SELECT * FROM users WHERE username='$_SESSION[loginuname]';";
         $result = $this->db->query($sql);
-        $getdata = mysqli_fetch_array($result);
+        $getdata = $result->fetch();
         $getfullname = $getdata['fullname'];
         $sql2 = "INSERT INTO sickregister(id, reason, from_date, to_date, fullname) VALUES('', '$sickreason', '$sickfrom', '$sickto', '$getfullname');";
         $result2 = $this->db->query($sql2);
+        
         if ($result2) {
             // Om sjukanmälan lades till i databasen.
             echo "<div class='alert alert-success'>
@@ -829,19 +798,27 @@ class Dashboard
     // SendLeaveRequest lägger till ledighetsansökan i databasen.
     public function SendLeaveRequest($leavereason, $leavefrom, $leaveto)
     {
+        if(!$leavereason || !$leavefrom) {
+          // Om något saknas.
+          echo "<div class='alert alert-danger'>
+                    Vissa fälten är inte ifyllda. Var vänlig och fyll in det.
+                </div>";
+          exit(0);
+        } // Slut om något saknas.
+        
         $sql = "SELECT * FROM users WHERE username='$_SESSION[loginuname]';";
         $result = $this->db->query($sql);
-        $getdata = mysqli_fetch_array($result);
+        $getdata = $result->fetch();
         $getfullname = $getdata['fullname'];
         $sql2 = "INSERT INTO leaveregister(id, reason, from_date, to_date, fullname) VALUES('', '$leavereason', '$leavefrom', '$leaveto', '$getfullname');";
         $result2 = $this->db->query($sql2);
+        
         if ($result2) {
             // Om ledighetsansökan lades till i databasen.
             echo "<div class='alert alert-success'>
                   Ledighetsansökan har registrerat i databasen.<br /> Administratören kommer att kontakta dig snart.
               </div>";
-        }
-        // Slut om ledighetsansökan lades till i databasen.
+        } // Slut om ledighetsansökan lades till i databasen.
         else {
             // Om nyheten lades inte till i databasen av någon anledning.
             echo mysqli_error($this->db);
@@ -855,44 +832,32 @@ class Dashboard
             // Om id är tom.
             header("location: index.php");
         } // Slut om id är tom.
+        
         $sql = "SELECT * FROM news_db WHERE id='$usrid'";
         $result = $this->db->query($sql);
-        $num = mysqli_num_rows($result);
+        $num = $result->rowCount();
+        
         if ($num == 1) {
             // Om id hittades i databasen.
             echo "
           <div class='row'>
             <div class='card-deck overflow-hidden w-100'>
                 ";
-            while ($getdata = mysqli_fetch_array($result)) {
-                $id = mysqli_real_escape_string($this->db, $getdata['id']);
-                $bild = mysqli_real_escape_string($this->db, $getdata['img']);
-                $title = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['title']
-                );
-                $content = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['content']
-                );
-                $author = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['author']
-                );
-                $insert_date = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['insert_date']
-                );
-                $cat = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['category']
-                );
+            while ($getdata = $result->fetch()) {
+                $id = $getdata['id'];
+                $bild = $getdata['img'];
+                $title = $getdata['title'];
+                $content = $getdata['content'];
+                $author = $getdata['author'];
+                $insert_date = $getdata['insert_date'];
+                $cat = $getdata['category'];
+                $cat = $getdata['category'];
 
                 // Nyhetsinnehåll.
                 echo " 
                   <div class='col-sm-6 col-md-4 col-lg-2 col-xl-5 cardparent'>
                     <div class='card p-2 h-100 mycard'>
-                      <img src='$bild' alt='$title' class='card-img-top img-fluid w-50 mx-auto' />
+                      <img src='$bild' alt='$title' loading='lazy' class='card-img-top img-fluid w-50 mx-auto' />
                         <div class='card-body'>
                             <h4 class='card-title'>$title</h4>
                             <p class='card-text'>
@@ -921,8 +886,9 @@ class Dashboard
     {
         $sql = "SELECT * FROM users WHERE username='$usrname';";
         $result = $this->db->query($sql);
-        $getdata = mysqli_fetch_array($result);
-        if ($getdata['adminmange'] == 1) {
+        $getdata = $result->fetch();
+        
+        if (!$getdata || $getdata['adminmange'] == 1) {
             // Om användaren har administratörsbehörigheter.
             return true;
         } // Slut om användaren har administratörsbehörigheter.
@@ -935,17 +901,23 @@ class Dashboard
     // AddNews lägger till nyheter beorende på de skickade data.
     public function AddNews($title, $cat, $content, $img, $author)
     {
+        if(!$title || !$cat || !$content || !$img || !$author) {
+          // Om något saknas.
+          echo "<div class='alert alert-danger'>
+                    Vissa fälten är tomma. Var vänlig och fyll in det.
+                </div>";
+          exit(0);
+        } // Slut om något saknas.
+        
         $sql = "SELECT * FROM users WHERE username='$author'";
         $result = $this->db->query($sql);
-        $getdata = mysqli_fetch_array($result);
-        $getendauthor = mysqli_real_escape_string(
-            $this->db,
-            $getdata['fullname']
-        );
+        $getdata = $result->fetch();
+        $getendauthor = $getdata['fullname'];
         date_default_timezone_set("Europe/Stockholm");
         $now = date("Y-m-d H:i:s", time());
         $sql2 = "INSERT INTO news_db(id, title, content, author, img, insert_date, category) VALUES('', '$title', '$content', '$getendauthor', '$img', '$now', '$cat');";
         $result2 = $this->db->query($sql2);
+        
         if ($result2) {
             // Om nyheten lades till i databasen.
             echo "<div class='alert alert-success' style='margin-left: -10px;'>
@@ -964,18 +936,18 @@ class Dashboard
     {
         $sql = "SELECT * FROM users WHERE username='$author'";
         $result = $this->db->query($sql);
-        $getdata = mysqli_fetch_array($result);
-        $getendauthor = mysqli_real_escape_string(
-            $this->db,
-            $getdata['fullname']
-        );
+        $getdata = $result->fetch();
+        $getendauthor = $getdata['fullname'];
         $sql2 = "UPDATE news_db SET title = '$title', content='$content', author='$getendauthor', category='$cat'";
+        
         if ($img !== "") {
             // Om bilden som skickas inte är tom.
             $sql2 .= ", img='$img'";
         } // Slut om bilden som skickas inte är tom.
+        
         $sql2 .= " WHERE id=$id;";
         $result2 = $this->db->query($sql2);
+        
         if ($result2) {
             // Om nyheten uppdaterades enligt de skickade data.
             echo "<div class='alert alert-success w-75'>
@@ -994,10 +966,11 @@ class Dashboard
     {
         $sql = "SELECT * FROM news_db WHERE id=$id;";
         $result = $this->db->query($sql);
-        $num = mysqli_num_rows($result);
-        $getdata = mysqli_fetch_array($result);
+        $num = $result->rowCount();
+        $getdata = $result->fetch();
         $sql2 = "DELETE FROM news_db WHERE id=$id;";
         $result2 = $this->db->query($sql2);
+        
         if ($result) {
             // Om nyheten togs bort från databasen.
             echo "<div class='alert alert-danger mt-2'>
@@ -1007,7 +980,7 @@ class Dashboard
         // Slut om nyheten togs bort från databasen.
         else {
             // Om nyheten inte togs bort från databasen av någon anledning.
-            echo mysqli_error($this->db);
+            echo $this->db->errorInfo();
         } // Slut om nyheten inte togs bort från databasen av någon anledning.
     }
 
@@ -1018,11 +991,9 @@ class Dashboard
         $result = $this->db->query($sql);
         echo "<option value=''>Kategori</option>
             <option value=''>---</option>";
-        while ($getdata = mysqli_fetch_array($result)) {
-            $catname = mysqli_real_escape_string(
-                $this->db,
-                $getdata['category_name']
-            );
+        
+        while ($getdata = $result->fetch()) {
+            $catname = $getdata['category_name'];
             echo "
               <option value='$catname'>$catname</option>
           ";
@@ -1033,8 +1004,17 @@ class Dashboard
     // UpdateEmail Uppdaterar e-postadress i Mitt konto sidan.
     public function UpdateEmail($email)
     {
+        if(!$email) {
+          // Om e-postadressen är tom.
+          echo "<div class='alert alert-danger'>
+                    E-postadressen är tom. Var vänlig och fyll in det.
+                </div>";
+          exit(0);
+        } // Slut om e-postadressen är tom.
+
         $sql = "UPDATE users SET email='$email' WHERE username='$_SESSION[loginuname]';";
         $result = $this->db->query($sql);
+        
         if ($result) {
             // Om e-postadress ändrades.
             header("location: accountsettings.php?msg=emailsuccess");
@@ -1051,16 +1031,16 @@ class Dashboard
     {
         $sql = "SELECT * FROM users";
         $result = $this->db->query($sql);
-        $num = mysqli_num_rows($result);
+        $num = $result->rowCount();
         // Personalinnehåll.
         echo "
-        <img src='./Images/Ikoner/staff.png' class='img-fluid stafficon' alt='Personalikon' />
+        <img src='./Images/Ikoner/staff.png' loading='lazy' class='img-fluid stafficon' alt='Personalikon' />
           <h1 class='ms-4'>Personal</h1>
             <div class='row'>
               <div class='card-deck w-75'>";
         if ($num > 0) {
             // Om man hittade personal i databasen.
-            while ($getdata = mysqli_fetch_array($result)) {
+            while ($getdata = $result->fetch()) {
                 $getfullname = $getdata['fullname'];
                 $getepost = $getdata['email'];
                 $gettfnr = $getdata['tfnr'];
@@ -1070,7 +1050,7 @@ class Dashboard
                 echo " 
             <div class='col-sm-6 col-md-4 col-lg-3 col-xl-4'>
               <div class='card p-2 h-100'>
-                <img src='.././$getavatar' alt='$getfullname Profilbild' class='card-img-top img-fluid cardimage' />
+                <img src='.././$getavatar' loading='lazy' alt='$getfullname Profilbild' class='card-img-top img-fluid cardimage' />
                   <div class='card-body'>
                       <h4 class='card-title'>$getfullname</h4>
                       <p class='card-text'>
@@ -1106,7 +1086,7 @@ class Dashboard
     {
         $sql = "SELECT * FROM arkiv;";
         $result = $this->db->query($sql);
-        $num = mysqli_num_rows($result);
+        $num = $result->rowCount();
         // Filarkivtabellen.
         echo "<div class='table-responsive'>
           <table class='table w-100'>
@@ -1123,27 +1103,12 @@ class Dashboard
               <tbody>";
         if ($num > 0) {
             // Om det finns arkivfiler i databasen.
-            while ($getdata = mysqli_fetch_array($result)) {
-                $getname = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['file_name']
-                );
-                $getsize = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['filesize']
-                );
-                $getcat = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['category']
-                );
-                $getdes = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['descr']
-                );
-                $getfile = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['the_file']
-                );
+            while ($getdata = $result->fetch()) {
+                $getname = $getdata['file_name'];
+                $getsize = $getdata['filesize'];
+                $getcat = $getdata['category'];
+                $getdes = $getdata['descr'];
+                $getfile = $getdata['the_file'];
                 echo " 
                   <tr>
                       <td>$getname</td>
@@ -1153,7 +1118,7 @@ class Dashboard
                       <td>$getsize byte</td>
                       <td>
                         <a href='download.php?file=$getfile'>
-                          <img class='img-fluid downloadicon' src='Images/Ikoner/download.png' alt='Download' />
+                          <img class='img-fluid downloadicon' loading='lazy' src='Images/Ikoner/download.png' alt='Download' />
                         </a>
                       </td>
                   </tr>
@@ -1211,6 +1176,14 @@ class Dashboard
     // AddCategory lägger till kategorier i databasen.
     public function AddCategory($addcatname, $addcatdb)
     {
+        if(!$addcatname || !$addcatdb) {
+          // Om något saknas.
+          echo "<div class='alert alert-danger'>
+                    Vissa fälten är tomma. Var vänlig och fyll in det.
+                </div>";
+          exit(0);
+        } // Slut om något saknas.
+        
         if ($addcatdb == "news_categories") {
             // Om användaren valde nyheterkategorier.
             $sql = "INSERT INTO news_categories(id, category_name) VALUES('', '$addcatname');";
@@ -1227,7 +1200,9 @@ class Dashboard
             // Om användaren valde arkivkategorier.
             $sql = "INSERT INTO arkiv_categories(id, cat_name) VALUES('', '$addcatname');";
         } // Slut om användaren valde arkivkategorier.
+        
         $result = $this->db->query($sql);
+        
         if ($result) {
             // Om resultatet lades till i databasen.
             echo "<div class='alert alert-success'>
@@ -1237,17 +1212,26 @@ class Dashboard
         // Slut om resultatet lades till i databasen.
         else {
             // Om resultet inte lyckades av någon anledning.
-            echo mysqli_error($this->db);
+            echo $this->db->errorInfo();
         } // Slut om resultet inte lyckades av någon anledning.
     }
 
     // AddFile lägger till nyheter beorende på de skickade data.
     public function AddFile($filename, $des, $cat, $file, $filesize)
     {
+        if(!$filename || !$des || !$cat || !$file || !$filesize) {
+          // Om något saknas.
+          echo "<div class='alert alert-danger'>
+                    Vissa fälten är tomma. Var vänlig och fyll in det.
+                </div>";
+          exit(0);
+        } // Slut om något saknas.
+        
         date_default_timezone_set("Europe/Stockholm");
         $now = date("Y-m-d H:i:s", time());
         $sql = "INSERT INTO arkiv(id, file_name, descr, category, the_file, filesize, insert_date) VALUES('', '$filename', '$des', '$cat', '$file', '$filesize', '$now');";
         $result = $this->db->query($sql);
+        
         if ($result) {
             // Om filen lades till i databasen.
             header("location: filarkiv.php?msg=true");
@@ -1264,29 +1248,24 @@ class Dashboard
     {
         $sql = "SELECT * FROM news_db WHERE id=$id;";
         $result = $this->db->query($sql);
-        $getdata1 = mysqli_fetch_array($result);
+        $getdata1 = $result->fetch();
         $categoryname = $getdata1['category'];
         $sql2 = "SELECT * FROM news_categories WHERE category_name='$categoryname';";
         $result2 = $this->db->query($sql2);
-        $getdata2 = mysqli_fetch_array($result2);
+        $getdata2 = $result2->fetch();
         $getcatid = $getdata2['id'];
         $sql3 = "SELECT * FROM news_categories WHERE NOT id=$getcatid;";
         $result3 = $this->db->query($sql3);
-        $getdata3 = mysqli_fetch_array($result3);
+        $getdata3 = $result3->fetch();
         $getsortedcat = $getdata3['category_name'];
         $sql4 = "SELECT * FROM news_db WHERE id=$id;";
         $result4 = $this->db->query($sql4);
-        while ($getdata4 = mysqli_fetch_array($result4)) {
-            $gettitle = mysqli_real_escape_string(
-                $this->db,
-                $getdata4['title']
-            );
-            $getcat = mysqli_real_escape_string(
-                $this->db,
-                $getdata4['category']
-            );
+        
+        while ($getdata4 = $result4->fetch()) {
+            $gettitle = $getdata4['title'];
+            $getcat = $getdata4['category'];
             $getcontent = $getdata4['content'];
-            $getimg = mysqli_real_escape_string($this->db, $getdata4['img']);
+            $getimg = $getdata4['img'];
             echo "
 
             </div>
@@ -1329,7 +1308,7 @@ class Dashboard
             <div class='row'>
               <div class='form-row col-md-7'>
                 <div>Nuvarande bild:</div>
-                  <img src='$getimg' class='img-fluid thumb' alt='$gettitle' /><br /><br />
+                  <img src='$getimg' loading='lazy' class='img-fluid thumb' alt='$gettitle' /><br /><br />
               </div>
             </div>
 
@@ -1349,42 +1328,29 @@ class Dashboard
     {
         $sql = "SELECT * FROM news_db;";
         $result = $this->db->query($sql);
-        $num = mysqli_num_rows($result);
+        $num = $result->rowCount();
+        
         // Nyhetsinnehåll.
         echo "
           <div class='row'>
             <div class='card-deck w-100'>
                 ";
+        
         if ($num > 0) {
             // Om det finns nyheter i databasen.
 
-            while ($getdata = mysqli_fetch_array($result)) {
-                $bild = mysqli_real_escape_string($this->db, $getdata['img']);
-                $title = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['title']
-                );
-                $content = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['content']
-                );
-                $date = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['insert_date']
-                );
-                $author = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['author']
-                );
-                $cat = mysqli_real_escape_string(
-                    $this->db,
-                    $getdata['category']
-                );
-                $id = mysqli_real_escape_string($this->db, $getdata['id']);
+            while ($getdata = $result->fetch()) {
+                $bild = $getdata['img'];
+                $title = $getdata['title'];
+                $content = $getdata['content'];
+                $date = $getdata['insert_date'];
+                $author = $getdata['author'];
+                $cat = $getdata['category'];
+                $id = $getdata['id'];
                 echo " 
                   <div class='col-sm-6 col-md-4 col-lg-2 col-xl-4 cardparent'>
                     <div class='card p-2 h-100 mycard'>
-                      <img src='$bild' alt='$title' class='w-100 card-img-top img-fluid' style='height: 200px;' />
+                      <img src='$bild' alt='$title' loading='lazy' class='w-100 card-img-top img-fluid' style='height: 200px;' />
                         <div class='card-body'>
                             <h4 class='card-title'>$title</h4>
                             <p class='card-text'>

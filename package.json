@@ -20,7 +20,7 @@
     "setup": "yarn --emoji && yarn --cwd ./Dashboard/ckeditor5 --emoji",
     "start": "php -S localhost:8080 && start localhost:8080",
     "lint": "eslint ./ && npx stylelint **/*.css && yarn type-check",
-    "build": "esbuild ./TS/* --bundle --outdir=js --minify",
+    "build": "css-minify --file ./CSS/main.css -o ./CSS && css-minify --file ./Dashboard/CSS/main.css -o ./Dashboard/CSS && esbuild ./TS/* --bundle --outdir=js --minify",
     "format": "prettier -w ./",
     "clear": "rimraf ./node_modules && cd ./Dashboard/ckeditor5 && rimraf ./node_modules",
     "prepare": "husky",
@@ -51,6 +51,7 @@
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.34.0",
     "concurrently": "9.2.1",
+    "css-minify": "^2.1.0",
     "esbuild": "^0.25.9",
     "globals": "16.3.0"
   }

@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.icon {
+  height: 2vh;
+  width: 20px;
+}
+#logobild {
+  height: auto;
+  width: 250px;
+}
+.rubrik {
+  font-size: 2em;
+}
+#sidfoten {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+#bornday {
+  margin-left: 35px;
+}
+#bornlabel {
+  margin-left: 20px;
+}
+@media only screen and (max-width: 1140px) {
+  body {
+    font-size: 100%;
+    margin: 0;
+    width: 100%;
+  }
+  .rubrik {
+    font-size: 2em;
+  }
+  #forgetpswbtn {
+    margin-left: 40px;
+  }
+  #bornlabel {
+    margin-left: -10px;
+  }
+  img {
+    width: 100%;
+  }
+  h1 {
+    font-size: 100%;
+  }
+  #main {
+    display: table-cell;
+    width: 1000vw;
+  }
+}
