@@ -30,7 +30,7 @@
     "@ckeditor/ckeditor5-list": "46.0.3",
     "@ckeditor/ckeditor5-media-embed": "47.0.0",
     "@ckeditor/ckeditor5-paragraph": "46.0.3",
-    "@ckeditor/ckeditor5-paste-from-office": "47.1.0",
+    "@ckeditor/ckeditor5-paste-from-office": "47.3.0",
     "@ckeditor/ckeditor5-table": "46.0.3",
     "@ckeditor/ckeditor5-theme-lark": "47.1.0",
     "postcss": "8.5.6",
